@@ -1,0 +1,44 @@
+#服务基本信息配置
+server:
+  port: 9007
+  thymeleaf:
+    prefix: classpath:/templates
+    suffix: .html
+
+#security 配置security.oauth2.client
+security:
+  oauth2:
+    sso:
+      loginPath: /login   # 登录路径
+    client:
+      clientId: spring-boot-web-client
+      clientSecret: Q!W@E#R$T%Y^U&I*O(P)
+      userAuthorizationUri: http://localhost:9005/oauth/authorize
+      grant-type: password
+      scope: read
+      access-token-uri: http://localhost:9005/oauth/token
+    resource:
+      jwt:
+        key-uri: http://localhost:9005/oauth/token_key
+  basic:
+    enabled: false
+
+# 数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth2?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 1234
+    thymeleaf:
+      prefix: classpath:/templates
+      mode: LEGACYHTML5
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.iweb.mapper
+
+#session:
+#  cookie:
+#    name: APPSESSIONID

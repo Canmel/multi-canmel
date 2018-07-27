@@ -1,0 +1,33 @@
+server:
+  port: 9005
+encrypt:
+  key-store:
+    location: mytest.jks
+    secret: mypass
+    alias: mytest
+# 若从数据库中获取客户端信息则需配置数据库源
+#spring:
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:mem:test
+#    username: sa
+#  h2:
+#    console:
+#      enabled: true
+management:
+  security:
+    enabled: false
+
+
+
+# 数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth2?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 1234
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.auth2.mapper
