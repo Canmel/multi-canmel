@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cefdc6c2-9d18-42b3-a5ec-68f2bb6ad5c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iweb/src/main/resources/static/javascript/login/Particleground.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iweb/src/main/resources/static/javascript/login/Treatment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iweb/src/main/resources/static/javascript/login/stopExecutionOnTimeout.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iweb/target/classes/com/iweb/controller/sessions/SessionController.class" afterPath="$PROJECT_DIR$/iweb/target/classes/com/iweb/controller/sessions/SessionController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iweb/src/main/java/com/iweb/controller/sessions/SessionController.java" afterPath="$PROJECT_DIR$/iweb/src/main/java/com/iweb/controller/sessions/SessionController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -925,8 +921,16 @@
       <workItem from="1532335344997" duration="330000" />
       <workItem from="1532585278909" duration="6000" />
       <workItem from="1532586714497" duration="15596000" />
-      <workItem from="1532611449805" duration="31330000" />
+      <workItem from="1532611449805" duration="31364000" />
     </task>
+    <task id="LOCAL-00001" summary="login">
+      <created>1532919289528</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532919289540</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -935,7 +939,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47463000" />
+    <option name="totallyTimeSpent" value="47497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -977,6 +981,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login" />
+    <option name="LAST_COMMIT_MESSAGE" value="login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
