@@ -17,6 +17,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -57,25 +58,27 @@ public class SessionController {
     }
 
     @PostMapping("/login")
-    public void signIn(Model model, User user, String imageCode,HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if(!validCode(imageCode, request)){
-            response.setStatus(HttpStatus.EXPECTATION_FAILED.value());
+    public ModelAndView signIn(Model model, User user, String imageCode, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        ModelAndView mv = new ModelAndView();
+        if (!validCode(imageCode, request)) {
             logger.info("验证码错误，返回首页");
-            response.sendRedirect("/login");
-            return;
+//            response.(HttpStatus.EXPECTATION_FAILED.value(), "验证码错误，返回首页");
+            mv.setViewName("/login");
+            mv.addObject("msg", "验证码错误，返回首页");
+            return mv;
         }
-
         HttpEntity httpEntity = buildRequestInfoMap(user);
         //获取 Token
         ResponseEntity<OAuth2AccessToken> oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
-
         if (!ObjectUtils.isEmpty(oAuth2AccessToken.getBody()) && !StringUtils.isEmpty(oAuth2AccessToken.getBody().getValue())) {
-            System.out.println(oAuth2AccessToken.getBody().getValue());
+            request.getSession().setAttribute("access_token", oAuth2AccessToken.getBody().getValue());
             response.sendRedirect("/welcome" + "?access_token=" + oAuth2AccessToken.getBody().getValue());
-
-//        } else {
-//            response.sendRedirect("/login");
+            return null;
         }
+        response.sendError(HttpStatus.UNAUTHORIZED.value(), "");
+        mv.setViewName("/login");
+        mv.addObject("msg", "验证码错误，返回首页");
+        return mv;
     }
 
     private boolean validCode(String verifyCode, HttpServletRequest request) {
@@ -85,7 +88,7 @@ public class SessionController {
             return false;
         }
         StringBuffer sessiom_code = (StringBuffer) request.getSession().getAttribute("session_imageCode");
-        return verifyCode.equals(sessiom_code);
+        return verifyCode.equals(sessiom_code.toString());
     }
 
 
