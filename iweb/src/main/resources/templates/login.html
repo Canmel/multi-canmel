@@ -13,6 +13,7 @@
     <link href="css/login/styles.css" rel="stylesheet" type="text/css"/>
     <link href="css/login/login.css" rel="stylesheet" type="text/css"/>
     <link href="css/login/loaders.css" rel="stylesheet" type="text/css"/>
+    <link href="plugins/toast/toast.style.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div class='login'>
@@ -51,7 +52,7 @@
                 </div>
             </div>
             <div class='login_fields__submit'>
-                <input type='submit' value='登录'/>
+                <input type='button' value='登录'/>
             </div>
         </form>
     </div>
@@ -77,157 +78,27 @@
 <script type="text/javascript" src="plugins/jquery/jquery-ui.min.js"></script>
 <script type="text/javascript" src='javascript/login/stopExecutionOnTimeout.js?t=1'></script>
 <script src="plugins/layui/layui.js" type="text/javascript"></script>
+<script type="text/javascript" src="plugins/toast/toast.script.js"></script>
 <script src="javascript/login/Particleground.js" type="text/javascript"></script>
 <script src="javascript/login/Treatment.js" type="text/javascript"></script>
-<!--<script src="plugins/jquery/jquery.mockjax.js" type="text/javascript"></script>-->
+<script type="text/javascript" src="javascript/login/login.js"></script>
+
 <script type="text/javascript">
-    var CodeVal = 0;
-    Code();
-
-    function Code() {
-        $.ajax({
-            url: "/getVerify",
-            type: "get",
-            success: function (resp) {
-                var c = document.getElementById("myCanvas");
-                var ctx = c.getContext("2d");
-                ctx.clearRect(0, 0, 1000, 1000);
-                ctx.font = "80px 'Hiragino Sans GB'";
-                ctx.fillStyle = "#E8DFE8";
-                ctx.fillText(resp, 0, 100);
-            }
-        });
-    }
-
-    function showCheck(a) {
-        CodeVal = a;
-    }
-
-    $(document).keypress(function (e) {
-        // 回车键事件
-        if (e.which == 13) {
-            $('input[type="button"]').click();
+    $(function () {
+        var msg = "[[${msg}]]";
+        if(msg && msg != "") {
+            $.Toast("test", msg, "success", {
+                stack: true,
+                has_icon:true,
+                has_close_btn:true,
+                fullscreen:false,
+                timeout:3000,
+                sticky:false,
+                has_progress:true,
+                rtl:false
+            });
         }
     });
-    //粒子背景特效
-    $('body').particleground({
-        dotColor: '#E8DFE8',
-        lineColor: '#133b88'
-    });
-    $('input[name="pwd"]').focus(function () {
-        $(this).attr('type', 'password');
-    });
-    $('input[type="text"]').focus(function () {
-        $(this).prev().animate({'opacity': '1'}, 200);
-    });
-    $('input[type="text"],input[type="password"]').blur(function () {
-        $(this).prev().animate({'opacity': '.5'}, 200);
-    });
-    $('input[name="login"],input[name="pwd"]').keyup(function () {
-        var Len = $(this).val().length;
-        if (!$(this).val() == '' && Len >= 5) {
-            $(this).next().animate({
-                'opacity': '1',
-                'right': '30'
-            }, 200);
-        } else {
-            $(this).next().animate({
-                'opacity': '0',
-                'right': '20'
-            }, 200);
-        }
-    });
-    var open = 0;
-    layui.use('layer', function () {
-        //非空验证
-        $('input[type="button"]').click(function () {
-            var username = $('input[name="username"]').val();
-            var pwd = $('input[name="pwd"]').val();
-            var code = $('input[name="imageCode"]').val();
-            if (username == '') {
-                ErroAlert('请输入您的账号');
-            } else if (pwd == '') {
-                ErroAlert('请输入密码');
-            } else if (code == '' || code.length != 4) {
-                ErroAlert('输入验证码');
-            } else {
-                //认证中..
-//                fullscreen();
-                $('.login').addClass('test'); //倾斜特效
-                $('.login').addClass('testtwo'); //平移特效
-                $('.authent').show().animate({right: -320}, {
-                    easing: 'easeOutQuint',
-                    duration: 600,
-                    queue: false
-                });
-                $('.authent').animate({opacity: 1}, {
-                    duration: 200,
-                    queue: false
-                }).addClass('visible');
-
-                var params = {
-                    username: username,
-                    password: pwd,
-                    imageCode: code
-                };
-
-                $.ajax({
-                    url: 'login',
-                    data: params,
-                    type: 'post',
-                    datType: "JSON",
-                    contentType: "application/json",
-                    success: function(resp){
-                        alert(resp);
-                    },
-                    error: function (resp) {
-                        alert();
-                    }
-                });
-
-//                $("#login_form").submit(function (resp) {
-//                    console.log(resp);
-//                });
-//                setTimeout(function () {
-//
-//                }, 300);
-//                setTimeout(function () {
-//
-//                }, 500);
-
-
-//                $("#login_form").submit(function (resp) {
-//                    console.log(resp);
-//                });
-//                $.ajax({
-//                    url: "/login",
-//                    type: "POST",
-//                    params: {username: username, password: pwd, imageCode: code},
-//                    success: function (resp) {
-//                        console.log(resp);
-//                    },
-//                    error: function (resp) {
-//                        console.error(1111);
-//                        console.error(resp)
-//                    }
-//                });
-
-
-            }
-        })
-    });
-    var fullscreen = function () {
-        elem = document.body;
-        if (elem.webkitRequestFullScreen) {
-            elem.webkitRequestFullScreen();
-        } else if (elem.mozRequestFullScreen) {
-            elem.mozRequestFullScreen();
-        } else if (elem.requestFullScreen) {
-            elem.requestFullscreen();
-        } else {
-            //浏览器不支持全屏API或已被禁用
-        }
-    };
 </script>
 </body>
 </html>

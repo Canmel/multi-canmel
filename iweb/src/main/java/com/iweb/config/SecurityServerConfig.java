@@ -23,8 +23,9 @@ public class SecurityServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/login", "/index", "/", "/getVerify", "/css/**", "/javascript/**", "/images/**", "/plugins/**", "/error/**").permitAll();
+        http.authorizeRequests().antMatchers("/login", "/index", "/", "/getVerify", "/css/**", "/javascript/**", "/images/**", "/plugins/**", "/error/**", "/fonts/**").permitAll();
         http.authorizeRequests().anyRequest().authenticated();
+        http.headers().frameOptions().disable();
         http.csrf().disable().exceptionHandling()
                 .authenticationEntryPoint(new Http401AuthenticationEntryPoint("Bearer realm=\"webrealm\""));
     }

@@ -1,0 +1,137 @@
+body > div {
+    width: 100%;
+}
+
+.total_data {
+    height: 36.66%;
+}
+
+.total_fhqs {
+    height:33.333%;
+}
+
+.total_zfzl {
+    height:30%;
+}
+
+.total_map {
+    height: 66%;
+}
+
+.total_txt {
+    height:34%;
+}
+
+.total_data > div {
+    height: 50%;
+}
+
+.total_item {
+    background-image: url("/images/home/12-1.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.total_item:hover {
+    background-image: url("/images/home/12-1-selected.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.total_item_head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total_item_body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total_item_body > span {
+    cursor: pointer;
+    color: #fff000;
+}
+
+.total_item_foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+
+.qyzstb {
+    background-image: url("/images/home/13.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 1rem;
+}
+
+.qyzstb:hover{
+    background-image: url("/images/home/13-selected.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fwqzstb {
+    background-image: url("/images/home/14.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 1rem;
+}
+
+.fwqzstb:hover{
+    background-image: url("/images/home/14-selected.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.tqzstb {
+    background-image: url("/images/home/15.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 1rem;
+}
+
+.tqzstb:hover{
+    background-image: url("/images/home/15-selected.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.hszstb {
+    background-image: url("/images/home/16.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 1rem;
+}
+
+.hszstb:hover{
+    background-image: url("/images/home/16-selected.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.gbzstb {
+    background-image: url("/images/home/17.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    height: 1rem;
+    width: 1rem;
+}
+
+.gbzstb:hover{
+    background-image: url("/images/home/17-selected.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}

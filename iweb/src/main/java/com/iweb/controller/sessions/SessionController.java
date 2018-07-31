@@ -29,81 +29,21 @@ import java.util.Collections;
 @Controller
 public class SessionController {
 
-    private Logger logger = LoggerFactory.getLogger(SessionController.class);
-
-    @Autowired
-    private OAuth2ClientProperties oAuth2ClientProperties;
-
-    @Autowired
-    private OAuth2ProtectedResourceDetails oAuth2ProtectedResourceDetails;
-
-    @Autowired
-    private RestTemplate restTemplate;
-
     @GetMapping("/index")
     String index() {
         return "/index";
     }
 
-    @GetMapping("/welcome")
-    String welcome(HttpSession session) {
-
-        return "/welcome";
+    @GetMapping("/home")
+    String welcome(Model model, HttpSession session) {
+        model.addAttribute("access_token", session.getAttribute("access_token"));
+        return "/home";
     }
 
     @GetMapping("/login")
     String login(Model model, User user) {
         model.addAttribute("user", user);
         return "/login";
-    }
-
-    @PostMapping("/login")
-    public ModelAndView signIn(Model model, User user, String imageCode, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        ModelAndView mv = new ModelAndView();
-        if (!validCode(imageCode, request)) {
-            logger.info("验证码错误，返回首页");
-//            response.(HttpStatus.EXPECTATION_FAILED.value(), "验证码错误，返回首页");
-            mv.setViewName("/login");
-            mv.addObject("msg", "验证码错误，返回首页");
-            return mv;
-        }
-        HttpEntity httpEntity = buildRequestInfoMap(user);
-        //获取 Token
-        ResponseEntity<OAuth2AccessToken> oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
-        if (!ObjectUtils.isEmpty(oAuth2AccessToken.getBody()) && !StringUtils.isEmpty(oAuth2AccessToken.getBody().getValue())) {
-            request.getSession().setAttribute("access_token", oAuth2AccessToken.getBody().getValue());
-            response.sendRedirect("/welcome" + "?access_token=" + oAuth2AccessToken.getBody().getValue());
-            return null;
-        }
-        response.sendError(HttpStatus.UNAUTHORIZED.value(), "");
-        mv.setViewName("/login");
-        mv.addObject("msg", "验证码错误，返回首页");
-        return mv;
-    }
-
-    private boolean validCode(String verifyCode, HttpServletRequest request) {
-        String session_verifyTime = (String) request.getSession().getAttribute("session_imageTime");
-        Long st = Long.parseLong(session_verifyTime);
-        if (st - System.currentTimeMillis() > 60) {
-            return false;
-        }
-        StringBuffer sessiom_code = (StringBuffer) request.getSession().getAttribute("session_imageCode");
-        return verifyCode.equals(sessiom_code.toString());
-    }
-
-
-    private HttpEntity buildRequestInfoMap(User loginUser) {
-        String clientAndSecret = oAuth2ClientProperties.getClientId() + ":" + oAuth2ClientProperties.getClientSecret();
-        clientAndSecret = "Basic " + Base64.getEncoder().encodeToString(clientAndSecret.getBytes());
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.set("Authorization", clientAndSecret);
-        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
-        map.put("username", Collections.singletonList(loginUser.getUsername()));
-        map.put("password", Collections.singletonList(loginUser.getPassword()));
-        map.put("grant_type", Collections.singletonList(oAuth2ProtectedResourceDetails.getGrantType()));
-        map.put("scope", oAuth2ProtectedResourceDetails.getScope());
-        //HttpEntity
-        return new HttpEntity(map, httpHeaders);
     }
 
 }
