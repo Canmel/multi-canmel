@@ -5,6 +5,9 @@ body > div {
 .total_data {
     height: 36.66%;
     background-color: #4e64696b;
+    box-sizing: border-box;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .total_warning > div {

@@ -1,11 +1,45 @@
 $(function () {
-    zfhqs();
-    qytdfbt();
-    zfzl();
-    wrapMessages();
-    sbtdqk();
-    tdgddbt();
+    zfhqs();        // 总负荷趋势
+    qytdfbt();      // 区域停电分布图
+    zfzl();         // 总负载率
+    wrapMessages(); // 停电消息滚动
+    sbtdqk();       // 设备停电情况
+    tdgddbt();      // 停电工单对比图
+
+    setTimeout(function () {
+        onclickHandler();
+    }, 1000);
+
+
 });
+
+function onclickHandler() {
+    console.log('onclick')
+    var dt = "<?xml version='1.0' encoding='UTF-8'?>" +
+        "<data>";
+    // $.each(vm.all, function (index, item) {
+    //     dt = dt + "<value dwdm='" + item['xjdmjc'] + "' dwmc='" + item['qumc'] + "'><field param='停电户数'>" + item['tdhs'] + "</field></value>";
+    // });
+    dt = dt + "</data>";
+    thisMapMovie("mapff").jsPassData(dt);
+}
+
+function thisMapMovie(movieName) {
+    if (window.document[movieName]) {
+        return window.document[movieName];
+    }
+    if (navigator.appName.indexOf("Microsoft Internet") == -1) {
+        if (document.embeds && document.embeds[movieName])
+            return document.embeds[movieName];
+    }
+    else {
+        return document.getElementById(movieName);
+    }
+}
+
+function onGetDwdm(dwdm) {
+    console.log(dwdm);
+}
 
 function wrapMessages() {
     $("#warning-messages").Scroll({

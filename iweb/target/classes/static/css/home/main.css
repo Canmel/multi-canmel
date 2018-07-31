@@ -790,6 +790,7 @@ strong,
 	transition: 0.3s;
 	visibility: hidden;
 	opacity: 0;
+	background-color: #7e64696b;
 }
 
 .quick-link li:hover .title {
