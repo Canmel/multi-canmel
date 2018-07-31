@@ -55,5 +55,17 @@ html, body, fram{ height: 100%; width: 100%; margin: 0px; }
 }
 
 .page > div {
-    /*padding-top: 5.5%;*/
+   height: 99%;
+}
+
+.font-color-white {
+    color: #cacaca;
+}
+
+.center {
+    text-align: center;
+}
+
+.font-color-golden {
+    color: #fff000;
 }

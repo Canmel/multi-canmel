@@ -1,17 +1,197 @@
 $(function () {
     zfhqs();
     qytdfbt();
+    zfzl();
+    wrapMessages();
+    sbtdqk();
+    tdgddbt();
 });
 
+function wrapMessages() {
+    $("#warning-messages").Scroll({
+        line: 1,
+        speed: 500,
+        timer: 2000
+    });
+}
+
+function tdgddbt() {
+    var myChart = echarts.init(document.getElementById('tdgddbt'));
+    // 指定图表的配置项和数据
+    var option = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['停电次数','工单数量'],
+            textStyle: {
+                color: '#cacaca'
+            }
+        },
+        calculable: true,
+        backgroundColor: '#4e64696b',
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: ['7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00'],
+                axisLabel: {
+                    formatter: '{value}',
+                    textStyle: {
+                        color: '#cacaca'
+                    }
+                },
+                splitLine: {
+                    show: false
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value}',
+                    textStyle: {
+                        color: '#cacaca'
+                    }
+                },
+                splitLine: {
+                    show: false
+                }
+            }
+        ],
+        series: [
+            {
+                name: '停电次数',
+                type: 'line',
+                data: [7003, 7993, 8002, 8332, 8443, 9333, 10002],
+                itemStyle: {
+                    normal: {
+                        color: 'red',
+                        lineStyle: {
+                            color: "red"
+                        }
+                    }
+                }
+            },
+            {
+                name: '工单数量',
+                type: 'line',
+                data: [2134, 3434, 5453, 6753, 8765, 9001, 9921],
+                itemStyle: {
+                    normal: {
+                        color: '#cacaca',
+                        lineStyle: {
+                            color: "#cacaca"
+                        }
+                    }
+                }
+            }
+        ]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+}
+
+function sbtdqk() {
+    var tqtd = echarts.init(document.getElementById("tqtdqk"));
+    var lytd = echarts.init(document.getElementById("lytdqk"));
+    var yhtd = echarts.init(document.getElementById("yhtdqk"));
+    var option = {
+        calculable: true,
+        animation: false,
+        series: [
+            {
+                type: 'pie',
+                hoverAnimation: false,
+                center: ['50%', '50%'],
+                radius: ['60%', '86%'],
+                x: '0%', // for funnel
+                itemStyle: {
+                    normal: {
+                        label: {
+                            formatter: function (params) {
+                                return params.value + '%'
+                            },
+                            textStyle: {
+                                baseline: 'top'
+                            }
+                        }
+                    }
+                },
+                data: [
+                    {
+                        name: '',
+                        value: 23,
+                        itemStyle: {
+                            normal: {
+                                color: '#fff000',
+                                label: {
+                                    show: true,
+                                    position: 'center',
+                                    formatter: '{b}',
+                                    textStyle: {
+                                        color: 'red',
+                                        baseline: 'bottom'
+                                    }
+                                },
+                                labelLine: {
+                                    show: false
+                                },
+                                label: {
+                                    show: true,
+                                    position: 'center'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        name: '停电',
+                        value: 77,
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(0,0,0,0)',
+                                label: {
+                                    show: true,
+                                    position: 'center',
+                                    formatter: '{b}',
+                                    textStyle: {
+                                        color: 'red',
+                                        baseline: 'bottom'
+                                    }
+                                },
+                                labelLine: {
+                                    show: false
+                                },
+                                label: {
+                                    show: true,
+                                    position: 'center'
+                                }
+                            }
+                        }
+                    }
+
+                ]
+            }
+        ]
+    };
+
+    tqtd.setOption(option, false);
+    lytd.setOption(option, false);
+    yhtd.setOption(option, false);
+}
+
 function zfzl() {
-    var zfzlChart = echarts.init(document.getElementById('qytdfbt'));
+    var zfzlChart = echarts.init(document.getElementById('zfzl'));
     var option = {
         tooltip: {
             formatter: "{a} <br/>{c} {b}"
         },
+        backgroundColor: '#4e64696b',
         series: [
             {
-                name: obj.name,
                 type: 'gauge',
                 z: 3,
                 center: ['50%', '75%'],    // 默认全局居中
@@ -61,7 +241,7 @@ function zfzl() {
                     },
                     offsetCenter: ['-0%', '-10%']
                 },
-                data: [{value: obj.gvalue, name: '总负载率'}],
+                data: [{value: 72, name: '总负载率'}]
             }
         ]
     };
@@ -92,7 +272,7 @@ function qytdfbt() {
                 splitLine: {
                     show: false
                 },
-                axisTick : {
+                axisTick: {
                     inside: false,
                     length: 5,
                     lineStyle: {
@@ -124,7 +304,7 @@ function qytdfbt() {
                 itemStyle: {
                     normal: {
                         color: "#5589C6",
-                        barBorderRadius:[10, 10, 10, 10]
+                        barBorderRadius: [10, 10, 10, 10]
                     },
                     emphasis: {
                         barBorderRadius: [10, 10, 10, 10]
@@ -140,7 +320,7 @@ function qytdfbt() {
                 itemStyle: {
                     normal: {
                         color: "#c23531",
-                        barBorderRadius:[10, 10, 10, 10]
+                        barBorderRadius: [10, 10, 10, 10]
                     },
                     emphasis: {
                         barBorderRadius: [10, 10, 10, 10]

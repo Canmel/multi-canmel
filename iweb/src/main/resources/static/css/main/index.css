@@ -4,6 +4,42 @@ body > div {
 
 .total_data {
     height: 36.66%;
+    background-color: #4e64696b;
+}
+
+.total_warning > div {
+    width: 100%;
+    height: 100%;
+    background-color: #4e64696b;
+}
+
+.total_sbtdqk > div {
+    width: 90%;
+    height: 70%;
+    background-color: #4e64696b;
+}
+
+.total_tdgddbt > div {
+    width: 100%;
+    height: 100%;
+    background-color: #4e64696b;
+
+}
+
+.total_warning {
+    height: 33.3333%;
+    overflow: hidden;
+}
+
+.total_sbtdqk {
+    height: 33.3333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total_tdgddbt {
+    height: 33.3333%;
 }
 
 .total_fhqs {
@@ -19,7 +55,7 @@ body > div {
 }
 
 .total_txt {
-    height:34%;
+    height:35%;
 }
 
 .total_data > div {
@@ -59,7 +95,6 @@ body > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
 }
 
 
@@ -134,4 +169,58 @@ body > div {
     background-image: url("/images/home/17-selected.png");
     background-size:100% 100%;
     background-repeat: no-repeat;
+}
+
+.total_fhqs {
+
+}
+
+#warning-messages > ul {
+    height: 100%;
+    width: 100%;
+    -webkit-padding-start: 0px;
+}
+
+.massage-item {
+    height: 50%;
+    width: 100%;
+    background-color: #4e64696b;
+}
+
+.massage-item > div:nth-child(1) {
+/*.massage-item > div {*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.massage-item > div:nth-child(2) {
+    /*.massage-item > div {*/
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.warning-logo {
+    width: 90%;
+    height: 65%;
+    background-image: url("/images/home/23.png");
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+}
+
+.warning-logo:hover {
+    background-image: url("/images/home/23_selected.png");
+    cursor: pointer;
+}
+
+.sbtd-pie {
+    background-image: url("/images/home/221.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.hover-g:hover {
+    color: #fff000;
+    cursor: pointer;
 }

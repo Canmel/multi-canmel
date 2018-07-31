@@ -15,7 +15,7 @@
         }
 
         function Ea() {
-            p.append('<div id="fp-nav"><ul></ul></div>');
+            // p.append('<div id="fp-nav"><ul></ul></div>');
             y = d("#fp-nav");
             y.addClass(function () {
                 return c.showActiveTooltip ? "fp-show-active " + c.navigationPosition : c.navigationPosition
