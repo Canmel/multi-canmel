@@ -2,7 +2,7 @@ package com.core.entity;
 
 import org.springframework.http.HttpStatus;
 
-public class ErrorResult {
+public class ErrorResult extends HttpResult {
 
     public static final String NOT_FOUND_MSG = "未找到请求页面";
 
@@ -17,7 +17,7 @@ public class ErrorResult {
     public ErrorResult() {
     }
 
-    public static ErrorResult UNAUTHORIZED(String msg){
+    public static ErrorResult UNAUTHORIZED(String msg) {
         return new ErrorResult(HttpStatus.UNAUTHORIZED.value(), msg);
     }
 

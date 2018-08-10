@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 
 @Configuration
 @EnableAuthorizationServer
-public class MyAuthorizationServerConfigurerAdapter extends AuthorizationServerConfigurerAdapter{
+public class MyAuthorizationServerConfigurerAdapter extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
@@ -32,18 +32,15 @@ public class MyAuthorizationServerConfigurerAdapter extends AuthorizationServerC
         endpoints.authenticationManager(authenticationManager);
     }
 
+    /**
+     * 注入一个获取客户端实例的服务
+     * 通过客户端提供的客户端id，使用jdbcTemplate 找到存在数据库中的ClientDetails
+     */
     @Autowired
-    private SpringBootSecurityConfig securityConfig;
+    public MyClientDetailsService myClientDetailsService;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient(securityConfig.clientId)
-                .secret(securityConfig.secret)
-                .authorizedGrantTypes("client_credentials", "password", "refresh_token")
-                .scopes("all")
-                .resourceIds("oauth2-resource")
-                .accessTokenValiditySeconds(securityConfig.accessTokenValiditySeconds)
-                .refreshTokenValiditySeconds(securityConfig.refreshTokenValiditySeconds);
+        clients.withClientDetails(myClientDetailsService);
     }
 }
