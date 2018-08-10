@@ -13,17 +13,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableAuthorizationServer
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    //需要正常运行的话，需要取消这段注释，原因见下面小节
-//    @Override
-//    public void configure(HttpSecurity http) throws Exception {
-//        http.csrf().disable();
-//        http.requestMatchers().antMatchers("/oauth/**")
-//                .and()
-//                .authorizeRequests()
-//                .antMatchers("/oauth/**").authenticated();
-//    }
-
-    //配置内存模式的用户
+    //配置内存模式的用户 TODO 需要将内存模式改为数据库模式
     @Bean
     @Override
     protected UserDetailsService userDetailsService() {
