@@ -11,6 +11,7 @@ security:
       access-token-uri: http://localhost:8080/oauth/token
       userAuthorizationUri: http://localhost:8080/oauth/authorize
       grant-type: password
+      scope: all
     resource:
       filter-order: 3
       token-info-uri: http://localhost:8080/oauth/token

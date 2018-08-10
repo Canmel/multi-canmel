@@ -30,7 +30,7 @@ public class MyRestController {
     @Autowired
     private OAuth2ProtectedResourceDetails oAuth2ProtectedResourceDetails;
 
-    @RequestMapping("/awa")
+    @RequestMapping("/login")
     public String eys() {
 
         User user = new User();
@@ -38,7 +38,7 @@ public class MyRestController {
         user.setPassword("123456");
         HttpEntity httpEntity = buildRequestInfoMap(user);
         ResponseEntity<OAuth2AccessToken> oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
-        return "我是一个字符串";
+        return oAuth2AccessToken.getBody().getValue();
     }
 
     private HttpEntity buildRequestInfoMap(User loginUser) {
