@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html class="no-js" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bientot - Landing page Coming Soon responsive template</title>
+    <meta name="description"
+          content="A responsive coming soon template, un template HTML pour une page en cours de construction">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/home/normalize.css">
+    <link rel="stylesheet" href="css/home/pageloader.css">
+    <link rel="stylesheet" href="fonts/opensans/stylesheet.css">
+    <link rel="stylesheet" href="fonts/asap/stylesheet.css">
+    <link rel="stylesheet" href="css/home/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/home/foundation.min.css">
+    <link rel="stylesheet" href="plugins/vendor/jquery.fullPage.css">
+    <link rel="stylesheet" href="plugins/vegas/vegas.min.css">
+    <link rel="stylesheet" href="css/home/main.css">
+    <link rel="stylesheet" href="css/home/main_responsive.css">
+    <link rel="stylesheet" href="css/home/style-font1.css">
+    <link rel="stylesheet" href="css/public.css"/>
+    <!--<script src="plugins/vendor/modernizr-2.7.1.min.js"></script>-->
+</head>
+
+<body id="menu" class="alt-bg">
+<div class="page-loader" id="page-loader">
+    <div><i class="ion ion-loading-d"></i>
+        <p>加载中...</p>
+    </div>
+</div>
+<header class="header-top">
+    <div class="logo">
+        <a>
+            基于电能计量装置的低压故障检测系统 &nbsp;
+        </a>
+    </div>
+    <div class="menu clearfix">
+        <a>胡彦斌</a>
+        <a class="logout" onclick="logout()">退出</a>
+    </div>
+</header>
+<nav class="quick-link count-6 nav-left">
+    <ul id="qmenu">
+        <li data-menuanchor="home" onclick="toPage('main')">
+            <a href="#home" class=""><i class="icon ion ion-home"></i></a>
+        </li>
+        <li data-menuanchor="when">
+            <a class=""><i class="icon ion ion-android-settings"></i>
+            </a>
+            <ul class="submenu">
+                <li target="users/index"><span class="title">用户管理</span></li>
+                <li target="roles/index"><span class="title">角色管理</span></li>
+                <li><span class="title">菜单管理</span></li>
+            </ul>
+        </li>
+        <li data-menuanchor="register">
+            <a href="#register"><i class="icon ion ion-compose"></i>
+            </a>
+            <ul class="submenu">
+                <li><span class="title">你别玩</span></li>
+                <li><span class="title">menu2</span></li>
+                <li><span class="title">menu3</span></li>
+            </ul>
+        </li>
+        <li data-menuanchor="about-us">
+            <a href="#about-us"><i class="icon ion ion-compose"></i>
+            </a>
+            <ul class="submenu">
+                <li><span class="title">When1</span></li>
+                <li><span class="title">When2</span></li>
+                <li><span class="title">When3</span></li>
+            </ul>
+        </li>
+        <li data-menuanchor="contact">
+            <a href="#contact"><i class="icon ion ion-android-call"></i>
+            </a>
+            <ul class="submenu">
+                <li><span class="title">When1</span></li>
+                <li><span class="title">When2</span></li>
+                <li><span class="title">When3</span></li>
+            </ul>
+        </li>
+        <li data-menuanchor="contact">
+            <a href="#contact/message"><i class="icon ion ion-email"></i>
+            </a>
+            <ul class="submenu">
+                <li><span class="title">When1</span></li>
+                <li><span class="title">When2</span></li>
+                <li><span class="title">When3</span></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div class="page-cover" id="home">
+    <div class="cover-bg pos-abs full-size bg-img" data-image-src="images/bg-default.jpg"></div>
+</div>
+<main class="page-main" id="mainpage">
+    <div class="section page-home page page-cent" id="main-container"></div>
+</main>
+<script>
+    var access_token = "[[${access_token}]]";
+</script>
+<script src="plugins/jquery/jquery-1.8.3.js"></script>
+<script src="plugins/vendor/all.js"></script>
+<script src="javascript/home/jquery.downCount.js"></script>
+<script src="javascript/home/form_script.js"></script>
+<script src="javascript/home/main.js"></script>
+</body>
+</html>
