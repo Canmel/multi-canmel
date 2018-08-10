@@ -28,12 +28,12 @@ public class AuthorizationServerConfig extends AuthServerConfig {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         super.configure(clients);
-        clients.inMemory()                          // 使用内存存储客户端信息
+        clients.inMemory()                       // 使用内存存储客户端信息
                 .withClient("spring-boot-web-client")       // client_id
-                .secret("Q!W@E#R$T%Y^U&I*O(P)")                   // client_secret
-                .authorizedGrantTypes("authorization_code", "password")     // 该client允许的授权类型
-                .accessTokenValiditySeconds(3600)               // Token 的有效期
-                .scopes("read")                    // 允许的授权范围
-                .autoApprove(true);                  //登录后绕过批准询问(/oauth/confirm_access)
+                .secret("Q!W@E#R$T%Y^U&I*O(P)")                     // client_secret
+                .authorizedGrantTypes("password", "refresh_token")  // 该client允许的授权类型
+                .accessTokenValiditySeconds(3600)                   // Token 的有效期
+                .scopes("read")                                     // 允许的授权范围
+                .autoApprove(true);                                 // 登录后绕过批准询问(/oauth/confirm_access)
     }
 }

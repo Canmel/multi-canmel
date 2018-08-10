@@ -69,3 +69,31 @@ html, body, fram{ height: 100%; width: 100%; margin: 0px; }
 .font-color-golden {
     color: #fff000;
 }
+
+.main-ifram {
+    box-sizing: border-box;
+    padding-top: 3rem;
+    padding-left: 3rem;
+}
+
+.map-tip {
+    width: 15rem;
+    height: 25rem;
+    position: absolute;
+    background-image: url("/images/home/tip-back.png");
+    z-index: 99;
+    background-repeat: no-repeat;
+    background-size: 90% 100%;
+}
+
+.tip-head {
+    height: 2.5rem;
+}
+
+.tip-body {
+    height: 2.5rem;
+}
+
+.tip-body-o {
+    height: 2.5rem;
+}

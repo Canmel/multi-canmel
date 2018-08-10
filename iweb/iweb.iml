@@ -79,7 +79,6 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-jwt:1.0.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.56" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.56" level="project" />
-    <orderEntry type="module" module-name="config" />
     <orderEntry type="library" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.196" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:1.5.9.RELEASE" level="project" />

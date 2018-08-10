@@ -121,7 +121,7 @@ var pageElem = $('.page');
 /** Init fullpage.js */
 
 function toPage(url) {
-    $("#main-container").html('<iframe src="'+ url +'?access_token='+ access_token +'" class="full-width full-height"></iframe>')
+    $("#main-container").html('<iframe src="'+ url +'?access_token='+ access_token +'" class="full-width full-height main-ifram"></iframe>')
 }
 
 function logout(){

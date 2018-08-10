@@ -13,14 +13,9 @@ $(function () {
 
 });
 
-function onclickHandler() {
-    console.log('onclick')
-    var dt = "<?xml version='1.0' encoding='UTF-8'?>" +
-        "<data>";
-    // $.each(vm.all, function (index, item) {
-    //     dt = dt + "<value dwdm='" + item['xjdmjc'] + "' dwmc='" + item['qumc'] + "'><field param='停电户数'>" + item['tdhs'] + "</field></value>";
-    // });
-    dt = dt + "</data>";
+function onclickHandler()
+{
+    var dt = '<?xml version="1.0" encoding="UTF-8"?><data><value dwdm="3340530" dwmc="鄞州"><field param="停电户数">0</field></value><value dwdm="3340540" dwmc="慈溪"><field param="停电户数">0</field>	</value><value dwdm="3340550" dwmc="余姚">		<field param="停电户数">0</field></value><value dwdm="3340560" dwmc="奉化"><field param="停电户数">0</field></value><value dwdm="3340570" dwmc="宁海"><field param="停电户数">0</field></value><value dwdm="3340580" dwmc="象山"><field param="停电户数">0</field></value><value dwdm="3340590" dwmc="北仑"><field param="停电户数">0</field></value><value dwdm="3340600" dwmc="镇海"><field param="停电户数">0</field></value><value dwdm="3340610" dwmc="海曙"><field param="停电户数">0</field></value><value dwdm="3340620" dwmc="江北"><field param="停电户数">0</field></value></data>';
     thisMapMovie("mapff").jsPassData(dt);
 }
 
@@ -38,7 +33,7 @@ function thisMapMovie(movieName) {
 }
 
 function onGetDwdm(dwdm) {
-    console.log(dwdm);
+    alert(dwdm);
 }
 
 function wrapMessages() {
@@ -53,11 +48,19 @@ function tdgddbt() {
     var myChart = echarts.init(document.getElementById('tdgddbt'));
     // 指定图表的配置项和数据
     var option = {
+        title: {
+            text: '停电工单对比图',
+            textStyle: {
+                color: '#ffffff'
+            }
+        },
         tooltip: {
             trigger: 'axis'
         },
+        grid: {x: '15%', y: '35%', width: '80%', height: '50%'},
         legend: {
             data:['停电次数','工单数量'],
+            padding: [32,0,0,0],
             textStyle: {
                 color: '#cacaca'
             }
@@ -220,6 +223,12 @@ function sbtdqk() {
 function zfzl() {
     var zfzlChart = echarts.init(document.getElementById('zfzl'));
     var option = {
+        title: {
+            text: '总负荷率',
+            textStyle: {
+                color: '#ffffff'
+            }
+        },
         tooltip: {
             formatter: "{a} <br/>{c} {b}"
         },
@@ -285,6 +294,12 @@ function zfzl() {
 function qytdfbt() {
     var barChart = echarts.init(document.getElementById('qytdfbt'));
     var option = {
+        title: {
+            text: '区域停电分布图',
+            textStyle: {
+                color: '#ffffff'
+            }
+        },
         tooltip: {
             trigger: 'axis'
         },
@@ -292,7 +307,7 @@ function qytdfbt() {
         textStyle: {
             color: '#ffffff'
         },
-        grid: {x: '15%', y: '15%', width: '80%', height: '70%'},
+        grid: {x: '15%', y: '25%', width: '80%', height: '60%'},
         calculable: true,
         xAxis: [
             {
@@ -374,6 +389,12 @@ function zfhqs() {
     var myChart = echarts.init(document.getElementById('fhqst'));
     // 指定图表的配置项和数据
     var option = {
+        title: {
+            text: '总负荷趋势',
+            textStyle: {
+                color: '#ffffff'
+            }
+        },
         tooltip: {
             trigger: 'axis'
         },

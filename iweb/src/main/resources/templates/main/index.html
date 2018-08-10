@@ -7,10 +7,8 @@
     <link href="css/main/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-
-<div class="col-12 page row-12" style="padding-top: 3rem; box-sizing: border-box;">
-    <div class="col-4 full-height" style="box-sizing: border-box; padding-left: 3.5rem;">
+<div class="col-12 page row-12">
+    <div class="col-4 full-height" style="width: 29.166%;">
         <div class="total_data">
             <div>
                 <div class="col-2 full-height"></div>
@@ -63,8 +61,8 @@
         </div>
     </div>
     <div class="col-5 full-height">
-        <div class="total_map col-12 row-8" id="flashContent">
-            <object type="application/x-shockwave-flash" data="plugins/nbmap/nbmap.swf" width="100%" id="mapff"
+        <div id="flashContent" class="col-12" style="height: 66%;">
+            <object type="application/x-shockwave-flash" data="/plugins/nbmap/nbmap.swf" width="100%" id="mapff"
                     height="100%">
                 <param name="movie" value="nbmap.swf"/>
                 <param name="quality" value="high"/>
@@ -77,7 +75,7 @@
                 <param name="devicefont" value="false"/>
                 <param name="salign" value=""/>
                 <param name="allowScriptAccess" value="sameDomain"/>
-                <embed play="true" swliveconnect="true" name="mapff" src="plugins/nbmap/nbmap.swf"
+                <embed play="true" swliveconnect="true" name="mapff" src="/plugins/nbmap/nbmap.swf"
                        quality="high"
                        bgcolor="#051F36" width="550" height="400" type="application/x-shockwave-flash"
                        pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"/>
@@ -87,8 +85,8 @@
             <div id="qytdfbt" class="full-width full-height"></div>
         </div>
     </div>
-    <div class="col-3 full-height">
-        <div class="total_warning" >
+    <div class="col-3 full-height" style="width: 29.166%;">
+        <div class="total_warning">
             <div id="warning-messages">
                 <ul>
                     <li class="massage-item">
@@ -142,30 +140,47 @@
                 </ul>
             </div>
         </div>
-        <div class="total_sbtdqk" style="border-top: 2px solid #fff0; background-color: #4e64696b;">
-            <div>
-                <div class="sbtd-pie col-4 row-12">
-                    <div class="row-8" id="tqtdqk"></div>
-                    <div class="row-2 col-11 center" style="font-size: 10px; margin-left: 0.2rem;">当前/月停电台区</div>
-                    <div class="row-2 center"><span class="font-color-golden">1/11</span></div>
-                </div>
-                <div class="sbtd-pie col-4 row-12">
-                    <div class="row-8" id="lytdqk"></div>
-                    <div class="row-2 col-11 center" style="font-size: 10px; margin-left: 0.2rem;">当前/月停电楼宇</div>
-                    <div class="row-2 center"><span class="font-color-golden">0/2</span></div>
-                </div>
-                <div class="sbtd-pie col-4 row-12">
-                    <div class="row-8" id="yhtdqk"></div>
-                    <div class="row-2 col-11 center" style="font-size: 10px; margin-left: 0.2rem;">当前/月停电用户</div>
-                    <div class="row-2 center"><span class="font-color-golden">233/362</span></div>
+        <div class="row-4" style="border-top: 2px solid #fff0; background-color: #4e64696b;">
+            <div class="col-12 row-2" style="display: flex; align-items: center;">
+                <span style="color: #fff; font-size: 18px;"><b>设备停电情况</b></span>
+            </div>
+            <div class="col-12 row-10">
+                <div class="full-width row-12">
+                    <div class="sbtd-pie col-4 row-12">
+                        <div class="row-8" id="tqtdqk"></div>
+                        <div class="row-2 col-11 center" style="font-size: 10px; margin-left: 0.2rem;">当前/月停电台区</div>
+                        <div class="row-2 center"><span class="font-color-golden">1/11</span></div>
+                    </div>
+                    <div class="sbtd-pie col-4 row-12">
+                        <div class="row-8" id="lytdqk"></div>
+                        <div class="row-2 col-11 center" style="font-size: 10px; margin-left: 0.2rem;">当前/月停电楼宇</div>
+                        <div class="row-2 center"><span class="font-color-golden">0/2</span></div>
+                    </div>
+                    <div class="sbtd-pie col-4 row-12">
+                        <div class="row-8" id="yhtdqk"></div>
+                        <div class="row-2 col-11 center" style="font-size: 10px; margin-left: 0.2rem;">当前/月停电用户</div>
+                        <div class="row-2 center"><span class="font-color-golden">233/362</span></div>
+                    </div>
                 </div>
             </div>
         </div>
-
         <div class="total_tdgddbt" style="border-top: 2px solid #fff0">
             <div id="tdgddbt"></div>
         </div>
     </div>
+</div>
+<div class="map-tip">
+    <div class="tip-head col-12"><span>鄞州（区域名称）</span></div>
+    <div class="tip-body col-11"></div>
+    <div class="tip-body-o col-11"></div>
+    <div class="tip-body col-11"></div>
+    <div class="tip-body-o col-11"></div>
+    <div class="tip-body col-11"></div>
+    <div class="tip-body-o col-11"></div>
+    <div class="tip-body col-11"></div>
+    <div class="tip-body-o col-11"></div>
+    <div class="tip-body col-11"></div>
+
 </div>
 <script type="text/javascript" src="plugins/jquery/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="plugins/jquery/scroll.js"></script>

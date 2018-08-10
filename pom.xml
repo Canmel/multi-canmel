@@ -13,6 +13,9 @@
         <module>auth2</module>
         <module>iweb</module>
         <module>web</module>
+        <module>restful</module>
+        <module>core</module>
+        <module>iauth2</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -50,11 +53,6 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-jwt</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.canmel</groupId>
-            <artifactId>config</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.mobile</groupId>

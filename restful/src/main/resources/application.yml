@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+security:
+  oauth2:
+    client:
+      client-id: spring-boot-web-client
+      client-secret: 123123
+      refresh-token-validity-seconds: 50000
+      access-token-validity-seconds: 1200
+      access-token-uri: http://localhost:8080/oauth/token
+      userAuthorizationUri: http://localhost:8080/oauth/authorize
+      grant-type: password
+    resource:
+      filter-order: 3
+      token-info-uri: http://localhost:8080/oauth/token
+
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    fuffix: .html

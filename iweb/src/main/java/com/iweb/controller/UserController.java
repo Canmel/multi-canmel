@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/users")
 public class UserController {
-    @GetMapping
+    @GetMapping("/index")
     public String index(Model model, HttpSession session) {
         model.addAttribute("access_token", session.getAttribute("access_token"));
         return "/users/index";
