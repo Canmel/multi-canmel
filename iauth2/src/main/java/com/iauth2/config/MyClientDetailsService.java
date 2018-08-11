@@ -18,7 +18,6 @@ public class MyClientDetailsService implements ClientDetailsService {
     public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
         // FIXME 这里每次请求都要运行四遍，不知道是为什么
         JdbcClientDetailsService jdbcClientDetailsService = new JdbcClientDetailsService(dataSource);
-        ClientDetails clientDetails = jdbcClientDetailsService.loadClientByClientId(clientId);
-        return clientDetails;
+        return jdbcClientDetailsService.loadClientByClientId(clientId);
     }
 }
