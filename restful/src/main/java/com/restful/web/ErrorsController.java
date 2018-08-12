@@ -7,6 +7,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * <p>
+ * 统一异常处理
+ * </p>
+ *
+ * @author  *
+ *   ┏ ┓   ┏ ┓
+ *  ┏┛ ┻━━━┛ ┻┓
+ *  ┃         ┃
+ *  ┃    ━    ┃
+ *  ┃  ┳┛  ┗┳ ┃
+ *  ┃         ┃
+ *  ┃    ┻    ┃
+ *  ┃         ┃
+ *  ┗━━┓    ┏━┛
+ *     ┃    ┃神兽保佑
+ *     ┃    ┃代码无BUG！
+ *     ┃    ┗━━━━━━━┓
+ *     ┃            ┣┓
+ *     ┃            ┏┛
+ *     ┗┓┓┏━━━━━━┳┓┏┛
+ *      ┃┫┫      ┃┫┫
+ *      ┗┻┛      ┗┻┛
+ * @since 2018-08-12
+ */
+
 @RestController
 public class ErrorsController implements ErrorController {
 

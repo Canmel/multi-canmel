@@ -10,7 +10,7 @@
         <module name="config" />
         <module name="core" />
         <module name="fds" />
-        <module name="iauth2" />
+        <module name="ioauth2" />
         <module name="iweb" />
         <module name="restful" />
         <module name="web" />
@@ -22,6 +22,7 @@
       <module name="core" target="1.8" />
       <module name="fds" target="1.8" />
       <module name="iauth2" target="1.8" />
+      <module name="ioauth2" target="1.8" />
       <module name="iweb" target="1.8" />
       <module name="multi-canmel" target="1.8" />
       <module name="restful" target="1.8" />

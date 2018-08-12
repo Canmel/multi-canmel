@@ -1,5 +1,5 @@
 server:
-  port: 9005
+  port: 8080
 encrypt:
   key-store:
     location: mytest.jks
