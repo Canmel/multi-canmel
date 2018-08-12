@@ -1,5 +1,6 @@
 package com.iauth2.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,14 +14,14 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableAuthorizationServer
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    //配置内存模式的用户 TODO 需要将内存模式改为数据库模式
-    @Bean
+
+    @Autowired
+    private MyUserDetailsService myUserDetailsService;
+
+    //配置内存模式的用户
     @Override
     protected UserDetailsService userDetailsService() {
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withUsername("demoUser1").password("123456").authorities("USER").build());
-        manager.createUser(User.withUsername("demoUser2").password("123456").authorities("USER").build());
-        return manager;
+        return myUserDetailsService;
     }
 
     /**

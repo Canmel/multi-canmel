@@ -17,7 +17,6 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -42,12 +41,12 @@ public class MyRestController {
     public HttpResult login(User user) {
         HttpEntity httpEntity = buildRequestInfoMap(user);
         ResponseEntity<OAuth2AccessToken> oAuth2AccessToken = null;
-        try{
+        try {
             oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
-                if(ObjectUtils.isEmpty(oAuth2AccessToken)){
+            if (ObjectUtils.isEmpty(oAuth2AccessToken)) {
                 return ErrorResult.UNAUTHORIZED("登录失败");
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error(e);
             return ErrorResult.UNAUTHORIZED("登录失败, 请检查用户名密码");
         }
