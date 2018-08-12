@@ -9,6 +9,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/fds/pom.xml" />
+        <option value="$PROJECT_DIR$/iauth2/pom.xml" />
         <option value="$PROJECT_DIR$/web/pom.xml" />
       </set>
     </option>
