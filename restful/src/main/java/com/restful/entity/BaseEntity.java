@@ -33,12 +33,28 @@ import java.io.Serializable;
 public class BaseEntity<T extends Model> extends Model<T> {
 
     @TableField(exist = false)
-    public Integer ipage;
+    public Integer currentPage = 1;
 
     @TableField(exist = false)
     public Integer tsize;
 
     private Integer id;
+
+    public Integer getCurrentPage() {
+        return currentPage;
+    }
+
+    public void setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+    }
+
+    public Integer getTsize() {
+        return tsize;
+    }
+
+    public void setTsize(Integer tsize) {
+        this.tsize = tsize;
+    }
 
     public Integer getId() {
         return id;

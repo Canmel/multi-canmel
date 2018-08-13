@@ -1,19 +1,19 @@
 package com.restful.web;
 
 
+import com.baomidou.mybatisplus.enums.SqlLike;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
 import com.restful.entity.SysUser;
 import com.restful.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -50,9 +50,10 @@ public class SysUserController {
     @GetMapping("")
     public HttpResult index(HttpServletRequest request, SysUser sysUser) {
         EntityWrapper<SysUser> userEntityWrapper = new EntityWrapper<SysUser>();
-        userEntityWrapper.setEntity(sysUser);
-
-        return Result.OK(sysUser.selectPage(new Page<SysUser>(), userEntityWrapper));
+        userEntityWrapper.like("username", sysUser.getUsername(), SqlLike.DEFAULT)
+                .like("email", sysUser.getEmail(), SqlLike.DEFAULT);
+        Page<SysUser> userPage = new Page<SysUser>(sysUser.getCurrentPage(), 10);
+        return Result.OK(sysUser.selectPage(userPage, userEntityWrapper));
     }
 
     @GetMapping("/current")
@@ -61,10 +62,30 @@ public class SysUserController {
     }
 
     @GetMapping("/{id}")
-    public HttpResult details(@PathVariable Integer id){
+    public HttpResult details(@PathVariable Integer id) {
         SysUser user = sysUserService.selectById(id);
         user.setPassword(null);
         return Result.OK(user);
+    }
+
+    @PutMapping("/{id}")
+    public HttpResult update(HttpServletRequest request, HttpServletResponse response, @RequestBody SysUser user, @PathVariable Integer id) {
+        if (sysUserService.updateById(user)) {
+            return Result.OK(request, "修改用户成功!");
+        } else {
+            return ErrorResult.EXPECTATION_FAILED("操作未完成，请检查参数");
+        }
+
+    }
+
+    @DeleteMapping("/{id}")
+    public HttpResult delete(HttpServletRequest request, @PathVariable Integer id){
+        if (sysUserService.deleteById(id)){
+            return Result.OK(request, "删除用户成功!");
+        }else{
+            return ErrorResult.EXPECTATION_FAILED("操作未完成，请检查参数");
+        }
+
     }
 }
 

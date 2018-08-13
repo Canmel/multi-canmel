@@ -32,7 +32,7 @@ import org.springframework.stereotype.Component;
  *      ┗┻┛      ┗┻┛
  * @since 2018-08-12
  */
-@Component
+//@Component
 public class MyUserDetailService implements UserDetailsService {
 
     @Override
