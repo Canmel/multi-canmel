@@ -31,6 +31,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
  *      ┗┻┛      ┗┻┛
  * @since 2018-08-12
  */
+
 @Configuration
 @EnableResourceServer
 public class SecurityServerConfig extends ResourceServerConfigurerAdapter {

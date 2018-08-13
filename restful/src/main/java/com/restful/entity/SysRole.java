@@ -1,5 +1,8 @@
 package com.restful.entity;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
+
 /**
  * <p>
  *
@@ -29,8 +32,22 @@ public class SysRole extends BaseEntity<SysRole> {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 主键ID
+     */
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    /**
+     * 角色名称
+     */
     private String rolename;
+    /**
+     * 状态
+     */
+    private Integer status;
+    /**
+     * 简短的描述
+     */
     private String description;
 
 
@@ -50,6 +67,14 @@ public class SysRole extends BaseEntity<SysRole> {
         this.rolename = rolename;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -63,6 +88,7 @@ public class SysRole extends BaseEntity<SysRole> {
         return "SysRole{" +
                 ", id=" + id +
                 ", rolename=" + rolename +
+                ", status=" + status +
                 ", description=" + description +
                 "}";
     }

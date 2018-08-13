@@ -1,17 +1,20 @@
 package com.core.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class Result extends HttpResult {
 
+    @Autowired
+    HttpSession httpSession;
+
     public static final String NOT_FOUND_MSG = "未找到请求页面";
 
-    public Integer httpStatus;
-    public String msg;
     public String access_token;
     public Object data;
 
@@ -47,10 +50,20 @@ public class Result extends HttpResult {
 
     public static Result OK(HttpServletRequest request, Object data) {
         String access_token = "";
-        if(!ObjectUtils.isEmpty(request.getSession().getAttribute("ACCESS_TOKEN"))){
-            access_token = request.getSession().getAttribute("ACCESS_TOKEN").toString();
+        Object oAccessToken = request.getSession().getAttribute("ACCESS_TOKEN");
+        if(!ObjectUtils.isEmpty(oAccessToken)){
+            access_token = oAccessToken.toString();
         }
         return new Result(HttpStatus.OK.value(), "请求成功", access_token, data);
+    }
+
+    public static Result OK(HttpServletRequest request, String msg) {
+        String access_token = "";
+        Object oAccessToken = request.getSession().getAttribute("ACCESS_TOKEN");
+        if(!ObjectUtils.isEmpty(oAccessToken)){
+            access_token = oAccessToken.toString();
+        }
+        return new Result(HttpStatus.OK.value(), msg, access_token);
     }
 
     public static Result OK(String access_token, String msg) {

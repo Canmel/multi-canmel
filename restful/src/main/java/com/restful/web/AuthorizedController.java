@@ -33,8 +33,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/error")
 public class AuthorizedController {
 
-    @GetMapping("/401")
+    @RequestMapping("/401")
     public ErrorResult error401(){
-        return ErrorResult.UNAUTHORIZED("401啊401");
+        return ErrorResult.UNAUTHORIZED("您没有这一操作权限（请联系系统管理员）");
     }
 }

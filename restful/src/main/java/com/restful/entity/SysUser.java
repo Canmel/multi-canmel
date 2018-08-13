@@ -1,6 +1,7 @@
 package com.restful.entity;
 
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
@@ -68,6 +69,7 @@ public class SysUser extends BaseEntity<SysUser>  {
     /**
      * 状态，1正常，0删除，2冻结
      */
+    @TableLogic
     private Integer status;
     private Date createdAt;
 
