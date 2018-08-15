@@ -1,14 +1,10 @@
-package com.restful.service;
-
-import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysRole;
+package com.restful.web;
 
 /**
- * <p>
- *  角色服务类
- * </p>
  *
- * @author  * 
+ * @author baily
+ * 描述:
+ * 控制器基类
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -26,8 +22,8 @@ import com.restful.entity.SysRole;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018年08月14日
  */
-public interface SysRoleService extends IService<SysRole> {
+public abstract class BaseController {
 
 }

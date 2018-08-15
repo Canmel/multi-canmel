@@ -76,7 +76,7 @@ public class MyRestController {
         sysUserEntityWrapper.eq("username", user.getUsername());
         try {
             oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
-            saveToSession(request.getSession(), sysUserService.selectOne(sysUserEntityWrapper));
+            saveToSession(request.getSession(), sysUserService.selectOne(sysUserEntityWrapper), oAuth2AccessToken.getBody().getValue());
             if (ObjectUtils.isEmpty(oAuth2AccessToken)) {
                 return ErrorResult.UNAUTHORIZED("登录失败");
             }
@@ -92,9 +92,10 @@ public class MyRestController {
      * @param session
      * @param user
      */
-    private void saveToSession(HttpSession session, SysUser user) {
+    private void saveToSession(HttpSession session, SysUser user, String access_token) {
         user.setPassword(null);
         session.setAttribute("currentUser", user);
+        session.setAttribute("ACCESS_TOKEN", access_token);
     }
 
     private HttpEntity buildRequestInfoMap(SysUser loginUser) {

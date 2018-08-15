@@ -51,8 +51,9 @@ mybatis-plus:
     # Sequence序列接口实现类配置
 #    key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
     #逻辑删除配置（下面3个配置）
-    logic-delete-value: 0
-    logic-not-delete-value: 1
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
 #    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
     #自定义填充策略接口实现
 #    meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
@@ -63,7 +64,6 @@ mybatis-plus:
     #配置JdbcTypeForNull, oracle数据库必须配置
 #    jdbc-type-for-null: 'null'
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
 #session:
 #  cookie:
 #    name: APPSESSIONID

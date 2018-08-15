@@ -42,7 +42,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RestController
 @RequestMapping("/api/users")
-public class SysUserController {
+public class SysUserController extends BaseController{
 
     @Autowired
     private SysUserService sysUserService;
@@ -53,7 +53,7 @@ public class SysUserController {
         userEntityWrapper.like("username", sysUser.getUsername(), SqlLike.DEFAULT)
                 .like("email", sysUser.getEmail(), SqlLike.DEFAULT);
         Page<SysUser> userPage = new Page<SysUser>(sysUser.getCurrentPage(), 10);
-        return Result.OK(sysUser.selectPage(userPage, userEntityWrapper));
+        return Result.OK(sysUserService.selectPage(userPage, userEntityWrapper));
     }
 
     @GetMapping("/current")
@@ -78,12 +78,21 @@ public class SysUserController {
 
     }
 
+    @PostMapping()
+    public HttpResult create(HttpServletRequest request, @RequestBody SysUser user){
+        if(sysUserService.insert(user)){
+            return Result.OK(request, "新建用户成功");
+        }else{
+            return ErrorResult.EXPECTATION_FAILED();
+        }
+    }
+
     @DeleteMapping("/{id}")
     public HttpResult delete(HttpServletRequest request, @PathVariable Integer id){
         if (sysUserService.deleteById(id)){
             return Result.OK(request, "删除用户成功!");
         }else{
-            return ErrorResult.EXPECTATION_FAILED("操作未完成，请检查参数");
+            return ErrorResult.EXPECTATION_FAILED();
         }
 
     }

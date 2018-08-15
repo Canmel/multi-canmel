@@ -1,6 +1,7 @@
 package com.restful.entity;
 
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
 
 /**
@@ -50,6 +51,8 @@ public class SysRole extends BaseEntity<SysRole> {
      */
     private String description;
 
+    @TableLogic
+    private Integer isDel;
 
     public Integer getId() {
         return id;
@@ -81,6 +84,14 @@ public class SysRole extends BaseEntity<SysRole> {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getIsDel() {
+        return isDel;
+    }
+
+    public void setIsDel(Integer isDel) {
+        this.isDel = isDel;
     }
 
     @Override

@@ -25,4 +25,8 @@ public class ErrorResult extends HttpResult {
     public static ErrorResult EXPECTATION_FAILED(String msg) {
         return new ErrorResult(HttpStatus.EXPECTATION_FAILED.value(), msg);
     }
+
+    public static ErrorResult EXPECTATION_FAILED() {
+        return new ErrorResult(HttpStatus.EXPECTATION_FAILED.value(), "操作未完成，请检查参数");
+    }
 }

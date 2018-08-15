@@ -53,7 +53,7 @@ public class LoginController {
         //获取 Token
         ResponseEntity<OAuth2AccessToken> oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
         if (!ObjectUtils.isEmpty(oAuth2AccessToken.getBody()) && !StringUtils.isEmpty(oAuth2AccessToken.getBody().getValue())) {
-            request.getSession().setAttribute("access_token", oAuth2AccessToken.getBody().getValue());
+            request.getSession().setAttribute("ACCESS_TOKEN", oAuth2AccessToken.getBody().getValue());
             rm.setAccess_token(oAuth2AccessToken.getBody().getValue());
             rm.setMsg("认证成功");
             rm.setHttpStatus(HttpStatus.OK.value());
