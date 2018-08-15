@@ -46,7 +46,7 @@ public class SysRoleController extends BaseController {
     @Autowired
     private SysRoleService sysRoleService;
 
-    @GetMapping("")
+    @GetMapping()
     public HttpResult index(HttpServletRequest request, SysRole sysRole) {
         EntityWrapper<SysRole> sysRoleEntityWrapper = new EntityWrapper<SysRole>();
         sysRoleEntityWrapper.like("rolename", sysRole.getRolename()).like("description", sysRole.getDescription());
@@ -65,15 +65,24 @@ public class SysRoleController extends BaseController {
         if (sysRoleService.updateById(role)) {
             return Result.OK(request, "修改角色成功!");
         } else {
-            return ErrorResult.EXPECTATION_FAILED("操作未完成，请检查参数");
+            return ErrorResult.EXPECTATION_FAILED();
         }
     }
 
     @DeleteMapping("/{id}")
     public HttpResult delete(HttpServletRequest request, @PathVariable Integer id) {
-        if (sysRoleService.deleteById(id)){
+        if (sysRoleService.deleteById(id)) {
             return Result.OK(request, "删除角色成功!");
-        }else{
+        } else {
+            return ErrorResult.EXPECTATION_FAILED();
+        }
+    }
+
+    @PostMapping()
+    public HttpResult create(HttpServletRequest request, @RequestBody SysRole role) {
+        if (role.insert()) {
+            return Result.OK(request, "角色创建成功");
+        } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
     }

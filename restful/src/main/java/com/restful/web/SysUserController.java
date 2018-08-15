@@ -79,7 +79,7 @@ public class SysUserController extends BaseController{
     }
 
     @PostMapping()
-    public HttpResult save(HttpServletRequest request, @RequestBody SysUser user){
+    public HttpResult create(HttpServletRequest request, @RequestBody SysUser user){
         if(sysUserService.insert(user)){
             return Result.OK(request, "新建用户成功");
         }else{

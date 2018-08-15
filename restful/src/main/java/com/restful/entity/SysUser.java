@@ -69,10 +69,11 @@ public class SysUser extends BaseEntity<SysUser>  {
     /**
      * 状态，1正常，0删除，2冻结
      */
-    @TableLogic
     private Integer status;
     private Date createdAt;
 
+    @TableLogic
+    private Integer isDel;
 
     public Integer getId() {
         return id;
@@ -144,6 +145,14 @@ public class SysUser extends BaseEntity<SysUser>  {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Integer getIsDel() {
+        return isDel;
+    }
+
+    public void setIsDel(Integer isDel) {
+        this.isDel = isDel;
     }
 
     @Override
