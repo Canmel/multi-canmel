@@ -10,6 +10,7 @@ import com.core.entity.Result;
 import com.restful.entity.SysUser;
 import com.restful.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,10 +43,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RestController
 @RequestMapping("/api/users")
-public class SysUserController extends BaseController{
+public class SysUserController extends BaseController {
 
     @Autowired
     private SysUserService sysUserService;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @GetMapping("")
     public HttpResult index(HttpServletRequest request, SysUser sysUser) {
@@ -73,28 +77,27 @@ public class SysUserController extends BaseController{
         if (sysUserService.updateById(user)) {
             return Result.OK(request, "修改用户成功!");
         } else {
-            return ErrorResult.EXPECTATION_FAILED("操作未完成，请检查参数");
+            return ErrorResult.EXPECTATION_FAILED();
         }
-
     }
 
     @PostMapping()
-    public HttpResult create(HttpServletRequest request, @RequestBody SysUser user){
-        if(sysUserService.insert(user)){
+    public HttpResult create(HttpServletRequest request, @RequestBody SysUser user) {
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        if (sysUserService.insert(user)) {
             return Result.OK(request, "新建用户成功");
-        }else{
+        } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
     }
 
     @DeleteMapping("/{id}")
-    public HttpResult delete(HttpServletRequest request, @PathVariable Integer id){
-        if (sysUserService.deleteById(id)){
+    public HttpResult delete(HttpServletRequest request, @PathVariable Integer id) {
+        if (sysUserService.deleteById(id)) {
             return Result.OK(request, "删除用户成功!");
-        }else{
+        } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
-
     }
 }
 
