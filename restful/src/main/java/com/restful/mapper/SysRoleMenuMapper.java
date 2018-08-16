@@ -1,13 +1,13 @@
-package com.restful.service;
+package com.restful.mapper;
 
-import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysRole;
-
-import javax.management.relation.Role;
+import com.restful.SuperMapper;
+import com.restful.entity.SysRoleMenu;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
- *  角色服务类
+ *  Mapper 接口
  * </p>
  *
  * @author  * 
@@ -28,8 +28,10 @@ import javax.management.relation.Role;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018-08-16
  */
-public interface SysRoleService extends IService<SysRole> {
-    SysRole selectRoleDetails(Integer id);
+@Repository
+@Mapper
+public interface SysRoleMenuMapper extends SuperMapper<SysRoleMenu> {
+
 }

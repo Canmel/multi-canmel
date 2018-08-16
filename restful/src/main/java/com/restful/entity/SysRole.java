@@ -1,8 +1,11 @@
 package com.restful.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
+
+import java.util.List;
 
 /**
  * <p>
@@ -32,6 +35,12 @@ import com.baomidou.mybatisplus.enums.IdType;
 public class SysRole extends BaseEntity<SysRole> {
 
     private static final long serialVersionUID = 1L;
+
+    @TableField(exist = false)
+    private List<SysMenu> menus;
+
+    @TableField(exist = false)
+    private List<Integer> menuIds;
 
     /**
      * 主键ID
@@ -92,6 +101,22 @@ public class SysRole extends BaseEntity<SysRole> {
 
     public void setIsDel(Integer isDel) {
         this.isDel = isDel;
+    }
+
+    public List<SysMenu> getMenus() {
+        return menus;
+    }
+
+    public void setMenus(List<SysMenu> menus) {
+        this.menus = menus;
+    }
+
+    public List<Integer> getMenuIds() {
+        return menuIds;
+    }
+
+    public void setMenuIds(List<Integer> menuIds) {
+        this.menuIds = menuIds;
     }
 
     @Override

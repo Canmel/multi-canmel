@@ -1,13 +1,14 @@
-package com.restful.service;
+package com.restful.service.impl;
 
-import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysRole;
-
-import javax.management.relation.Role;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.restful.entity.SysRoleMenu;
+import com.restful.mapper.SysRoleMenuMapper;
+import com.restful.service.SysRoleMenuService;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  角色服务类
+ *  服务实现类
  * </p>
  *
  * @author  * 
@@ -28,8 +29,9 @@ import javax.management.relation.Role;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018-08-16
  */
-public interface SysRoleService extends IService<SysRole> {
-    SysRole selectRoleDetails(Integer id);
+@Service
+public class SysRoleMenuServiceImpl extends ServiceImpl<SysRoleMenuMapper, SysRoleMenu> implements SysRoleMenuService {
+
 }

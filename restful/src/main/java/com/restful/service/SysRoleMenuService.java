@@ -1,13 +1,11 @@
 package com.restful.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysRole;
-
-import javax.management.relation.Role;
+import com.restful.entity.SysRoleMenu;
 
 /**
  * <p>
- *  角色服务类
+ *  服务类
  * </p>
  *
  * @author  * 
@@ -28,8 +26,8 @@ import javax.management.relation.Role;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018-08-16
  */
-public interface SysRoleService extends IService<SysRole> {
-    SysRole selectRoleDetails(Integer id);
+public interface SysRoleMenuService extends IService<SysRoleMenu> {
+
 }

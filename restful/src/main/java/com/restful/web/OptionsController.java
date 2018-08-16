@@ -51,7 +51,7 @@ public class OptionsController {
             Map map = menuLevel.getValueMap();
             list.add(map);
         }
-        return Result.OK(request, MenuLevel.all());
+        return Result.OK(MenuLevel.all());
     }
 
 }

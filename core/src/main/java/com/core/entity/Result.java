@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -44,20 +46,22 @@ public class Result extends HttpResult {
     public Result() {
     }
 
-    public static Result OK(String access_token) {
-        return new Result(HttpStatus.OK.value(), access_token);
+    public static HttpServletRequest getRequest(){
+        ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        return servletRequestAttributes.getRequest();
     }
 
-    public static Result OK(HttpServletRequest request, Object data) {
+    public static Result OK(Object data) {
         String access_token = "";
-        Object oAccessToken = request.getSession().getAttribute("ACCESS_TOKEN");
+        Object oAccessToken = getRequest().getSession().getAttribute("ACCESS_TOKEN");
         if(!ObjectUtils.isEmpty(oAccessToken)){
             access_token = oAccessToken.toString();
         }
         return new Result(HttpStatus.OK.value(), "请求成功", access_token, data);
     }
 
-    public static Result OK(HttpServletRequest request, String msg) {
+    public static Result OK(String msg) {
+        HttpServletRequest request = getRequest();
         String access_token = "";
         Object oAccessToken = request.getSession().getAttribute("ACCESS_TOKEN");
         if(!ObjectUtils.isEmpty(oAccessToken)){
@@ -66,17 +70,12 @@ public class Result extends HttpResult {
         return new Result(HttpStatus.OK.value(), msg, access_token);
     }
 
-    public static Result OK(String access_token, String msg) {
-        return new Result(HttpStatus.OK.value(), msg, access_token);
-    }
-
-    public static Result OK(String access_token, String msg, Object obj) {
+    public static Result OK(String msg, Object obj) {
+        String access_token = "";
+        Object oAccessToken = getRequest().getSession().getAttribute("ACCESS_TOKEN");
+        if(!ObjectUtils.isEmpty(oAccessToken)){
+            access_token = oAccessToken.toString();
+        }
         return new Result(HttpStatus.OK.value(), msg, access_token, obj);
     }
-
-    public static Result OK(Object data) {
-        return new Result(HttpStatus.OK.value(), "请求成功", null, data);
-    }
-
-
 }

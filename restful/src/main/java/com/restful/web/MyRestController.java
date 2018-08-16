@@ -84,7 +84,7 @@ public class MyRestController {
             logger.error(e);
             return ErrorResult.UNAUTHORIZED("登录失败, 请检查用户名密码");
         }
-        return Result.OK(oAuth2AccessToken.getBody().getValue(), "登录成功", sysUserService.selectOne(sysUserEntityWrapper));
+        return Result.OK("登录成功", sysUserService.selectOne(sysUserEntityWrapper));
     }
 
     /**
