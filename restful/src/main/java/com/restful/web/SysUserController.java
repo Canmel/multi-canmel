@@ -73,28 +73,28 @@ public class SysUserController extends BaseController {
     }
 
     @PutMapping("/{id}")
-    public HttpResult update(HttpServletRequest request, HttpServletResponse response, @RequestBody SysUser user, @PathVariable Integer id) {
+    public HttpResult update(HttpServletResponse response, @RequestBody SysUser user, @PathVariable Integer id) {
         if (sysUserService.updateById(user)) {
-            return Result.OK(request, "修改用户成功!");
+            return Result.OK("修改用户成功!");
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
     }
 
     @PostMapping()
-    public HttpResult create(HttpServletRequest request, @RequestBody SysUser user) {
+    public HttpResult create(@RequestBody SysUser user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         if (sysUserService.insert(user)) {
-            return Result.OK(request, "新建用户成功");
+            return Result.OK("新建用户成功");
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
     }
 
     @DeleteMapping("/{id}")
-    public HttpResult delete(HttpServletRequest request, @PathVariable Integer id) {
+    public HttpResult delete(@PathVariable Integer id) {
         if (sysUserService.deleteById(id)) {
-            return Result.OK(request, "删除用户成功!");
+            return Result.OK("删除用户成功!");
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }

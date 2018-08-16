@@ -52,36 +52,36 @@ public class SysMenuController extends BaseController {
         EntityWrapper<SysMenu> sysRoleEntityWrapper = new EntityWrapper<SysMenu>();
         sysRoleEntityWrapper.like("menuname", menu.getMenuname()).like("description", menu.getDescription());
         Page<SysMenu> menuPage = new Page<SysMenu>(menu.getCurrentPage(), 10);
-        return Result.OK(request, sysMenuService.selectPage(menuPage, sysRoleEntityWrapper));
+        return Result.OK(sysMenuService.selectPage(menuPage, sysRoleEntityWrapper));
     }
 
     @GetMapping("/{id}")
     public HttpResult details(HttpServletRequest request, @PathVariable Integer id) {
-        return Result.OK(request, sysMenuService.selectById(id));
+        return Result.OK(sysMenuService.selectById(id));
     }
 
     @PutMapping("/{id}")
     public HttpResult update(HttpServletRequest request, HttpServletResponse response, @RequestBody SysMenu menu, @PathVariable Integer id) {
         if (sysMenuService.updateById(menu)) {
-            return Result.OK(request, "修改菜单成功!");
+            return Result.OK("修改菜单成功!");
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
     }
 
     @PostMapping()
-    public HttpResult create(HttpServletRequest request, @RequestBody SysMenu menu) {
+    public HttpResult create(@RequestBody SysMenu menu) {
         if (sysMenuService.insert(menu)) {
-            return Result.OK(request, "新建菜单成功");
+            return Result.OK("新建菜单成功");
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
     }
 
     @DeleteMapping("/{id}")
-    public HttpResult delete(HttpServletRequest request, @PathVariable Integer id) {
+    public HttpResult delete(@PathVariable Integer id) {
         if (sysMenuService.deleteById(id)) {
-            return Result.OK(request, "删除菜单成功!");
+            return Result.OK("删除菜单成功!");
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
@@ -91,7 +91,14 @@ public class SysMenuController extends BaseController {
     public HttpResult top(HttpServletRequest request) {
         EntityWrapper<SysMenu> menuEntityWrapper = new EntityWrapper<SysMenu>();
         menuEntityWrapper.eq("level", MenuLevel.TOP_MENU.getValue());
-        return Result.OK(request, sysMenuService.selectList(menuEntityWrapper));
+        return Result.OK(sysMenuService.selectList(menuEntityWrapper));
+    }
+
+    @GetMapping("/subs")
+    public HttpResult subs(HttpServletRequest request){
+        EntityWrapper<SysMenu> menuEntityWrapper = new EntityWrapper<SysMenu>();
+        menuEntityWrapper.eq("level", MenuLevel.SUB_MENU.getValue());
+        return Result.OK(sysMenuService.selectList(menuEntityWrapper));
     }
 }
 

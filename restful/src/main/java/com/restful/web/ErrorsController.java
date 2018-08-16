@@ -1,11 +1,15 @@
 package com.restful.web;
 
 import com.core.entity.ErrorResult;
+import org.apache.http.protocol.RequestContent;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.servlet.support.RequestContext;
 
 /**
  * <p>
@@ -42,6 +46,8 @@ public class ErrorsController implements ErrorController {
     @RequestMapping(value = ERROR_PATH)
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public ErrorResult handleError() {
+        ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
+        servletRequestAttributes.getResponse().setStatus(HttpStatus.NOT_FOUND.value());
         return ErrorResult.NOTFOUND();
     }
 
