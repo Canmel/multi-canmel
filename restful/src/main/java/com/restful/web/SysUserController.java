@@ -77,9 +77,8 @@ public class SysUserController extends BaseController {
         if (sysUserService.updateById(user)) {
             return Result.OK(request, "修改用户成功!");
         } else {
-            return ErrorResult.EXPECTATION_FAILED("操作未完成，请检查参数");
+            return ErrorResult.EXPECTATION_FAILED();
         }
-
     }
 
     @PostMapping()
