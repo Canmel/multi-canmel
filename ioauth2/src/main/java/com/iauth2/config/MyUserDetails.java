@@ -3,10 +3,12 @@ package com.iauth2.config;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
+import java.util.List;
 
 public class MyUserDetails implements org.springframework.security.core.userdetails.UserDetails {
 
     private User user;
+    private List authorities;
 
     public MyUserDetails(User user) {
         this.user = user;
@@ -15,9 +17,13 @@ public class MyUserDetails implements org.springframework.security.core.userdeta
     public MyUserDetails() {
     }
 
+    public void setAuthorities(List authorities) {
+        this.authorities = authorities;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return this.authorities;
     }
 
     @Override

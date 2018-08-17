@@ -114,5 +114,11 @@ public class SysRoleController extends BaseController {
         }
     }
 
+    @GetMapping("/all")
+    public HttpResult all(){
+        List<SysRole> sysRoleList = sysRoleService.selectList(new EntityWrapper<>());
+        return Result.OK(sysRoleList);
+    }
+
 }
 

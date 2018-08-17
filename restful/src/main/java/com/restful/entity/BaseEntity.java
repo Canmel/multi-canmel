@@ -32,9 +32,11 @@ import java.io.Serializable;
  */
 public class BaseEntity<T extends Model> extends Model<T> {
 
+    /** 当前页 **/
     @TableField(exist = false)
     public Integer currentPage = 1;
 
+    /** 每页条数 **/
     @TableField(exist = false)
     public Integer tsize;
 

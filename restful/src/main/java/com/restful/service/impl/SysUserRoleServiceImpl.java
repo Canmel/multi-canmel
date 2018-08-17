@@ -1,13 +1,14 @@
-package com.restful.service;
+package com.restful.service.impl;
 
-import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysUser;
-
-import javax.servlet.http.HttpServletRequest;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.restful.entity.SysUserRole;
+import com.restful.mapper.SysUserRoleMapper;
+import com.restful.service.SysUserRoleService;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务类
+ *  服务实现类
  * </p>
  *
  * @author  * 
@@ -28,10 +29,9 @@ import javax.servlet.http.HttpServletRequest;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018-08-17
  */
-public interface SysUserService extends IService<SysUser> {
-    SysUser current(HttpServletRequest request);
+@Service
+public class SysUserRoleServiceImpl extends ServiceImpl<SysUserRoleMapper, SysUserRole> implements SysUserRoleService {
 
-    SysUser selectUserDetails(Integer id);
 }
