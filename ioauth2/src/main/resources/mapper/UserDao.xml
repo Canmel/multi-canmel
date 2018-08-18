@@ -8,24 +8,27 @@
         <result column="password" property="password" jdbcType="VARCHAR"></result>
     </resultMap>
 
-    <sql id="Base_Column_List" >
+    <sql id="Base_Column_List">
         id, username, password
     </sql>
 
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseMap">
         SELECT
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         FROM sys_user
         WHERE id = #{id,jdbcType=INTEGER}
     </select>
 
     <select id="selectByUsername" parameterType="java.lang.String" resultMap="BaseMap">
         SELECT
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         FROM sys_user
         WHERE 1=1 AND username = #{username}
         LIMIT 1
     </select>
 
+    <select id="roleList" parameterType="java.lang.Integer" resultType="java.lang.String">
+        select UCASE(rolename) from sys_role where id in (SELECT sur.role_id FROM sys_user_role sur where sur.user_id = #{id} )
+    </select>
 
 </mapper>

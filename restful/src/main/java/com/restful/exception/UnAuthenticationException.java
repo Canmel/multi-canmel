@@ -1,16 +1,12 @@
-package com.restful.service;
-
-import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysUser;
-
-import javax.servlet.http.HttpServletRequest;
+package com.restful.exception;
 
 /**
- * <p>
- *  服务类
- * </p>
  *
- * @author  * 
+ *  前端控制器
+ *
+ * @author baily
+ * 描述:
+ * ${DESCRIPTION}
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -28,10 +24,10 @@ import javax.servlet.http.HttpServletRequest;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018年08月17日
  */
-public interface SysUserService extends IService<SysUser> {
-    SysUser current(HttpServletRequest request);
-
-    SysUser selectUserDetails(Integer id);
+public class UnAuthenticationException extends RuntimeException {
+    public UnAuthenticationException(String message) {
+        super(message);
+    }
 }

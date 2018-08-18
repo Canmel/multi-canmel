@@ -1,12 +1,12 @@
 package com.restful.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
 
-import java.io.Serializable;
 import java.sql.Date;
-import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * <p>
@@ -33,7 +33,7 @@ import java.time.LocalDateTime;
  *      ┗┻┛      ┗┻┛
  * @since 2018-08-12
  */
-public class SysUser extends BaseEntity<SysUser>  {
+public class SysUser extends BaseEntity<SysUser> {
 
     private static final long serialVersionUID = 1L;
 
@@ -70,10 +70,17 @@ public class SysUser extends BaseEntity<SysUser>  {
      * 状态，1正常，0删除，2冻结
      */
     private Integer status;
+
     private Date createdAt;
 
     @TableLogic
     private Integer isDel;
+
+    @TableField(exist = false)
+    private List roleIds;
+
+    @TableField(exist = false)
+    private List<SysRole> sysRoles;
 
     public Integer getId() {
         return id;
@@ -153,6 +160,22 @@ public class SysUser extends BaseEntity<SysUser>  {
 
     public void setIsDel(Integer isDel) {
         this.isDel = isDel;
+    }
+
+    public List getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(List roleIds) {
+        this.roleIds = roleIds;
+    }
+
+    public List<SysRole> getSysRoles() {
+        return sysRoles;
+    }
+
+    public void setSysRoles(List<SysRole> sysRoles) {
+        this.sysRoles = sysRoles;
     }
 
     @Override

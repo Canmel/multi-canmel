@@ -43,7 +43,8 @@ import org.springframework.web.client.RestTemplate;
         "com.restful.config.mybatisplus",
         "com.restful.web",
         "com.restful.config.security",
-        "com.restful.service"})
+        "com.restful.service",
+        "com.restful.exception"})
 public class RestfulController implements CommandLineRunner {
 
     @Bean

@@ -2,10 +2,14 @@ package com.iauth2.config;
 
 import com.iauth2.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 自定义用户详情服务
@@ -25,7 +29,20 @@ public class MyUserDetailsService implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        MyUserDetails userDetails = new MyUserDetails(userDao.selectByUsername(username));
+        User user = userDao.selectByUsername(username);
+        List<String> roles = userDao.roleList(user.getId());
+        MyUserDetails userDetails = new MyUserDetails(user);
+        List lkist = new ArrayList();
+        for (String roleName : roles) {
+            GrantedAuthority grantedAuthority = new GrantedAuthority() {
+                @Override
+                public String getAuthority() {
+                    return "ROLE_" + roleName;
+                }
+            };
+            lkist.add(grantedAuthority);
+        }
+        userDetails.setAuthorities(lkist);
         return userDetails;
     }
 }

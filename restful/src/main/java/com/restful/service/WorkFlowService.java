@@ -1,9 +1,7 @@
 package com.restful.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysUser;
-
-import javax.servlet.http.HttpServletRequest;
+import com.restful.entity.WorkFlow;
 
 /**
  * <p>
@@ -28,10 +26,8 @@ import javax.servlet.http.HttpServletRequest;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018-08-17
  */
-public interface SysUserService extends IService<SysUser> {
-    SysUser current(HttpServletRequest request);
+public interface WorkFlowService extends IService<WorkFlow> {
 
-    SysUser selectUserDetails(Integer id);
 }

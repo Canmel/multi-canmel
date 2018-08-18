@@ -1,13 +1,13 @@
-package com.restful.service;
+package com.restful.mapper;
 
-import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.SysUser;
-
-import javax.servlet.http.HttpServletRequest;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.restful.entity.WorkFlow;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
- *  服务类
+ *  Mapper 接口
  * </p>
  *
  * @author  * 
@@ -28,10 +28,11 @@ import javax.servlet.http.HttpServletRequest;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-12
+ * @since 2018-08-17
  */
-public interface SysUserService extends IService<SysUser> {
-    SysUser current(HttpServletRequest request);
+@Mapper
+@Repository
+public interface WorkFlowMapper extends BaseMapper<WorkFlow> {
 
-    SysUser selectUserDetails(Integer id);
+
 }

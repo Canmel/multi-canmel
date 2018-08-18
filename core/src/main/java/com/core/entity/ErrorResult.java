@@ -5,6 +5,9 @@ import org.springframework.http.HttpStatus;
 public class ErrorResult extends HttpResult {
 
     public static final String NOT_FOUND_MSG = "未找到请求页面";
+    public static final String UNAUTHORIZED_MSG = "授权信息已过期";
+    public static final String EXPECTATION_FAILED_MSG = "操作未完成，请检查参数";
+
 
     public ErrorResult(Integer httpStatus, String msg) {
         this.httpStatus = httpStatus;
@@ -18,6 +21,10 @@ public class ErrorResult extends HttpResult {
         return new ErrorResult(HttpStatus.UNAUTHORIZED.value(), msg);
     }
 
+    public static ErrorResult UNAUTHORIZED() {
+        return new ErrorResult(HttpStatus.UNAUTHORIZED.value(), UNAUTHORIZED_MSG);
+    }
+
     public static ErrorResult NOTFOUND() {
         return new ErrorResult(HttpStatus.NOT_FOUND.value(), NOT_FOUND_MSG);
     }
@@ -27,6 +34,6 @@ public class ErrorResult extends HttpResult {
     }
 
     public static ErrorResult EXPECTATION_FAILED() {
-        return new ErrorResult(HttpStatus.EXPECTATION_FAILED.value(), "操作未完成，请检查参数");
+        return new ErrorResult(HttpStatus.EXPECTATION_FAILED.value(), EXPECTATION_FAILED_MSG);
     }
 }
