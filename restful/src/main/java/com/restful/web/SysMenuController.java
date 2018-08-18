@@ -43,7 +43,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RestController
 @RequestMapping("/api/menus")
-public class SysMenuController extends BaseController {
+    public class SysMenuController extends BaseController {
 
     @Autowired
     private SysMenuService sysMenuService;

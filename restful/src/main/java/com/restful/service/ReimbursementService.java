@@ -1,12 +1,14 @@
-package com.restful.exception;
+package com.restful.service;
+
+import com.restful.entity.Reimbursement;
+import com.baomidou.mybatisplus.service.IService;
 
 /**
+ * <p>
+ *  服务类
+ * </p>
  *
- *  前端控制器
- *
- * @author baily
- * 描述:
- * ${DESCRIPTION}
+ * @author  * 
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -24,14 +26,8 @@ package com.restful.exception;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018年08月17日
+ * @since 2018-08-18
  */
-public class UnAuthenticationException extends RuntimeException {
-    public UnAuthenticationException(String message) {
-        super(message);
-    }
+public interface ReimbursementService extends IService<Reimbursement> {
 
-    public UnAuthenticationException() {
-        super("未找到登录用户信息，session已失效，请重新登录");
-    }
 }

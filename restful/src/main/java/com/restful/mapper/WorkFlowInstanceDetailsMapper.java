@@ -1,12 +1,16 @@
-package com.restful.exception;
+package com.restful.mapper;
+
+import com.restful.SuperMapper;
+import com.restful.entity.WorkFlowInstanceDetails;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
+ * <p>
+ *  Mapper 接口
+ * </p>
  *
- *  前端控制器
- *
- * @author baily
- * 描述:
- * ${DESCRIPTION}
+ * @author  * 
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -24,14 +28,10 @@ package com.restful.exception;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018年08月17日
+ * @since 2018-08-18
  */
-public class UnAuthenticationException extends RuntimeException {
-    public UnAuthenticationException(String message) {
-        super(message);
-    }
+@Mapper
+@Repository
+public interface WorkFlowInstanceDetailsMapper extends SuperMapper<WorkFlowInstanceDetails> {
 
-    public UnAuthenticationException() {
-        super("未找到登录用户信息，session已失效，请重新登录");
-    }
 }

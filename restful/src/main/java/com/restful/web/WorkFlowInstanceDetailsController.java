@@ -1,12 +1,16 @@
-package com.restful.exception;
+package com.restful.web;
+
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.stereotype.Controller;
 
 /**
- *
+ * <p>
  *  前端控制器
+ * </p>
  *
- * @author baily
- * 描述:
- * ${DESCRIPTION}
+ * @author  * 
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -24,14 +28,11 @@ package com.restful.exception;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018年08月17日
+ * @since 2018-08-18
  */
-public class UnAuthenticationException extends RuntimeException {
-    public UnAuthenticationException(String message) {
-        super(message);
-    }
+@Controller
+@RequestMapping("/workflow/instance/details")
+public class WorkFlowInstanceDetailsController {
 
-    public UnAuthenticationException() {
-        super("未找到登录用户信息，session已失效，请重新登录");
-    }
 }
+

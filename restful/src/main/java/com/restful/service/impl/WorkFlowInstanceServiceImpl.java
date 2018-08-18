@@ -1,12 +1,17 @@
-package com.restful.exception;
+package com.restful.service.impl;
+
+import com.restful.entity.WorkFlowInstance;
+import com.restful.mapper.WorkFlowInstanceMapper;
+import com.restful.service.WorkFlowInstanceService;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
 
 /**
+ * <p>
+ *  服务实现类
+ * </p>
  *
- *  前端控制器
- *
- * @author baily
- * 描述:
- * ${DESCRIPTION}
+ * @author  * 
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -24,14 +29,9 @@ package com.restful.exception;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018年08月17日
+ * @since 2018-08-18
  */
-public class UnAuthenticationException extends RuntimeException {
-    public UnAuthenticationException(String message) {
-        super(message);
-    }
+@Service
+public class WorkFlowInstanceServiceImpl extends ServiceImpl<WorkFlowInstanceMapper, WorkFlowInstance> implements WorkFlowInstanceService {
 
-    public UnAuthenticationException() {
-        super("未找到登录用户信息，session已失效，请重新登录");
-    }
 }
