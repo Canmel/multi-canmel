@@ -148,6 +148,13 @@ public class WorkFlow extends BaseEntity<WorkFlow> {
         this.flow = flow;
     }
 
+    public WorkFlow() {
+    }
+
+    public WorkFlow(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "WorkFlow{" +

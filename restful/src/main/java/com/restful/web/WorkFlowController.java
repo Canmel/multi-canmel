@@ -106,10 +106,10 @@ public class WorkFlowController extends BaseController {
     }
 
     @DeleteMapping("/{id}")
-    public HttpResult delete(@PathVariable Integer id){
-        if(workFlowService.deleteById(id)){
+    public HttpResult delete(@PathVariable Integer id) {
+        if (workFlowService.deleteById(id)) {
             return Result.OK("删除流程成功");
-        }else{
+        } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
     }
