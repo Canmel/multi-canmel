@@ -79,7 +79,7 @@ public class GeneratorServiceEntity {
                 .setStrategy(strategyConfig)
                 .setPackageInfo(
                         new PackageConfig()
-                                .setParent("com.restful.pmtest")
+                                .setParent("com.restful")
                                 .setController("controller")
                                 .setEntity("entity")
                 ).execute();

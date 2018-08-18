@@ -3,15 +3,13 @@ package com.restful.web;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
 import com.restful.entity.enums.MenuLevel;
+import com.restful.entity.enums.WorkFlowType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  *
@@ -44,14 +42,12 @@ import java.util.Map;
 public class OptionsController {
 
     @GetMapping("/menus/levels")
-    public HttpResult menuLevel(HttpServletRequest request){
-        List list = new ArrayList();
-        MenuLevel[] menuLevels = MenuLevel.values();
-        for (MenuLevel menuLevel: menuLevels) {
-            Map map = menuLevel.getValueMap();
-            list.add(map);
-        }
+    public HttpResult menuLevel(HttpServletRequest request) {
         return Result.OK(MenuLevel.all());
     }
 
+    @GetMapping("/workflow/typies")
+    public HttpResult workflowTypies() {
+        return Result.OK(WorkFlowType.all());
+    }
 }

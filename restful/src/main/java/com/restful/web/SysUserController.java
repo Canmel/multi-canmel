@@ -129,8 +129,8 @@ public class SysUserController extends BaseController {
      * creat_user: baily
      * creat_date: 2018/8/17
      **/
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     @PostMapping()
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult create(@RequestBody SysUser user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         if (sysUserService.insert(user)) {
@@ -147,8 +147,8 @@ public class SysUserController extends BaseController {
      * creat_user: baily
      * creat_date: 2018/8/17
      **/
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult delete(@PathVariable Integer id) {
         if (sysUserService.deleteById(id)) {
             return Result.OK("删除用户成功!");
