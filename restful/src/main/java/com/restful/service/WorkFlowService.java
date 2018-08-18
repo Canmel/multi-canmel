@@ -30,4 +30,5 @@ import com.restful.entity.WorkFlow;
  */
 public interface WorkFlowService extends IService<WorkFlow> {
 
+    boolean publish(Integer id);
 }
