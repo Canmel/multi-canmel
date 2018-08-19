@@ -46,4 +46,11 @@ public class AdviceController {
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
         return ErrorResult.UNAUTHORIZED();
     }
+
+    @ExceptionHandler(value = WorkFlowInstanceAlreadyExistException.class)
+    public HttpResult workFlowInstanceAlreadyExistException(WorkFlowInstanceAlreadyExistException e){
+        HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+        response.setStatus(HttpStatus.BAD_REQUEST.value());
+        return ErrorResult.BAD_REQUEST(e.getLocalizedMessage());
+    }
 }

@@ -1,20 +1,17 @@
 package com.restful.web;
 
 
-import com.baomidou.mybatisplus.enums.SqlLike;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
-import com.restful.entity.SysUser;
 import com.restful.entity.WorkFlow;
 import com.restful.entity.WorkFlowInstance;
 import com.restful.service.WorkFlowInstanceService;
 import com.restful.service.WorkFlowService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,17 +52,27 @@ public class WorkFlowInstanceController {
     private WorkFlowService workFlowService;
 
     @GetMapping
-    public HttpResult index(WorkFlowInstance workFlowInstance, String workFlowName){
+    public HttpResult index(WorkFlowInstance workFlowInstance, String workFlowName) {
         EntityWrapper<WorkFlow> workFlowEntityWrapper = new EntityWrapper<WorkFlow>();
         List<WorkFlow> workFlowList = new WorkFlow(workFlowName).selectList(null);
         List<Integer> businessIds = new ArrayList<>();
-        for (WorkFlow workFlow: workFlowList){
+        for (WorkFlow workFlow : workFlowList) {
             businessIds.add(workFlow.getId());
         }
         EntityWrapper<WorkFlowInstance> workFlowInstanceEntityWrapper = new EntityWrapper<WorkFlowInstance>();
         workFlowInstanceEntityWrapper.in("business_id", businessIds);
         Page<WorkFlowInstance> workFlowPage = new Page<WorkFlowInstance>(workFlowInstance.getCurrentPage(), 10);
         return Result.OK(workFlowInstanceService.selectPage(workFlowPage, workFlowInstanceEntityWrapper));
+    }
+
+    @PostMapping
+    public HttpResult create(@RequestBody WorkFlowInstance workFlowInstance) {
+        if (workFlowInstanceService.insert(workFlowInstance)) {
+            return Result.OK("发起工作流实例成功");
+        } else {
+            return ErrorResult.UNAUTHORIZED();
+        }
+
     }
 
 }

@@ -1,9 +1,17 @@
 package com.restful.entity;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.restful.entity.enums.WorkFlowRectType;
+import com.restful.entity.enums.WorkFlowType;
+import org.springframework.util.StringUtils;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * <p>
@@ -42,7 +50,7 @@ public class WorkFlowInstance extends BaseEntity<WorkFlowInstance> {
     private String next;
     private Integer status;
     private Date createdAt;
-
+    private String flow;
 
     public Integer getId() {
         return id;
@@ -98,6 +106,54 @@ public class WorkFlowInstance extends BaseEntity<WorkFlowInstance> {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getFlow() {
+        return flow;
+    }
+
+    public void setFlow(String flow) {
+        this.flow = flow;
+    }
+
+    public WorkFlowTask currentTask() {
+        WorkFlowTask workFlowTask = new WorkFlowTask();
+        if (!StringUtils.isEmpty(this.current)) {
+            JSONObject currentMap = JSONObject.parseObject(this.flow);
+
+            String type = (String) currentMap.get("type");
+            workFlowTask.setType(type);
+
+            JSONObject text = (JSONObject) currentMap.get("text");
+            String textVal = (String) text.get("text");
+            workFlowTask.setText(textVal);
+
+            JSONObject desc = currentMap.getJSONObject("desc");
+            String descVal = (String) desc.get("value");
+            workFlowTask.setDesc(descVal);
+        }
+        if (StringUtils.isEmpty(this.flow)) {
+            return null;
+        }
+        workFlowTask.setFlow(this.flow);
+
+
+        JSONObject map = JSONObject.parseObject(this.flow);
+        JSONObject states = map.getJSONObject("states");
+        for (Object o: states.values()) {
+            String taskType = ((JSONObject) o).getString("type");
+            if(WorkFlowRectType.RECT_TYPE_START.getValue().equals(taskType)){
+                workFlowTask.setType(taskType);
+                String text = ((JSONObject) o).getString("text");
+                String textVal = JSONObject.parseObject(text).getString("text");
+                workFlowTask.setText(textVal);
+                String desc = ((JSONObject) o).getString("desc");
+                workFlowTask.setDesc(desc);
+                break;
+            }
+        }
+        // TODO 看我 ！ 看我 ！修剪修剪这里的代码哈
+        return workFlowTask;
     }
 
     @Override

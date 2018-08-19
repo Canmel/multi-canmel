@@ -42,6 +42,12 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Service
 public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, Reimbursement> implements ReimbursementService {
+   
+    /**
+     * describe: 插入报销申请
+     * creat_user: baily
+     * creat_date: 2018/8/19
+     **/
     @Override
     public boolean insert(Reimbursement entity) {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
