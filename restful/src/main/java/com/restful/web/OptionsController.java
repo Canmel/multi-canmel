@@ -5,6 +5,7 @@ import com.core.entity.HttpResult;
 import com.core.entity.Result;
 import com.restful.entity.WorkFlow;
 import com.restful.entity.enums.MenuLevel;
+import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.entity.enums.WorkFlowType;
 import com.restful.service.WorkFlowService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,6 +78,7 @@ public class OptionsController {
         WorkFlowType workFlowType = WorkFlowType.valueOf(type);
         EntityWrapper<WorkFlow> workFlowEntityWrapper = new EntityWrapper<>();
         workFlowEntityWrapper.eq("flowType", workFlowType.getValue());
+        workFlowEntityWrapper.eq("is_public", WorkFlowPublish.PUBLISHED.getValue());
         return Result.OK(workFlowService.selectList(workFlowEntityWrapper));
     }
 

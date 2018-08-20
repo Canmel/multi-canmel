@@ -133,6 +133,38 @@ public class WorkFlowInstance extends BaseEntity<WorkFlowInstance> {
         this.nextFlow = nextFlow;
     }
 
+    /** TODO
+     * describe: 流程进入下一步
+     * creat_user: baily
+     * creat_date: 2018/8/20
+     **/
+    public void toNextTask(){
+
+    }
+
+    /** TODO
+     * describe: 是否下一步是结束
+     * creat_user: baily
+     * creat_date: 2018/8/20
+     **/
+    public boolean isNextEnd(){
+        return false;
+    }
+
+    /** TODO
+     * describe: 当前节点是否是结束节点
+     * creat_user: baily
+     * creat_date: 2018/8/20
+     **/
+    public boolean isCurrentEnd(){
+        return false;
+    }
+
+    /**
+     * describe: 更新工作流实例，核实下一步 等信息
+     * creat_user: baily
+     * creat_date: 2018/8/20
+     **/
     public boolean updateInstance() {
         if (!this.paramsCheck()) {
             return false;
