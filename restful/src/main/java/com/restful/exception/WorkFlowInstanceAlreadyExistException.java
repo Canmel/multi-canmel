@@ -1,14 +1,12 @@
-package com.restful.service;
-
-import com.baomidou.mybatisplus.service.IService;
-import com.restful.entity.WorkFlow;
+package com.restful.exception;
 
 /**
- * <p>
- *  服务类
- * </p>
  *
- * @author  * 
+ *  前端控制器
+ *
+ * @author baily
+ * 描述:
+ * ${DESCRIPTION}
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -26,9 +24,10 @@ import com.restful.entity.WorkFlow;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018-08-17
+ * @since 2018年08月19日
  */
-public interface WorkFlowService extends IService<WorkFlow> {
-
-    boolean publish(Integer id);
+public class WorkFlowInstanceAlreadyExistException extends RuntimeException {
+    public WorkFlowInstanceAlreadyExistException() {
+        super("工作流实例已经发起，或还没有关闭，暂不能发起");
+    }
 }

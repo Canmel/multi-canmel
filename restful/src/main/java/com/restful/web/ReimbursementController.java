@@ -47,7 +47,7 @@ public class ReimbursementController extends BaseController {
     public HttpResult index(Reimbursement reimbursement) {
         Page<Reimbursement> reimbursementPage = new Page<Reimbursement>(reimbursement.getCurrentPage(), 10);
         EntityWrapper<Reimbursement> reimbursementEntityWrapper = new EntityWrapper<Reimbursement>();
-        reimbursementEntityWrapper.like("name", reimbursement.getName());
+        reimbursementEntityWrapper.like("description", reimbursement.getDescription());
         return Result.OK(reimbursementService.selectPage(reimbursementPage, reimbursementEntityWrapper));
     }
 

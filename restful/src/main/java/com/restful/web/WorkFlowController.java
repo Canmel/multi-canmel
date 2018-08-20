@@ -8,6 +8,7 @@ import com.core.entity.HttpResult;
 import com.core.entity.Result;
 import com.restful.entity.SysUser;
 import com.restful.entity.WorkFlow;
+import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.exception.UnAuthenticationException;
 import com.restful.service.WorkFlowService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,6 +106,11 @@ public class WorkFlowController extends BaseController {
         }
     }
 
+    /**
+     * describe: 删除流程
+     * creat_user: baily
+     * creat_date: 2018/8/19
+     **/
     @DeleteMapping("/{id}")
     public HttpResult delete(@PathVariable Integer id) {
         if (workFlowService.deleteById(id)) {
@@ -112,6 +118,21 @@ public class WorkFlowController extends BaseController {
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
+    }
+
+    /**
+     * describe: 发布流程
+     * creat_user: baily
+     * creat_date: 2018/8/19
+     **/
+    @GetMapping("/publish/{id}")
+    public HttpResult publish(@PathVariable Integer id) {
+        if (workFlowService.publish(id)) {
+            return Result.OK("发布流程成功");
+        } else {
+            return ErrorResult.UNAUTHORIZED();
+        }
+
     }
 }
 

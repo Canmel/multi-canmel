@@ -41,6 +41,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @ComponentScan(basePackages = {
         "com.restful.config.mybatisplus",
+        "com.restful.config.application",
         "com.restful.web",
         "com.restful.config.security",
         "com.restful.service",

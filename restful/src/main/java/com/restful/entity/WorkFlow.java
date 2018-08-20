@@ -155,6 +155,15 @@ public class WorkFlow extends BaseEntity<WorkFlow> {
         this.name = name;
     }
 
+    public WorkFlow(Integer id) {
+        this.id = id;
+    }
+
+    public WorkFlow(Integer id, Integer isPublic) {
+        this.id = id;
+        this.isPublic = isPublic;
+    }
+
     @Override
     public String toString() {
         return "WorkFlow{" +
