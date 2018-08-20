@@ -1,5 +1,9 @@
 package com.restful.entity;
 
+import com.alibaba.fastjson.JSONObject;
+import com.restful.config.application.WorkFlowProperties;
+import org.springframework.util.StringUtils;
+
 /**
  *
  *  前端控制器
@@ -28,6 +32,8 @@ package com.restful.entity;
  */
 public class WorkFlowTask {
     private String flow;
+
+    private String flowName;
 
     private String text;
 
@@ -75,5 +81,32 @@ public class WorkFlowTask {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getFlowName() {
+        return flowName;
+    }
+
+    public void setFlowName(String flowName) {
+        this.flowName = flowName;
+    }
+
+    public WorkFlowTask(String flowName, String flow) {
+        if (StringUtils.isEmpty(flow) || StringUtils.isEmpty(flowName)) {
+            return;
+        }
+        this.flow = flow;
+        this.flowName = flowName;
+        JSONObject jsonObject = JSONObject.parseObject(flow);
+        String taskType = jsonObject.getString(WorkFlowProperties.WORKFLOW_TYPE);
+        this.setType(taskType);
+        String text = ((JSONObject) jsonObject).getString(WorkFlowProperties.WORKFLOW_TEXT);
+        String textVal = JSONObject.parseObject(text).getString(WorkFlowProperties.WORKFLOW_TEXT);
+        this.setText(textVal);
+        String desc = ((JSONObject) jsonObject).getString(WorkFlowProperties.WORKFLOW_DESC);
+        this.setDesc(desc);
+    }
+
+    public WorkFlowTask() {
     }
 }

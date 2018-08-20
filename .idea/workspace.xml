@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cefdc6c2-9d18-42b3-a5ec-68f2bb6ad5c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowRectType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/exception/WorkFlowInstanceAlreadyExistException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/config/application/WorkFlowProperties.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/main/java/com/core/entity/ErrorResult.java" afterPath="$PROJECT_DIR$/core/src/main/java/com/core/entity/ErrorResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/pom.xml" afterPath="$PROJECT_DIR$/restful/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/restful.iml" afterPath="$PROJECT_DIR$/restful/restful.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/exception/AdviceController.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/exception/AdviceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/camel/.idea/workspace.xml" afterPath="$PROJECT_DIR$/view/camel/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,47 +33,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WorkFlowInstance.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java">
+      <file leaf-file-name="WorkFlowInstanceServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="154" column="19" lean-forward="false" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+            <state relative-caret-position="148">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkFlowType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowType.java">
+      <file leaf-file-name="ReimbursementController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+            <state relative-caret-position="171">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkFlowInstance.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55">
+              <caret line="135" column="33" lean-forward="false" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1836#1837#0" expanded="true" />
+                <element signature="e#1874#1875#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkFlowRectType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowRectType.java">
+      <file leaf-file-name="WorkFlowInstanceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+            <state relative-caret-position="228">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IService.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/IService.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceImpl.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/impl/ServiceImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="36" />
               <folding>
-                <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#794#795#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
+                <element signature="e#1427#1428#0" expanded="true" />
+                <element signature="e#1475#1476#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkFlowInstanceServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java">
+      <file leaf-file-name="WorkFlow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="1335">
+              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,8 +112,18 @@
       <file leaf-file-name="MethodProxy.class" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestfulController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -112,13 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>stateless</find>
-      <find>com.baomidou.springboot.MyMetaObjectHandler</find>
-      <find>mobie</find>
-      <find>未找到请求页面</find>
-      <find>ErrorResult</find>
-      <find>UNAUTHORIZED</find>
-      <find>NOT_FOUND_MSG</find>
       <find>common</find>
       <find>8080</find>
       <find>401啊</find>
@@ -142,6 +168,13 @@
       <find>Authentication</find>
       <find>currentUser</find>
       <find>RequestContextHolder.getRequestAttributes</find>
+      <find>WorkFlowTask</find>
+      <find>workFlowTask</find>
+      <find>current</find>
+      <find>nextTaskStr</find>
+      <find>getTaskStrByRectName</find>
+      <find>inser</find>
+      <find>insert(</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -166,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/SecurityServerConfig.java" />
         <option value="$PROJECT_DIR$/ioauth2/src/main/java/com/iauth2/config/MyUserDetails.java" />
         <option value="$PROJECT_DIR$/ioauth2/src/main/java/com/iauth2/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/ioauth2/src/main/resources/mapper/UserDao.xml" />
@@ -187,7 +219,6 @@
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/AdviceController.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/core/entity/Result.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/core/entity/HttpResult.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysUserController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceDetailsService.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstanceDetails.java" />
@@ -200,7 +231,6 @@
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/Reimbursement.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/mapper/ReimbursementMapper.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/exception/UnAuthenticationException.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/OptionsController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/WorkFlowService.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowPublish.java" />
@@ -213,10 +243,13 @@
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java" />
         <option value="$PROJECT_DIR$/restful/pom.xml" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowRectType.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/config/application/WorkFlowProperties.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java" />
       </list>
     </option>
   </component>
@@ -409,7 +442,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
@@ -421,103 +454,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="restful" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowRectType" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowType" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowInstance" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowTask" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="AdviceController" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="UnAuthenticationException" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
@@ -541,6 +477,19 @@
               <item name="restful" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
+              <item name="restful" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="restful" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="SysRoleServiceImpl" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
@@ -564,8 +513,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowService" type="1a9f42e2:ClassTreeNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
@@ -577,6 +525,19 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="restful" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="AuthorizedController" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
+              <item name="restful" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="restful" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="ReimbursementController" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
@@ -589,6 +550,17 @@
               <item name="restful" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WorkFlowInstanceController" type="1a9f42e2:ClassTreeNode" />
+            </path>
+            <path>
+              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
+              <item name="restful" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="restful" type="462c0819:PsiDirectoryNode" />
+              <item name="RestfulController" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
@@ -844,6 +816,29 @@
               <item name="baomidou" type="462c0819:PsiDirectoryNode" />
               <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="ServiceImpl" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
@@ -2027,7 +2022,7 @@
       <workItem from="1534166590679" duration="5972000" />
       <workItem from="1534174873217" duration="24450000" />
       <workItem from="1534402027288" duration="2980000" />
-      <workItem from="1534429342686" duration="70623000" />
+      <workItem from="1534429342686" duration="88553000" />
     </task>
     <task id="LOCAL-00001" summary="login">
       <created>1532919289528</created>
@@ -2211,7 +2206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534612853879</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="流程设计">
+      <created>1534692131409</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1534692131409</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2238,7 +2240,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346895000" />
+    <option name="totallyTimeSpent" value="364825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -2303,7 +2305,8 @@
     <MESSAGE value="工作流增删改查" />
     <MESSAGE value="添加工作流增删改查，工作流实例模块，报销申请增删改查" />
     <MESSAGE value="发布流程" />
-    <option name="LAST_COMMIT_MESSAGE" value="发布流程" />
+    <MESSAGE value="流程设计" />
+    <option name="LAST_COMMIT_MESSAGE" value="流程设计" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2345,22 +2348,16 @@
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java</url>
-          <line>155</line>
+          <url>file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java</url>
+          <line>64</line>
           <properties />
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java</url>
-          <line>145</line>
-          <properties />
-          <option name="timeStamp" value="150" />
+          <option name="timeStamp" value="190" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="151" />
+      <option name="time" value="193" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -2392,6 +2389,12 @@
         <watch expression="WorkFlowRectType.RECT_TYPE_START.name()" />
         <watch expression="WorkFlowRectType.RECT_TYPE_START.getName()" />
         <watch expression="WorkFlowRectType.RECT_TYPE_START.getValue()" />
+        <watch expression="currentFlow.keySet()" />
+        <watch expression="currentFlow.keySet()" />
+        <watch expression="entity.currentTask()" />
+        <watch expression="entity.currentTask()" />
+        <watch expression="entity.currentTask()" />
+        <watch expression="entity.currentTask()" />
       </configuration>
       <configuration name="Application">
         <watch expression="oAuth2ProtectedResourceDetails.getAccessTokenUri()" />
@@ -2404,62 +2407,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/SysMenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/SysRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/WorkFlowInstanceDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="46" column="30" lean-forward="false" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/CodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/SysRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/resources/mapper/SysRoleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2523,20 +2470,6 @@
         <state relative-caret-position="188">
           <caret line="84" column="112" lean-forward="false" selection-start-line="84" selection-start-column="88" selection-end-line="84" selection-end-column="112" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="54" column="69" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1140#1155#0" expanded="false" />
-            <element signature="e#1276#1291#0" expanded="false" />
-            <element signature="e#1834#1835#0" expanded="false" />
-            <element signature="e#1903#1904#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2611,26 +2544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1152">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/exception/AdviceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/IService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -2654,14 +2571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="70" column="27" lean-forward="false" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -2709,17 +2618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding>
-            <element signature="e#1801#1802#0" expanded="true" />
-            <element signature="e#1836#1837#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/parser/JSONParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-689">
@@ -2760,34 +2658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          <folding>
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/SysUserRoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -2820,22 +2690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -2846,22 +2700,150 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/RolesProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/SysUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowRectType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        <state relative-caret-position="266">
+          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="104" column="19" lean-forward="true" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
           <folding>
-            <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/application/WorkFlowProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/SysRoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/AuthorizedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="119" column="34" lean-forward="true" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/IService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/impl/ServiceImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="36" />
+          <folding>
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="154" column="19" lean-forward="false" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+        <state relative-caret-position="55">
+          <caret line="135" column="33" lean-forward="false" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="33" />
+          <folding>
+            <element signature="e#1836#1837#0" expanded="true" />
+            <element signature="e#1874#1875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -43,9 +43,6 @@ public class WorkFlowInstanceServiceImpl extends ServiceImpl<WorkFlowInstanceMap
     @Autowired
     private WorkFlowService workFlowService;
 
-    @Autowired
-    private WorkFlowInstanceService workFlowInstanceService;
-
     /**
      * describe: 重写报销申请工作流实例
      * creat_user: baily
@@ -55,7 +52,7 @@ public class WorkFlowInstanceServiceImpl extends ServiceImpl<WorkFlowInstanceMap
     public boolean insert(WorkFlowInstance entity) {
         EntityWrapper<WorkFlowInstance> workFlowInstanceEntityWrapper = new EntityWrapper<>();
         workFlowInstanceEntityWrapper.eq("business_id", entity.getBusinessId());
-        WorkFlowInstance workFlowInstance = workFlowInstanceService.selectOne(workFlowInstanceEntityWrapper);
+        WorkFlowInstance workFlowInstance = this.selectOne(workFlowInstanceEntityWrapper);
 
         if (!ObjectUtils.isEmpty(workFlowInstance)) {
             throw new WorkFlowInstanceAlreadyExistException();
@@ -64,8 +61,7 @@ public class WorkFlowInstanceServiceImpl extends ServiceImpl<WorkFlowInstanceMap
         WorkFlow workFlow = workFlowService.selectById(entity.getWorkFlowId());
         entity.setFlow(workFlow.getFlow());
 
-        entity.setCurrent(entity.currentTask().getFlow());
-
-        return false;
+        entity.updateInstance();
+        return super.insert(entity);
     }
 }
