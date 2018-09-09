@@ -15,7 +15,6 @@
         <module>web</module>
         <module>restful</module>
         <module>core</module>
-        <module>iauth2</module>
         <module>ioauth2</module>
     </modules>
     <packaging>pom</packaging>

@@ -11,6 +11,10 @@
 
     <artifactId>restful</artifactId>
 
+    <properties>
+        <activiti.version>5.17.0</activiti.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.canmel</groupId>
@@ -29,8 +33,8 @@
             <version>2.2.0</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-jetty</artifactId>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-jetty</artifactId>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.apache.velocity</groupId>
@@ -50,6 +54,170 @@
             <version>1.2.47</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-spring-boot-starter-basic</artifactId>
+            <version>5.18.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-security</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>mybatis</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>activation</artifactId>
+                    <groupId>javax.activation</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.activiti</groupId>-->
+            <!--<artifactId>activiti-rest</artifactId>-->
+            <!--<version>${activiti.version}</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.slf4j </groupId>-->
+                    <!--<artifactId>slf4j-log4j12</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>activiti-engine</artifactId>-->
+                    <!--<groupId>org.activiti</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                    <!--<artifactId>spring-boot-starter-security</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-config</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-crypto</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-web</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.xmlgraphics</groupId>-->
+            <!--<artifactId>batik-codec</artifactId>-->
+            <!--<version>1.7</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.xmlgraphics</groupId>-->
+            <!--<artifactId>batik-css</artifactId>-->
+            <!--<version>1.7</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.xmlgraphics</groupId>-->
+            <!--<artifactId>batik-svg-dom</artifactId>-->
+            <!--<version>1.7</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.xmlgraphics</groupId>-->
+            <!--<artifactId>batik-svggen</artifactId>-->
+            <!--<version>1.7</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.activiti</groupId>-->
+            <!--<artifactId>activiti-explorer</artifactId>-->
+            <!--<version>${activiti.version}</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.slf4j </groupId>-->
+                    <!--<artifactId>slf4j-log4j12</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>activiti-bpmn-model</artifactId>-->
+                    <!--<groupId>org.activiti</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                    <!--<artifactId>spring-boot-starter-security</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-config</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-crypto</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-web</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.activiti</groupId>-->
+            <!--<artifactId>activiti-diagram-rest</artifactId>-->
+            <!--<version>${activiti.version}</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                    <!--<artifactId>spring-boot-starter-security</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-config</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-crypto</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.security</groupId>-->
+                    <!--<artifactId>spring-security-web</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.activiti</groupId>-->
+            <!--<artifactId>activiti-simple-workflow</artifactId>-->
+            <!--<version>${activiti.version}</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>activiti-bpmn-layout</artifactId>-->
+                    <!--<groupId>org.activiti</groupId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.activiti</groupId>-->
+            <!--<artifactId>activiti-spring</artifactId>-->
+            <!--<version>${activiti.version}</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.slf4j</groupId>-->
+                    <!--<artifactId>slf4j-log4j12</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>druid</artifactId>-->
+            <!--<version>1.1.10</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>

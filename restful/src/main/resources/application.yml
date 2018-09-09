@@ -10,13 +10,13 @@ security:
     client:
       clientId: spring-boot-web-client
       clientSecret: 123123
-      userAuthorizationUri: http://localhost:8080/oauth/authorize
+      userAuthorizationUri: http://localhost:9999/oauth/authorize
       grant-type: password
       scope: all
-      access-token-uri: http://localhost:8080/oauth/token
+      access-token-uri: http://localhost:9999/oauth/token
     resource:
       jwt:
-        key-uri: http://localhost:8080/oauth/token_key
+        key-uri: http://localhost:9999/oauth/token_key
   basic:
     enabled: false
 

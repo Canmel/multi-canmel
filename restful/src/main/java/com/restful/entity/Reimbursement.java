@@ -1,14 +1,15 @@
 package com.restful.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
+
 import java.math.BigDecimal;
-import com.baomidou.mybatisplus.annotations.TableId;
-import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author  * 
@@ -59,6 +60,9 @@ public class Reimbursement extends BaseEntity<Reimbursement> {
      * 备注
      */
     private String description;
+
+    @TableField(exist = false)
+    private WorkFlowInstance workFlowInstance;
 
 
     public Integer getId() {
@@ -117,16 +121,24 @@ public class Reimbursement extends BaseEntity<Reimbursement> {
         this.description = description;
     }
 
+    public WorkFlowInstance getWorkFlowInstance() {
+        return workFlowInstance;
+    }
+
+    public void setWorkFlowInstance(WorkFlowInstance workFlowInstance) {
+        this.workFlowInstance = workFlowInstance;
+    }
+
     @Override
     public String toString() {
         return "Reimbursement{" +
-        ", id=" + id +
-        ", name=" + name +
-        ", amount=" + amount +
-        ", creator=" + creator +
-        ", status=" + status +
-        ", isDel=" + isDel +
-        ", description=" + description +
-        "}";
+                ", id=" + id +
+                ", name=" + name +
+                ", amount=" + amount +
+                ", creator=" + creator +
+                ", status=" + status +
+                ", isDel=" + isDel +
+                ", description=" + description +
+                "}";
     }
 }
