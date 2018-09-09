@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cefdc6c2-9d18-42b3-a5ec-68f2bb6ad5c6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_converter_5_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_model_5_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_engine_5_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_image_generator_5_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_process_validation_5_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_spring_5_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_spring_boot_starter_basic_5_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_email_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_1_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_13_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_13_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/config/activiti/ActitytiDataSourceConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/gwkj-base" afterPath="$PROJECT_DIR$/view/gwkj-base" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/Reimbursement.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/Reimbursement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/java/com/restful/web/OptionsController.java" afterPath="$PROJECT_DIR$/restful/src/main/java/com/restful/web/OptionsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/core.iml" afterPath="$PROJECT_DIR$/core/core.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/pom.xml" afterPath="$PROJECT_DIR$/core/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioauth2/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/ioauth2/src/main/resources/application.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/pom.xml" afterPath="$PROJECT_DIR$/restful/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/restful.iml" afterPath="$PROJECT_DIR$/restful/restful.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restful/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/restful/src/main/resources/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,112 +52,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReimbursementController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
-              <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+            <state relative-caret-position="300">
+              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReimbursementService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/ReimbursementService.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/restful/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="593">
+              <caret line="191" column="14" lean-forward="true" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activiti-diagram-rest-5.17.0.pom" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-diagram-rest/5.17.0/activiti-diagram-rest-5.17.0.pom">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1485">
+              <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="104" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkFlowType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowType.java">
+      <file leaf-file-name="activiti-spring-boot-starter-rest-api-5.18.0.pom" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-rest-api/5.18.0/activiti-spring-boot-starter-rest-api-5.18.0.pom">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="57" column="15" lean-forward="true" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+            <state relative-caret-position="735">
+              <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activiti-spring-boot-starter-actuator-5.18.0.pom" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-actuator/5.18.0/activiti-spring-boot-starter-actuator-5.18.0.pom">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activiti-spring-boot-starters-5.18.0.pom" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starters/5.18.0/activiti-spring-boot-starters-5.18.0.pom">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activiti-spring-boot-starter-basic-5.18.0.pom" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-basic/5.18.0/activiti-spring-boot-starter-basic-5.18.0.pom">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1890">
+              <caret line="126" column="21" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActitytiDataSourceConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/activiti/ActitytiDataSourceConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkFlow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlow.java">
+      <file leaf-file-name="AbstractProcessEngineAutoConfiguration.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-basic/5.18.0/activiti-spring-boot-starter-basic-5.18.0.jar!/org/activiti/spring/boot/AbstractProcessEngineAutoConfiguration.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="33" column="76" lean-forward="false" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkFlowInstance.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java">
+      <file leaf-file-name="AbstractProcessEngineConfiguration.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-basic/5.18.0/activiti-spring-boot-starter-basic-5.18.0.jar!/org/activiti/spring/boot/AbstractProcessEngineConfiguration.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="153" column="12" lean-forward="false" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
-              <folding>
-                <element signature="e#3034#3035#0" expanded="true" />
-                <element signature="e#3062#3063#0" expanded="true" />
-                <element signature="e#3203#3204#0" expanded="true" />
-                <element signature="e#3231#3232#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkFlowPublish.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowPublish.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReimbursementServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OptionsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/OptionsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="80" column="61" lean-forward="false" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reimbursement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/Reimbursement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="123" column="51" lean-forward="false" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
-              <folding>
-                <element signature="e#2343#2344#0" expanded="true" />
-                <element signature="e#2417#2418#0" expanded="true" />
-                <element signature="e#2473#2474#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkFlowController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1249">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -158,22 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>common</find>
-      <find>8080</find>
-      <find>401啊</find>
-      <find>session().se</find>
-      <find>ACCESS_TOKEN</find>
-      <find>encode</find>
-      <find>AbstractSecurityConfig</find>
-      <find>PasswordEncoder</find>
-      <find>BCr</find>
-      <find>addMenus(template: TemplateRef&lt;any&gt;, id) {</find>
-      <find>Result.OK</find>
-      <find>memu</find>
-      <find>menu</find>
-      <find>hasAuthority</find>
-      <find>has</find>
-      <find>roles</find>
       <find>UsernamePasswordAuthenticationToken</find>
       <find>UserDetails</find>
       <find>SecurityExpressionRoot</find>
@@ -188,6 +189,22 @@
       <find>getTaskStrByRectName</find>
       <find>inser</find>
       <find>insert(</find>
+      <find>8080</find>
+      <find>DataSource</find>
+      <find>ch.</find>
+      <find>ch.qos</find>
+      <find>log</find>
+      <find>slf4</find>
+      <find>slf4j</find>
+      <find>dataSource</find>
+      <find>初始化</find>
+      <find>未找到请求</find>
+      <find>ErrorResult</find>
+      <find>securit</find>
+      <find>security</find>
+      <find>securi</find>
+      <find>secu</find>
+      <find>eng</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -212,27 +229,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ioauth2/src/main/java/com/iauth2/config/MyUserDetails.java" />
-        <option value="$PROJECT_DIR$/ioauth2/src/main/java/com/iauth2/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/ioauth2/src/main/resources/mapper/UserDao.xml" />
-        <option value="$PROJECT_DIR$/ioauth2/src/main/java/com/iauth2/config/MyUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/config/RolesProperties.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/SysRole.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/MyRestController.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/RoleName.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/BaseEntity.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysRoleController.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/mapper/WorkFlowServiceImpl.java" />
         <option value="$PROJECT_DIR$/restful/src/main/resources/mapper/SysUserRoleMapper.xml" />
         <option value="$PROJECT_DIR$/restful/src/main/resources/mapper/WorkFlowMapper.xml" />
         <option value="$PROJECT_DIR$/restful/src/main/resources/mapper/SysRoleMenuMapper.xml" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/genetator/GeneratorServiceEntity.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/mapper/WorkFlowMapper.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowType.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/AdviceController.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/core/entity/Result.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/core/entity/HttpResult.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysUserController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceDetailsService.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstanceDetails.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/WorkFlowInstanceDetailsService.java" />
@@ -240,21 +244,17 @@
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/mapper/WorkFlowInstanceDetailsMapper.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/WorkFlowInstanceService.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceDetailsController.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysMenuController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/mapper/ReimbursementMapper.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/exception/UnAuthenticationException.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/WorkFlowService.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowPublish.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlow.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowServiceImpl.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/exception/WorkFlowInstanceAlreadyExistException.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/core/entity/ErrorResult.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/exception/AdviceController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java" />
-        <option value="$PROJECT_DIR$/restful/pom.xml" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowRectType.java" />
-        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/config/application/WorkFlowProperties.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java" />
@@ -263,6 +263,23 @@
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/OptionsController.java" />
         <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java" />
+        <option value="$PROJECT_DIR$/auth2/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ioauth2/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/core/pom.xml" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/ErrorsController.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysUserController.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysMenuController.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/MyRestController.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/genetator/GeneratorServiceEntity.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/SecurityServerConfig.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowController.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/springboot/ActitytiDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/java/com/restful/config/activiti/ActitytiDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/restful/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/restful/pom.xml" />
       </list>
     </option>
   </component>
@@ -283,7 +300,23 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="restful" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="restful" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="restful" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="com.baomidou:mybatis-plus-boot-starter:2.2.0" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -310,10 +343,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -345,1302 +374,28 @@
               <item name="restful" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowPublish" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowInstance" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="ReimbursementServiceImpl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkFlowService" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="multi-canmel" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="restful" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="OptionsController" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx" type="462c0819:PsiDirectoryNode" />
-              <item name="jmx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx" type="462c0819:PsiDirectoryNode" />
-              <item name="jmx" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx" type="462c0819:PsiDirectoryNode" />
-              <item name="jmx" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx" type="462c0819:PsiDirectoryNode" />
-              <item name="jmx" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="JSONStreamReaderImpl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="javafx-mx.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oracle" type="462c0819:PsiDirectoryNode" />
-              <item name="javafx" type="462c0819:PsiDirectoryNode" />
-              <item name="jmx" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="JSONReader" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="nashorn.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="nashorn.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jdk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="nashorn.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jdk" type="462c0819:PsiDirectoryNode" />
-              <item name="nashorn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="nashorn.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jdk" type="462c0819:PsiDirectoryNode" />
-              <item name="nashorn" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="nashorn.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jdk" type="462c0819:PsiDirectoryNode" />
-              <item name="nashorn" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="nashorn.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jdk" type="462c0819:PsiDirectoryNode" />
-              <item name="nashorn" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="JSONParser" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:fastjson:1.2.47" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:fastjson:1.2.47" type="70bed36:NamedLibraryElementNode" />
-              <item name="fastjson-1.2.47.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:fastjson:1.2.47" type="70bed36:NamedLibraryElementNode" />
-              <item name="fastjson-1.2.47.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:fastjson:1.2.47" type="70bed36:NamedLibraryElementNode" />
-              <item name="fastjson-1.2.47.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:fastjson:1.2.47" type="70bed36:NamedLibraryElementNode" />
-              <item name="fastjson-1.2.47.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
-              <item name="fastjson" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:fastjson:1.2.47" type="70bed36:NamedLibraryElementNode" />
-              <item name="fastjson-1.2.47.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="alibaba" type="462c0819:PsiDirectoryNode" />
-              <item name="fastjson" type="462c0819:PsiDirectoryNode" />
-              <item name="JSONArray" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="ServiceImpl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-support:2.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-support-2.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="baomidou" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisplus" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="IService" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" type="70bed36:NamedLibraryElementNode" />
-              <item name="tomcat-embed-core-8.5.23.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" type="70bed36:NamedLibraryElementNode" />
-              <item name="tomcat-embed-core-8.5.23.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" type="70bed36:NamedLibraryElementNode" />
-              <item name="tomcat-embed-core-8.5.23.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" type="70bed36:NamedLibraryElementNode" />
-              <item name="tomcat-embed-core-8.5.23.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="catalina" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" type="70bed36:NamedLibraryElementNode" />
-              <item name="tomcat-embed-core-8.5.23.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="catalina" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.23" type="70bed36:NamedLibraryElementNode" />
-              <item name="tomcat-embed-core-8.5.23.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="catalina" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="ApplicationFilterChain" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="codehaus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="codehaus" type="462c0819:PsiDirectoryNode" />
-              <item name="jackson" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="codehaus" type="462c0819:PsiDirectoryNode" />
-              <item name="jackson" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="codehaus" type="462c0819:PsiDirectoryNode" />
-              <item name="jackson" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="JsonParserBase" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="codehaus" type="462c0819:PsiDirectoryNode" />
-              <item name="jackson" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="codehaus" type="462c0819:PsiDirectoryNode" />
-              <item name="jackson" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="JsonParserDelegate" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-core-asl-1.9.13.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="codehaus" type="462c0819:PsiDirectoryNode" />
-              <item name="jackson" type="462c0819:PsiDirectoryNode" />
-              <item name="JsonParser" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="Jackson2JsonParser" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="JsonParser" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-              <item name="ResourceServerConfigurer" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-oauth2-2.0.14.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-              <item name="ResourceServerConfigurerAdapter" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="configurers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="configurers" type="462c0819:PsiDirectoryNode" />
-              <item name="ExpressionUrlAuthorizationConfigurer" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-config-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="configurers" type="462c0819:PsiDirectoryNode" />
-              <item name="ExpressionUrlAuthorizationConfigurer" type="1a9f42e2:ClassTreeNode" />
-              <item name="AuthorizedUrl" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-              <item name="SecurityExpressionOperations" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-              <item name="SecurityExpressionRoot" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="DaoAuthenticationProvider" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="jaas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="jaas" type="462c0819:PsiDirectoryNode" />
-              <item name="JaasAuthenticationToken" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="AbstractAuthenticationToken" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="UsernamePasswordAuthenticationToken" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="userdetails" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="userdetails" type="462c0819:PsiDirectoryNode" />
-              <item name="UserDetails" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="Authentication" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-core-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="GrantedAuthority" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-              <item name="WebSecurityExpressionRoot" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-security-web-4.2.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="WebAuthenticationDetails" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="cglib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="cglib" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-core:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-core-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="cglib" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-              <item name="MethodProxy" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="multi-canmel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.3.13.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.3.13.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="InvocableHandlerMethod" type="1a9f42e2:ClassTreeNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="Httr&#9;FILE&#9;file:///Users/baily/project/multi-canmel/core/src/main/java/com/core/entity/HttpResult.java&#10;HttpR&#9;FILE&#9;file:///Users/baily/project/multi-canmel/core/src/main/java/com/core/entity/HttpResult.java&#10;menuC&#9;FILE&#9;file:///Users/baily/project/multi-canmel/restful/src/main/java/com/restful/web/SysMenuController.java&#10;SysMenuC&#9;FILE&#9;file:///Users/baily/project/multi-canmel/restful/src/main/java/com/restful/web/SysMenuController.java&#10;AbstractSecurityConfig&#9;PSI&#9;JAVA://com.config.oauth2config.config.AbstractSecurityConfig&#10;LogicSqlInjector&#9;FILE&#9;jar:///Users/baily/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-core/2.2.0/mybatis-plus-core-2.2.0.jar!/com/baomidou/mybatisplus/mapper/LogicSqlInjector.class&#10;JdbcTy&#9;PSI&#9;JAVA://org.apache.ibatis.type.JdbcType&#10;Obje&#9;PSI&#9;JAVA://java.lang.Object&#10;UserDe&#9;FILE&#9;file:///Users/baily/project/multi-canmel/auth2/src/main/java/com/auth2/service/UserDetailsService.java&#10;UserDetai&#9;FILE&#9;jar:///Users/baily/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java&#10;IClientDetailsService&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iauth2/src/main/java/com/iauth2/config/IClientDetailsService.java&#10;public.c&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/public.css&#10;main&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/home/main.css&#10;inde&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/javascript/main/index.js&#10;publ&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/public.css&#10;index&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/main/index.css&#10;publi&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/public.css&#10;all&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/plugins/vendor/all.js&#10;all.js&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/plugins/vendor/all.js&#10;login&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/javascript/login/login.js" />
+    <property name="SearchEverywhereHistoryKey" value="log4&#9;PSI&#9;JAVA://org.apache.log4j.Log4jLoggerFactory#log4jLoggers&#10;Httr&#9;FILE&#9;file:///Users/baily/project/multi-canmel/core/src/main/java/com/core/entity/HttpResult.java&#10;HttpR&#9;FILE&#9;file:///Users/baily/project/multi-canmel/core/src/main/java/com/core/entity/HttpResult.java&#10;menuC&#9;FILE&#9;file:///Users/baily/project/multi-canmel/restful/src/main/java/com/restful/web/SysMenuController.java&#10;SysMenuC&#9;FILE&#9;file:///Users/baily/project/multi-canmel/restful/src/main/java/com/restful/web/SysMenuController.java&#10;AbstractSecurityConfig&#9;PSI&#9;JAVA://com.config.oauth2config.config.AbstractSecurityConfig&#10;LogicSqlInjector&#9;FILE&#9;jar:///Users/baily/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-core/2.2.0/mybatis-plus-core-2.2.0.jar!/com/baomidou/mybatisplus/mapper/LogicSqlInjector.class&#10;JdbcTy&#9;PSI&#9;JAVA://org.apache.ibatis.type.JdbcType&#10;Obje&#9;PSI&#9;JAVA://java.lang.Object&#10;UserDe&#9;FILE&#9;file:///Users/baily/project/multi-canmel/auth2/src/main/java/com/auth2/service/UserDetailsService.java&#10;UserDetai&#9;FILE&#9;jar:///Users/baily/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java&#10;IClientDetailsService&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iauth2/src/main/java/com/iauth2/config/IClientDetailsService.java&#10;public.c&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/public.css&#10;main&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/home/main.css&#10;inde&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/javascript/main/index.js&#10;publ&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/public.css&#10;index&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/main/index.css&#10;publi&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/css/public.css&#10;all&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/plugins/vendor/all.js&#10;all.js&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/plugins/vendor/all.js&#10;login&#9;FILE&#9;file:///Users/baily/project/multi-canmel/iweb/src/main/resources/static/javascript/login/login.js" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -1652,12 +407,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/iweb/src/main/resources/static/css" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl" />
-      <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/service" />
-      <recent name="$PROJECT_DIR$/restful/src/main/resources/mapper" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/mapper" />
-      <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/entity" />
+      <recent name="$PROJECT_DIR$/restful/src/main/resources" />
+      <recent name="$PROJECT_DIR$/iweb/src/main/resources/static/plugins/jqgrid/js" />
+      <recent name="$PROJECT_DIR$/iweb/src/main/resources/static/fonts/asap" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.restful.entity.enums" />
@@ -1666,11 +420,12 @@
       <recent name="com.iauth2.config" />
       <recent name="com.core.entity" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl" />
+      <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/service" />
+      <recent name="$PROJECT_DIR$/restful/src/main/resources/mapper" />
       <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/mapper" />
-      <recent name="$PROJECT_DIR$/restful/src/main/resources" />
-      <recent name="$PROJECT_DIR$/iweb/src/main/resources/static/plugins/jqgrid/js" />
-      <recent name="$PROJECT_DIR$/iweb/src/main/resources/static/fonts/asap" />
+      <recent name="$PROJECT_DIR$/restful/src/main/java/com/restful/entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1685,22 +440,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GeneratorServiceEntity">
+  <component name="RunManager" selected="Spring Boot.RestfulController">
     <configuration name="Auth2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.auth2.Auth2Application" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="auth2" />
       <envs />
     </configuration>
     <configuration name="ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.config.oauth2config.ConfigApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="config" />
       <envs />
     </configuration>
     <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.core.CoreApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="core" />
       <envs />
     </configuration>
@@ -1750,24 +508,28 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.iauth2.IOauth2Application" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="ioauth2" />
       <envs />
     </configuration>
     <configuration name="IwebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.iweb.IwebApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="iweb" />
       <envs />
     </configuration>
     <configuration name="RestfulController" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.restful.RestfulController" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="restful" />
       <envs />
     </configuration>
     <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.web.WebApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="web" />
       <envs />
     </configuration>
@@ -1824,6 +586,12 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1891,8 +659,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.GeneratorServiceEntity" />
-        <item index="1" class="java.lang.String" itemvalue="Spring Boot.IOauth2Application" />
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.IOauth2Application" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GeneratorServiceEntity" />
         <item index="2" class="java.lang.String" itemvalue="Application.IAuth2Application" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.com.iauth2.config in iauth2" />
       </list>
@@ -1928,7 +696,15 @@
       <workItem from="1534166590679" duration="5972000" />
       <workItem from="1534174873217" duration="24450000" />
       <workItem from="1534402027288" duration="2980000" />
-      <workItem from="1534429342686" duration="92535000" />
+      <workItem from="1534429342686" duration="94838000" />
+      <workItem from="1535592674701" duration="722000" />
+      <workItem from="1535696414339" duration="597000" />
+      <workItem from="1535711934218" duration="590000" />
+      <workItem from="1536300295246" duration="595000" />
+      <workItem from="1536412441427" duration="3835000" />
+      <workItem from="1536417369314" duration="152000" />
+      <workItem from="1536417559153" duration="9796000" />
+      <workItem from="1536497708577" duration="9422000" />
     </task>
     <task id="LOCAL-00001" summary="login">
       <created>1532919289528</created>
@@ -2126,7 +902,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534737316552</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="流程设计">
+      <created>1534768534714</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1534768534714</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2153,34 +936,34 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368807000" />
+    <option name="totallyTimeSpent" value="396819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40153453" sideWeight="0.5114449" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3201389" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40153453" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40153453" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34526855" sideWeight="0.48712447" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35652173" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40920717" sideWeight="0.48712447" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.49284694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34620887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23680556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2188,6 +971,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2260,17 +1044,35 @@
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java</url>
           <line>64</line>
           <properties />
           <option name="timeStamp" value="190" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/CodeController.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/ErrorsController.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/MyRestController.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="193" />
+      <option name="time" value="197" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -2320,449 +1122,396 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/restful/src/main/resources/mapper/SysRoleMapper.xml">
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring/5.17.0/activiti-spring-5.17.0.jar!/org/activiti/spring/SpringProcessEngineConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/resources/mapper/ReimbursementMapper.xml">
+    <entry file="file://$PROJECT_DIR$/view/gwkj-base/gwkj-dygzjcxt/target/classes/logback-spring.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="76" column="81" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="81" />
-          <folding>
-            <element signature="e#2015#2024#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="142">
+          <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/mapper/ReimbursementMapper.java">
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/canmel/core/1.0.SNAPSHOT/core-1.0.SNAPSHOT.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/gwkj-base/gwkj-dygzjcxt/src/main/java/com/gwkj/dygzjcxt/security/DygzjcxtUserDetailsService.java">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="256">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/SysMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="84" column="112" lean-forward="false" selection-start-line="84" selection-start-column="88" selection-end-line="84" selection-end-column="112" />
+        <state relative-caret-position="158">
+          <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth2/src/main/java/com/auth2/Auth2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/ioauth2/src/main/java/com/iauth2/IOauth2Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        <state relative-caret-position="90">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/WorkFlowInstanceService.java">
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25-sources.jar!/org/apache/log4j/Log4jLoggerFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="133">
+          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/Log4jLoggerFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/gwkj-base/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="53" column="14" lean-forward="false" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/gwkj-base/gwkj-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="157" column="25" lean-forward="false" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/mybatisplus/MybatisPlusConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceDetailsController.java">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/mybatisplus/MyBeanConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/exception/UnAuthenticationException.java">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/genetator/GeneratorServiceEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-          <folding>
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-125">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/exception/AdviceController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        <state relative-caret-position="-713">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/CustomAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/Http401AuthenticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/MySecurityExpressionRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/CustomWebAuthenticationDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="37" column="35" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/MyUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/MyUserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/security/SecurityServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="42" column="201" lean-forward="false" selection-start-line="42" selection-start-column="201" selection-end-line="42" selection-end-column="201" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/core/entity/ErrorResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="46" />
-          <folding>
-            <element signature="e#585#586#0" expanded="false" />
-            <element signature="e#661#662#0" expanded="false" />
-            <element signature="e#855#856#0" expanded="false" />
-            <element signature="e#930#931#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1064#1065#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="48" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/core/entity/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="34" column="141" lean-forward="true" selection-start-line="34" selection-start-column="141" selection-end-line="34" selection-end-column="141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/exception/WorkFlowInstanceAlreadyExistException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/common/util/JsonParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/common/util/Jackson2JsonParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/parser/JSONParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-689">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/lib/javafx-mx.jar!/com/oracle/javafx/jmx/json/impl/JSONStreamReaderImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/lib/javafx-mx.jar!/com/oracle/javafx/jmx/json/JSONReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar!/org/codehaus/jackson/JsonParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/SysUserRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/alibaba/fastjson/1.2.47/fastjson-1.2.47.jar!/com/alibaba/fastjson/JSONArray.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar!/org/codehaus/jackson/impl/JsonParserBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar!/org/codehaus/jackson/util/JsonParserDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/RolesProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/SysUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/CodeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowRectType.java">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/ErrorsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="104" column="19" lean-forward="true" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
-            <element signature="e#1479#1480#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/application/WorkFlowProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/SysRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/AuthorizedController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        <state relative-caret-position="236">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/MyRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/RestfulController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="119" column="34" lean-forward="true" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
+        <state relative-caret-position="33">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/IService.class">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/SuperMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="370">
+          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowInstanceController.java">
+    <entry file="file://$PROJECT_DIR$/restful/restful.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/impl/ServiceImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="36" />
-          <folding>
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/WorkFlowInstanceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/WorkFlowService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/WorkFlowController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1249">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="138">
+          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/ReimbursementController.java">
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-rest/5.17.0/activiti-rest-5.17.0.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="101">
+          <caret line="210" column="26" lean-forward="true" selection-start-line="210" selection-start-column="26" selection-end-line="210" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/web/OptionsController.java">
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/apache/xmlgraphics/batik-codec/1.7/batik-codec-1.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="80" column="61" lean-forward="false" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="61" />
-          <folding />
+        <state relative-caret-position="-647">
+          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/Reimbursement.java">
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/apache/xmlgraphics/batik-css/1.7/batik-css-1.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="123" column="51" lean-forward="false" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
-          <folding>
-            <element signature="e#2343#2344#0" expanded="true" />
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2473#2474#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-474">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/impl/ReimbursementServiceImpl.java">
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/apache/xmlgraphics/batik-svg-dom/1.7/batik-svg-dom-1.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="85" column="5" lean-forward="false" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="146">
+          <caret line="101" column="29" lean-forward="false" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/service/ReimbursementService.java">
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/apache/xmlgraphics/batik-svggen/1.7/batik-svggen-1.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="-607">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowType.java">
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-explorer/5.17.0/activiti-explorer-5.17.0.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="57" column="15" lean-forward="true" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+        <state relative-caret-position="191">
+          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-simple-workflow/5.17.0/activiti-simple-workflow-5.17.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1469">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring/5.17.0/activiti-spring-5.17.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/config/activiti/ActitytiDataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlow.java">
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-basic/5.18.0/activiti-spring-boot-starter-basic-5.18.0.jar!/org/activiti/spring/boot/AbstractProcessEngineAutoConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="33" column="76" lean-forward="false" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/enums/WorkFlowPublish.java">
+    <entry file="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-basic/5.18.0/activiti-spring-boot-starter-basic-5.18.0.jar!/org/activiti/spring/boot/AbstractProcessEngineConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="90">
+          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restful/src/main/java/com/restful/entity/WorkFlowInstance.java">
+    <entry file="file://$PROJECT_DIR$/restful/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="153" column="12" lean-forward="false" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
-          <folding>
-            <element signature="e#3034#3035#0" expanded="true" />
-            <element signature="e#3062#3063#0" expanded="true" />
-            <element signature="e#3203#3204#0" expanded="true" />
-            <element signature="e#3231#3232#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starters/5.18.0/activiti-spring-boot-starters-5.18.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-rest-api/5.18.0/activiti-spring-boot-starter-rest-api-5.18.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="19" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-actuator/5.18.0/activiti-spring-boot-starter-actuator-5.18.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-spring-boot-starter-basic/5.18.0/activiti-spring-boot-starter-basic-5.18.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="126" column="21" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/activiti/activiti-diagram-rest/5.17.0/activiti-diagram-rest-5.17.0.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="104" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restful/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="191" column="14" lean-forward="true" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
       </provider>
     </entry>
   </component>

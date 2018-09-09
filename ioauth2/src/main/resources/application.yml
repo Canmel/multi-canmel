@@ -1,6 +1,6 @@
 # 配置服务相关信息
 server:
-  port: 8080
+  port: 9999
 
 encrypt:
   key-store:
