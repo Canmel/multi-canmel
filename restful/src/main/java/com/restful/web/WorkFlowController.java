@@ -58,6 +58,7 @@ public class WorkFlowController extends BaseController {
     public HttpResult index(WorkFlow workFlow) {
         EntityWrapper<WorkFlow> entityWrapper = new EntityWrapper<>();
         entityWrapper.like("name", workFlow.getName());
+        entityWrapper.orderBy("id", false);
         Page<WorkFlow> workFlowPage = new Page<WorkFlow>(workFlow.getCurrentPage(), 10);
         return Result.OK(workFlowService.selectPage(workFlowPage, entityWrapper));
     }
