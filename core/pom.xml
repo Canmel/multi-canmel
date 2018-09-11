@@ -11,11 +11,15 @@
 
     <artifactId>core</artifactId>
 
+    <properties>
+        <spring-context.version>3.1.0.RELEASE</spring-context.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>3.1.0.RELEASE</version>
+            <version>${spring-context.version}</version>
         </dependency>
     </dependencies>
 
