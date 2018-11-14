@@ -4,12 +4,14 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.restful.config.security.CustomAuthenticationProvider;
 import com.restful.entity.SysUser;
 import com.restful.service.SysUserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties;
 import org.springframework.http.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.util.LinkedMultiValueMap;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Base64;
 import java.util.Collections;
@@ -68,13 +71,25 @@ public class MyRestController {
     @Autowired
     private OAuth2ProtectedResourceDetails oAuth2ProtectedResourceDetails;
 
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
+    private CustomAuthenticationProvider customAuthenticationProvider;
+
     @PostMapping("/login")
-    public HttpResult login(HttpServletRequest request, SysUser user) {
+    public HttpResult login(HttpServletRequest request, HttpServletResponse response, SysUser user, String imageCode) {
+        if (!validCode(imageCode, request)) {
+            logger.info("验证码错误或已过期");
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+            return ErrorResult.UNAUTHORIZED("验证码错误或已过期");
+        }
         HttpEntity httpEntity = buildRequestInfoMap(user);
         ResponseEntity<OAuth2AccessToken> oAuth2AccessToken = null;
         EntityWrapper<SysUser> sysUserEntityWrapper = new EntityWrapper<SysUser>();
         sysUserEntityWrapper.eq("username", user.getUsername());
         try {
+            bCryptPasswordEncoder.encode("123456");
             oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
             saveToSession(request.getSession(), sysUserService.selectOne(sysUserEntityWrapper), oAuth2AccessToken.getBody().getValue());
             if (ObjectUtils.isEmpty(oAuth2AccessToken)) {
@@ -82,6 +97,7 @@ public class MyRestController {
             }
         } catch (Exception e) {
             logger.error(e);
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return ErrorResult.UNAUTHORIZED("登录失败, 请检查用户名密码");
         }
         return Result.OK("登录成功", sysUserService.selectOne(sysUserEntityWrapper));
@@ -112,4 +128,15 @@ public class MyRestController {
         //HttpEntity
         return new HttpEntity(map, httpHeaders);
     }
+
+    private boolean validCode(String verifyCode, HttpServletRequest request) {
+        String session_verifyTime = (String) request.getSession().getAttribute("session_imageTime");
+        Long st = Long.parseLong(session_verifyTime);
+        if (st - System.currentTimeMillis() > 60) {
+            return false;
+        }
+        StringBuffer sessiom_code = (StringBuffer) request.getSession().getAttribute("session_imageCode");
+        return verifyCode.equals(sessiom_code.toString());
+    }
+
 }

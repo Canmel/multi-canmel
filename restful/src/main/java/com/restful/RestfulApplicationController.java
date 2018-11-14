@@ -1,15 +1,12 @@
 package com.restful;
 
-import javafx.application.Application;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -46,17 +43,17 @@ import org.springframework.web.client.RestTemplate;
         "com.restful.config.security",
         "com.restful.service",
         "com.restful.exception"})
-public class RestfulController implements CommandLineRunner {
+public class RestfulApplicationController implements CommandLineRunner {
 
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
-    public static Logger logger = LoggerFactory.getLogger(RestfulController.class);
+    public static Logger logger = LoggerFactory.getLogger(RestfulApplicationController.class);
 
     public static void main(String[] args) {
-        SpringApplication.run(RestfulController.class, args);
+        SpringApplication.run(RestfulApplicationController.class, args);
     }
 
     @Override

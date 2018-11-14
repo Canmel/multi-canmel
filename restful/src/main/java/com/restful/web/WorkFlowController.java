@@ -11,6 +11,10 @@ import com.restful.entity.WorkFlow;
 import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.exception.UnAuthenticationException;
 import com.restful.service.WorkFlowService;
+import org.activiti.engine.ProcessEngine;
+import org.activiti.engine.ProcessEngines;
+import org.activiti.engine.RepositoryService;
+import org.activiti.engine.repository.Deployment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
@@ -48,6 +52,11 @@ public class WorkFlowController extends BaseController {
 
     @Autowired
     private WorkFlowService workFlowService;
+
+    @Autowired
+    private ProcessEngine processEngine() {
+         return ProcessEngines.getDefaultProcessEngine();
+    }
 
     /**
      * describe: 分页查询工作流信息
@@ -128,12 +137,10 @@ public class WorkFlowController extends BaseController {
      **/
     @GetMapping("/publish/{id}")
     public HttpResult publish(@PathVariable Integer id) {
-        if (workFlowService.publish(id)) {
-            return Result.OK("发布流程成功");
-        } else {
-            return ErrorResult.UNAUTHORIZED();
-        }
-
+        WorkFlow workFlow = workFlowService.selectById(id);
+        Deployment deployment = processEngine().getRepositoryService().createDeployment().addString("test", workFlow.getFlow()).deploy();
+        System.out.println(deployment.getName());
+        return Result.OK("流程部署成功");
     }
 }
 
