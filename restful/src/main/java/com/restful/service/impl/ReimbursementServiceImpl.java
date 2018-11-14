@@ -52,9 +52,6 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
 
 
 
-    @Autowired
-    private WorkFlowInstanceService workFlowInstanceService;
-
     /**
      * describe: 插入报销申请
      * creat_user: baily
@@ -79,8 +76,6 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
             Reimbursement reimbursement = i.next();
             EntityWrapper<WorkFlowInstance> workFlowInstanceEntityWrapper = new EntityWrapper<>();
             workFlowInstanceEntityWrapper.eq("business_id", reimbursement.getId());
-            WorkFlowInstance workFlowInstance = workFlowInstanceService.selectOne(workFlowInstanceEntityWrapper);
-            reimbursement.setWorkFlowInstance(workFlowInstance);
         }
         return reimbursementPage;
     }

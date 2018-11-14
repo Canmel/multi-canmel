@@ -53,7 +53,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
                 throw new ImageCodeIllegalException("验证码已超时");
             }
         }
-        return null; //如果后续要有验证密码的provider，这里需要直接返回null
+        return authentication; //如果后续要有验证密码的provider，这里需要直接返回null
     }
 
     @Override
