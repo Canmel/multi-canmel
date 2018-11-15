@@ -19,6 +19,8 @@
         <freemarker.version>2.3.23</freemarker.version>
         <fastjson.version>1.2.47</fastjson.version>
         <activiti-starter.version>5.18.0</activiti-starter.version>
+        <springfox-version>2.7.0</springfox-version>
+        <swagger-core-version>1.5.15</swagger-core-version>
     </properties>
 
     <dependencies>
@@ -79,6 +81,22 @@
                     <groupId>javax.activation</groupId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>swagger-ui</artifactId>
+            <version>3.1.4</version>
         </dependency>
     </dependencies>
 

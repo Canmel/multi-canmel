@@ -40,7 +40,11 @@ public class SecurityServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/login/**", "/auth/**", "/index", "/", "/code/verify", "/css/**", "/javascript/**", "/images/**", "/plugins/**", "/error/**", "/fonts/**", "/swagger-ui/**").permitAll();
+        http.authorizeRequests().antMatchers("/login/**", "/configuration/**","/auth/**",
+                "/index", "/", "/code/verify", "/css/**", "/javascript/**", "/images/**", "/plugins/**", "/error/**",
+                "/fonts/**", "/webjars/**", "/resources/**", "/swagger-ui.html"
+                , "/swagger-resources/**", "/v2/api-docs", "index.html", "/oauth/token"
+                , "/oauth/authorize", "/swagger").permitAll();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
         http.authorizeRequests().anyRequest().authenticated();
         http.headers().frameOptions().disable();

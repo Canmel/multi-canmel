@@ -4,10 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * <p>
@@ -35,12 +37,15 @@ import org.springframework.web.client.RestTemplate;
  * @since 2018-08-12
  */
 //@EnableTransactionManagement
+@EnableAutoConfiguration
 @SpringBootApplication
+@EnableSwagger2
 @ComponentScan(basePackages = {
         "com.restful.config.mybatisplus",
         "com.restful.config.application",
         "com.restful.web",
         "com.restful.config.security",
+        "com.restful.config.swagger",
         "com.restful.service",
         "com.restful.exception"})
 public class RestfulApplicationController implements CommandLineRunner {
