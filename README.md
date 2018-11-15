@@ -61,12 +61,12 @@
 > 完成的用户-角色-权限管理
 > 接口部分添加了用户权限限制
 > 基本完成Angular4项目`canmel`的后台接口 [Canmel](https://github.com/Canmel/camel)
-
+> 新增angular7前端项目 `c7` [Canmel](https://github.com/Canmel/c7)
 ```
 
 ### 启动顺序
 1. 启动授权服务器（ioauth2）
-2. 启动restful
+2. 启动restful / c7
 3. 对应前端camel （angular）
 
 ## web
