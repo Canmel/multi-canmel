@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.0.4">
     <CLASSES>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/2.0.4/thymeleaf-layout-dialect-2.0.4.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/2.0.4/thymeleaf-layout-dialect-2.0.4.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/2.0.4/thymeleaf-layout-dialect-2.0.4-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/2.0.4/thymeleaf-layout-dialect-2.0.4-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/2.0.4/thymeleaf-layout-dialect-2.0.4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/nz/net/ultraq/thymeleaf/thymeleaf-layout-dialect/2.0.4/thymeleaf-layout-dialect-2.0.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.httpcomponents:httpclient:4.5.3">
     <CLASSES>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-sources.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

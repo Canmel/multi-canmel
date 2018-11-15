@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.security:spring-security-jwt:1.0.8.RELEASE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/security/spring-security-jwt/1.0.8.RELEASE/spring-security-jwt-1.0.8.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/org/springframework/security/spring-security-jwt/1.0.8.RELEASE/spring-security-jwt-1.0.8.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/security/spring-security-jwt/1.0.8.RELEASE/spring-security-jwt-1.0.8.RELEASE-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/org/springframework/security/spring-security-jwt/1.0.8.RELEASE/spring-security-jwt-1.0.8.RELEASE-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/code/svn_repository/国网浙江电力-基于电能计量装置的低压故障监测系统项目管理/04source/041code/maven_repository/org/springframework/security/spring-security-jwt/1.0.8.RELEASE/spring-security-jwt-1.0.8.RELEASE-sources.jar!/" />
+      <root url="jar://$USER_HOME$/code/svn_repository/org/springframework/security/spring-security-jwt/1.0.8.RELEASE/spring-security-jwt-1.0.8.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
