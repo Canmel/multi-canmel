@@ -8,9 +8,6 @@ import com.baomidou.mybatisplus.enums.IdType;
 import java.util.List;
 
 /**
- * <p>
- *
- * </p>
  *
  * @author  * 
  *   ┏ ┓   ┏ ┓
@@ -69,6 +66,11 @@ public class SysRole extends BaseEntity<SysRole> {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public SysRole addId(Integer id){
+        this.id = id;
+        return this;
     }
 
     public String getRolename() {
