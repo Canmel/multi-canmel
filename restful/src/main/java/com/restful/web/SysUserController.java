@@ -216,7 +216,7 @@ public class SysUserController extends BaseController {
         }
         SysUser user = users.get(0);
         if(!ObjectUtils.isEmpty(sysUser.getId()) && user.getId().equals(sysUser.getId())){
-            return Result.OK("用户名可使用");
+            return Result.OK("用户名可用");
         }else {
             return ErrorResult.EXPECTATION_FAILED("用户名已存在");
         }

@@ -9,19 +9,25 @@ import com.core.entity.Result;
 import com.restful.entity.SysMenu;
 import com.restful.entity.enums.MenuLevel;
 import com.restful.service.SysMenuService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
  *  前端控制器
  * </p>
  *
- * @author  * 
+ * @author  *
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -43,13 +49,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RestController
 @RequestMapping("/api/menus")
-    public class SysMenuController extends BaseController {
+@Api(value = "菜单接口", description = "菜单接口")
+public class SysMenuController extends BaseController {
 
     @Autowired
     private SysMenuService sysMenuService;
-    
+
     /**
-     * param: 
+     * param:
      *   menu: 查询项
      * describe: 分页查询菜单信息
      * creat_user: baily
@@ -140,10 +147,31 @@ import javax.servlet.http.HttpServletResponse;
      **/
     @GetMapping("/subs")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
-    public HttpResult subs(HttpServletRequest request){
+    public HttpResult subs(HttpServletRequest request) {
         EntityWrapper<SysMenu> menuEntityWrapper = new EntityWrapper<SysMenu>();
         menuEntityWrapper.eq("level", MenuLevel.SUB_MENU.getValue());
         return Result.OK(sysMenuService.selectList(menuEntityWrapper));
+    }
+
+    @ApiOperation(value = "验证菜单名称是否可用", notes = "验证菜单名称是否可用")
+    @PostMapping("/name/valid")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    public HttpResult validMenuNameUsed(@RequestBody SysMenu sysMenu) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("menuname", sysMenu.getMenuname());
+        List<SysMenu> menus = sysMenuService.selectByMap(map);
+        if (menus.size() > 1) {
+            return ErrorResult.EXPECTATION_FAILED("菜单名已存在");
+        }
+        if (menus.size() == 0) {
+            return Result.OK("菜单名可用");
+        }
+        SysMenu menu = menus.get(0);
+        if (!ObjectUtils.isEmpty(sysMenu.getId()) && menu.getId().equals(sysMenu.getId())) {
+            return Result.OK("菜单名可使用");
+        } else {
+            return ErrorResult.EXPECTATION_FAILED("菜单名已存在");
+        }
     }
 }
 
