@@ -1,12 +1,17 @@
-package com.restful.web;
+package com.restful.service.impl;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.restful.entity.SysLog;
+import com.restful.mapper.SysLogMapper;
+import com.restful.service.SysLogService;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
 
 /**
+ * <p>
+ *  服务实现类
+ * </p>
  *
- * @author baily
- * 描述:
- * 控制器基类
+ * @author  * 
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -24,11 +29,9 @@ import org.springframework.beans.factory.annotation.Value;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018年08月14日
+ * @since 2018-11-20
  */
-public abstract class BaseController {
-
-    @Value("${system.page.pageNum}")
-    public int pageNumber;
+@Service
+public class SysLogServiceImpl extends ServiceImpl<SysLogMapper, SysLog> implements SysLogService {
 
 }

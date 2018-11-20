@@ -178,6 +178,7 @@ public class SysRoleController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @GetMapping("/all")
+    @ApiOperation(value = "查询所有角色", notes = "查询所有角色")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult all() {
         List<SysRole> sysRoleList = sysRoleService.selectList(new EntityWrapper<>());

@@ -68,7 +68,7 @@ public class SysRole extends BaseEntity<SysRole> {
         this.id = id;
     }
 
-    public SysRole addId(Integer id){
+    public SysRole addId(Integer id) {
         this.id = id;
         return this;
     }
