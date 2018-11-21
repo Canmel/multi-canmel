@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties;
 import org.springframework.http.*;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
@@ -89,7 +90,6 @@ public class MyRestController {
         EntityWrapper<SysUser> sysUserEntityWrapper = new EntityWrapper<SysUser>();
         sysUserEntityWrapper.eq("username", user.getUsername());
         try {
-            bCryptPasswordEncoder.encode("123456");
             oAuth2AccessToken = restTemplate.exchange(oAuth2ProtectedResourceDetails.getAccessTokenUri(), HttpMethod.POST, httpEntity, OAuth2AccessToken.class);
             saveToSession(request.getSession(), sysUserService.selectOne(sysUserEntityWrapper), oAuth2AccessToken.getBody().getValue());
             if (ObjectUtils.isEmpty(oAuth2AccessToken)) {

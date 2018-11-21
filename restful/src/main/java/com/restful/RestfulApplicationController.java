@@ -36,7 +36,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  *      ┗┻┛      ┗┻┛
  * @since 2018-08-12
  */
-//@EnableTransactionManagement
+
 @EnableAutoConfiguration
 @SpringBootApplication
 @EnableSwagger2
@@ -44,6 +44,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
         "com.restful.config.mybatisplus",
         "com.restful.config.application",
         "com.restful.web",
+        "com.restful.aop",
         "com.restful.config.security",
         "com.restful.config.swagger",
         "com.restful.service",

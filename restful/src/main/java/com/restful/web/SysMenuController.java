@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
-import com.restful.annotation.SysLog;
+import com.restful.annotation.SaveLog;
 import com.restful.entity.SysMenu;
 import com.restful.entity.enums.MenuLevel;
 import com.restful.service.SysMenuService;
@@ -64,7 +64,7 @@ public class SysMenuController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @GetMapping
-    @SysLog(title = "分页查询菜单信息", value = "日志信息菜单查询")
+    @SaveLog(title = "分页查询菜单信息", value = "日志信息菜单查询")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult index(HttpServletRequest request, SysMenu menu) {
         EntityWrapper<SysMenu> entityWrapper = new EntityWrapper<SysMenu>();
