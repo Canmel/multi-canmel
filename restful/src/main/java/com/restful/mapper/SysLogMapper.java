@@ -1,12 +1,17 @@
-package com.restful.web;
+package com.restful.mapper;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.restful.SuperMapper;
+import com.restful.entity.SysLog;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
+ * <p>
+ *  Mapper 接口
+ * </p>
  *
- * @author baily
- * 描述:
- * 控制器基类
+ * @author  * 
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -24,11 +29,11 @@ import org.springframework.beans.factory.annotation.Value;
  *     ┗┓┓┏━━━━━━┳┓┏┛
  *      ┃┫┫      ┃┫┫
  *      ┗┻┛      ┗┻┛
- * @since 2018年08月14日
+ * @since 2018-11-20
  */
-public abstract class BaseController {
 
-    @Value("${system.page.pageNum}")
-    public int pageNumber;
+@Mapper
+@Repository
+public interface SysLogMapper extends SuperMapper<SysLog> {
 
 }

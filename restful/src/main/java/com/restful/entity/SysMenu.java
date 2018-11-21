@@ -61,6 +61,10 @@ public class SysMenu extends BaseEntity<SysMenu> {
      */
     private String address;
     /**
+     * 目录图标
+     */
+    private String icon;
+    /**
      * 逻辑删除 1是 0 否
      */
     @TableLogic
@@ -137,6 +141,14 @@ public class SysMenu extends BaseEntity<SysMenu> {
 
     public void setIsDel(Integer isDel) {
         this.isDel = isDel;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     @Override
