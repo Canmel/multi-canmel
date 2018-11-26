@@ -153,4 +153,9 @@ public class SysMenu extends BaseEntity<SysMenu> {
                 ", isDel=" + isDel +
                 "}";
     }
+
+    public SysMenu addId(Integer id){
+        this.id = id;
+        return this;
+    }
 }

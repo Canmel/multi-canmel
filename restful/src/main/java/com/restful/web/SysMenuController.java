@@ -90,7 +90,7 @@ public class SysMenuController extends BaseController {
     @PutMapping("/{id}")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult update(HttpServletRequest request, HttpServletResponse response, @RequestBody SysMenu menu, @PathVariable Integer id) {
-        if (sysMenuService.updateById(menu)) {
+        if (sysMenuService.updateById(menu.addId(id))) {
             return Result.OK("修改菜单成功!");
         } else {
             return ErrorResult.EXPECTATION_FAILED();
