@@ -27,7 +27,8 @@ spring:
     url: jdbc:mysql://localhost:3306/auth2?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 1234
-
+  aop:
+    auto: true
 
 mybatis-plus:
   # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
@@ -67,3 +68,7 @@ mybatis-plus:
 #session:
 #  cookie:
 #    name: APPSESSIONID
+
+system:
+  page:
+    pageNum: 10

@@ -7,12 +7,12 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.restful.annotation.SaveLog;
 import com.restful.entity.SysUser;
 import com.restful.entity.SysUserRole;
 import com.restful.service.SysUserRoleService;
 import com.restful.service.SysUserService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -77,6 +77,7 @@ public class SysUserController extends BaseController {
     **/
     @GetMapping
     @ApiOperation(value = "（分页）查询用户列表", notes = "（分页）查询用户列表")
+    @SaveLog(title = "分页查询用户信息", value = "用户信息查询")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult index(HttpServletRequest request, SysUser sysUser, Authentication authentication) {
         EntityWrapper<SysUser> userEntityWrapper = new EntityWrapper<SysUser>();

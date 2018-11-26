@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.restful.annotation.SaveLog;
 import com.restful.entity.SysRole;
 import com.restful.entity.SysRoleMenu;
 import com.restful.service.SysRoleMenuService;
@@ -30,7 +31,7 @@ import java.util.Map;
  * </p>
  *
  * @author *
- * ┏ ┓   ┏ ┓
+ *  ┏ ┓   ┏ ┓
  * ┏┛ ┻━━━┛ ┻┓
  * ┃         ┃
  * ┃    ━    ┃
@@ -39,14 +40,14 @@ import java.util.Map;
  * ┃    ┻    ┃
  * ┃         ┃
  * ┗━━┓    ┏━┛
- * ┃    ┃神兽保佑
- * ┃    ┃代码无BUG！
- * ┃    ┗━━━━━━━┓
- * ┃            ┣┓
- * ┃            ┏┛
- * ┗┓┓┏━━━━━━┳┓┏┛
- * ┃┫┫      ┃┫┫
- * ┗┻┛      ┗┻┛
+ *    ┃    ┃神兽保佑
+ *    ┃    ┃代码无BUG！
+ *    ┃    ┗━━━━━━━┓
+ *    ┃            ┣┓
+ *    ┃            ┏┛
+ *    ┗┓┓┏━━━━━━┳┓┏┛
+ *     ┃┫┫      ┃┫┫
+ *     ┗┻┛      ┗┻┛
  * @since 2018-08-12
  */
 @RestController
@@ -69,6 +70,7 @@ public class SysRoleController extends BaseController {
      **/
     @GetMapping()
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    @SaveLog(title = "分页查询菜单信息", value = "日志信息菜单查询")
     public HttpResult index(SysRole sysRole) {
         EntityWrapper<SysRole> sysRoleEntityWrapper = new EntityWrapper<SysRole>();
         sysRoleEntityWrapper.like("rolename", sysRole.getRolename()).like("description", sysRole.getDescription());
