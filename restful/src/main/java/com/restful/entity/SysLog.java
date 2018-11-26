@@ -1,5 +1,6 @@
 package com.restful.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.enums.IdType;
 
 import java.util.Date;
@@ -58,7 +59,7 @@ public class SysLog extends BaseEntity<SysLog> {
     /**
      * 创建者
      */
-    private Integer operator;
+        private Integer operator;
     /**
      * 标签
      */
@@ -66,7 +67,10 @@ public class SysLog extends BaseEntity<SysLog> {
     /**
      * 创建时间
      */
-    private Date createdAt;
+    private String createdAt;
+
+    @TableField(exist = false)
+    private SysUser optor;
 
 
     public Integer getId() {
@@ -125,15 +129,23 @@ public class SysLog extends BaseEntity<SysLog> {
         this.label = label;
     }
 
-    public Date getCreatedAt() {
+    public String getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 
-    public SysLog(String method, String params, String title, String description, Integer operator, Integer label, Date createdAt) {
+    public SysUser getOptor() {
+        return optor;
+    }
+
+    public void setOptor(SysUser optor) {
+        this.optor = optor;
+    }
+
+    public SysLog(String method, String params, String title, String description, Integer operator, Integer label, String createdAt) {
         this.method = method;
         this.params = params;
         this.title = title;

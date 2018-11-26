@@ -11,7 +11,9 @@ import com.restful.entity.SysMenu;
 import com.restful.entity.enums.MenuLevel;
 import com.restful.service.SysMenuService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.ObjectUtils;
@@ -22,6 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 
 /**
  * <p>
@@ -64,9 +68,9 @@ public class SysMenuController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @GetMapping
-    @SaveLog(title = "分页查询菜单信息", value = "日志信息菜单查询")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
-    public HttpResult index(HttpServletRequest request, SysMenu menu) {
+    @ApiOperation(value = "分页查询菜单信息",notes = "分页查询菜单信息",httpMethod = "GET",produces = APPLICATION_JSON_UTF8_VALUE)
+    public HttpResult index(SysMenu menu) {
         EntityWrapper<SysMenu> entityWrapper = new EntityWrapper<SysMenu>();
         entityWrapper.like("menuname", menu.getMenuname()).like("description", menu.getDescription());
         Page<SysMenu> menuPage = new Page<SysMenu>(menu.getCurrentPage(), 10);
@@ -79,6 +83,7 @@ public class SysMenuController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @GetMapping("/{id}")
+    @ApiOperation(value = "查看菜单详细信息", notes = "查看菜单详细信息")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult details(HttpServletRequest request, @PathVariable Integer id) {
         return Result.OK(sysMenuService.selectById(id));
@@ -90,7 +95,7 @@ public class SysMenuController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @PutMapping("/{id}")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    @SaveLog(title = "修改菜单", value = "修改菜单")
     public HttpResult update(HttpServletRequest request, HttpServletResponse response, @RequestBody SysMenu menu, @PathVariable Integer id) {
         if (sysMenuService.updateById(menu.addId(id))) {
             return Result.OK("修改菜单成功!");
@@ -106,6 +111,7 @@ public class SysMenuController extends BaseController {
      **/
     @PostMapping()
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    @SaveLog(title = "新建菜单", value = "新建菜单")
     public HttpResult create(@RequestBody SysMenu menu) {
         if (sysMenuService.insert(menu)) {
             return Result.OK("新建菜单成功");

@@ -1,5 +1,6 @@
 package com.restful.service;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.restful.entity.SysLog;
 import com.baomidou.mybatisplus.service.IService;
 
@@ -29,5 +30,5 @@ import com.baomidou.mybatisplus.service.IService;
  * @since 2018-11-20
  */
 public interface SysLogService extends IService<SysLog> {
-
+    Page<SysLog> selectLogsPage(SysLog log);
 }

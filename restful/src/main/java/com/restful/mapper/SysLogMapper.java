@@ -2,9 +2,10 @@ package com.restful.mapper;
 
 import com.restful.SuperMapper;
 import com.restful.entity.SysLog;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * <p>
@@ -35,5 +36,5 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface SysLogMapper extends SuperMapper<SysLog> {
-
+    List<SysLog> selectLogsPage(SysLog log);
 }

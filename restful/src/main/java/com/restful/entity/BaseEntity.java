@@ -38,7 +38,7 @@ public class BaseEntity<T extends Model> extends Model<T> {
 
     /** 每页条数 **/
     @TableField(exist = false)
-    public Integer tsize;
+    public Integer tsize = 10;
 
     private Integer id;
 

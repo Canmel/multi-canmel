@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.restful.mapper.SysLogMapper">
+    <resultMap id="SysLogResultMap" type="com.restful.entity.SysLog">
+        <id column="log_id" property="id"></id>
+        <result column="log_method" property="method"></result>
+        <result column="log_params" property="params"></result>
+        <result column="log_title" property="title"></result>
+        <result column="log_description" property="description"></result>
+        <result column="log_operator" property="operator"></result>
+        <result column="log_label" property="label"></result>
+        <result column="log_created_at" property="createdAt"></result>
+        <association property="optor" javaType="com.restful.entity.SysUser"
+                     resultMap="com.restful.mapper.SysUserMapper.SysUserResult"></association>
+    </resultMap>
 
+    <select id="selectLogsPage" resultMap="SysLogResultMap">
+        SELECT
+        log.id log_id, log.method log_method, log.params log_params, log.title log_title, log.description log_description, log.operator
+        log_operator, log.label log_label, log.created_at log_created_at, log.operator user_id, user.username
+        user_username
+        FROM sys_log log
+        LEFT JOIN sys_user user ON log.operator = user.id
+        <where>
+            <if test="operator != null">log.operator = #{operator}</if>
+            <if test="title != null">log.title LIKE CONCAT('%',#{title},'%')</if>
+        </where>
+    </select>
 </mapper>

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
 import com.restful.entity.SysLog;
+import com.restful.entity.SysRole;
 import com.restful.service.SysLogService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -58,10 +59,7 @@ public class SysLogController extends BaseController {
     @ApiOperation(value = "分页查询日志", notes = "分页查询日志列表")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public Result index(HttpServletRequest request, SysLog sysLog) {
-        EntityWrapper<SysLog> entityWrapper = new EntityWrapper<>();
-        entityWrapper.like("description", sysLog.getDescription());
-        Page<SysLog> logPage = new Page<>(sysLog.getCurrentPage(), pageNumber);
-        return Result.OK(service.selectPage(logPage, entityWrapper));
+        return Result.OK(service.selectLogsPage(sysLog));
     }
 
     @GetMapping("/{id}")

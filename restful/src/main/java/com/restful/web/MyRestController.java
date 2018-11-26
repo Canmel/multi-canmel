@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.restful.annotation.SaveLog;
 import com.restful.config.security.CustomAuthenticationProvider;
 import com.restful.entity.SysUser;
 import com.restful.service.SysUserService;
@@ -18,6 +19,7 @@ import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -130,13 +132,16 @@ public class MyRestController {
     }
 
     private boolean validCode(String verifyCode, HttpServletRequest request) {
+        if(StringUtils.isEmpty(verifyCode)){
+            return false;
+        }
         String session_verifyTime = (String) request.getSession().getAttribute("session_imageTime");
         Long st = Long.parseLong(session_verifyTime);
         if (st - System.currentTimeMillis() > 60) {
             return false;
         }
         StringBuffer sessiom_code = (StringBuffer) request.getSession().getAttribute("session_imageCode");
-        return verifyCode.equals(sessiom_code.toString());
+        return verifyCode.toLowerCase().equals(sessiom_code.toString().toLowerCase());
     }
 
 }

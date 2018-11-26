@@ -19,6 +19,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Component
@@ -57,7 +58,8 @@ public class SysLogAop {
         SysUser sysUser = sysUserService.selectOne(sysUserEntityWrapper);
         log.setOperator(sysUser.getId());
         log.setTitle(logAnnotation.title());
-        log.setCreatedAt(new Date());
+        SimpleDateFormat sDateFormat=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        log.setCreatedAt(sDateFormat.format(new Date()));
         sysLogService.insert(log);
     }
 }

@@ -3,6 +3,9 @@ package com.restful.entity;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  *
@@ -26,50 +29,44 @@ import com.baomidou.mybatisplus.enums.IdType;
  *      ┗┻┛      ┗┻┛
  * @since 2018-08-15
  */
+@ApiModel(value = "菜单实体类", description = "菜单实体类")
 public class SysMenu extends BaseEntity<SysMenu> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键
-     */
     @TableId(value = "id", type = IdType.AUTO)
+    @ApiModelProperty(name="id", notes = "主键")
     private Integer id;
-    /**
-     * 菜单名称
-     */
+
+    @ApiModelProperty(name = "菜单名称", notes = "菜单名称", example = "admin")
     private String menuname;
-    /**
-     * 简短的描述文字
-     */
+
+    @ApiModelProperty(name = "简短的描述文字", notes = "简短的描述文字", example = "简短的描述文字")
     private String description;
-    /**
-     * 上级菜单
-     */
+
+    @ApiModelProperty(name="上级菜单", notes = "上级菜单", example = "1")
     private Integer pid;
-    /**
-     * 简单的排序字段
-     */
+
+    @ApiModelProperty(name = "简单的排序字段", notes = "简单的排序字段", example = "1")
     private Integer mindex;
+
+    @ApiModelProperty(name = "菜单等级", notes = "菜单等级", example = "1")
     private Integer level;
-    /**
-     * 状态
-     */
+
+    @ApiModelProperty(name = "状态", notes = "状态", example = "1")
     private Integer status;
-    /**
-     * 目录地址
-     */
+
+    @ApiModelProperty(name = "目录地址", notes = "目录地址", example = "/app/users")
     private String address;
-    /**
-     * 目录图标
-     */
+
+    @ApiModelProperty(name = "目录图标", notes = "目录图标", example = "fa fa-user-o")
     private String icon;
     /**
      * 逻辑删除 1是 0 否
      */
     @TableLogic
+    @ApiModelProperty(name = "逻辑删除", notes = "逻辑删除 1是 0 否", example = "1")
     private Integer isDel;
-
 
     public Integer getId() {
         return id;

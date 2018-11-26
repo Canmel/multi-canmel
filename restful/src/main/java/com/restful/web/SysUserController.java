@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -77,7 +78,6 @@ public class SysUserController extends BaseController {
     **/
     @GetMapping
     @ApiOperation(value = "（分页）查询用户列表", notes = "（分页）查询用户列表")
-    @SaveLog(title = "分页查询用户信息", value = "用户信息查询")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult index(HttpServletRequest request, SysUser sysUser, Authentication authentication) {
         EntityWrapper<SysUser> userEntityWrapper = new EntityWrapper<SysUser>();
@@ -96,8 +96,14 @@ public class SysUserController extends BaseController {
      **/
     @ApiOperation(value = "当前登录人，不设使用权限" ,  notes="当前登录人，不设使用权限")
     @GetMapping("/current")
-    public HttpResult current(HttpServletRequest request) {
-        return Result.OK(sysUserService.current(request));
+    public HttpResult current(HttpServletRequest request, Principal principal) {
+        EntityWrapper<SysUser> userEntityWrapper = new EntityWrapper<>();
+        userEntityWrapper.eq("username", principal.getName());
+        SysUser user = sysUserService.selectOne(userEntityWrapper);
+        if(ObjectUtils.isEmpty(user)){
+            return ErrorResult.UNAUTHORIZED("未找到当前登录人");
+        }
+        return Result.OK(user);
     }
 
     /**
@@ -123,9 +129,10 @@ public class SysUserController extends BaseController {
      * creat_user: baily
      * creat_date: 2018/8/17
      **/
-    @ApiOperation(value = "被修改的用户", notes = "被修改的用户")
+    @ApiOperation(value = "修改用户", notes = "修改用户")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     @PutMapping("/{id}")
+    @SaveLog(title = "修改用户", value = "修改用户")
     public HttpResult update(HttpServletResponse response, @RequestBody SysUser user, @PathVariable Integer id) {
         if (sysUserService.updateById(user.addId(id))) {
             return Result.OK("修改用户成功!");
@@ -144,6 +151,7 @@ public class SysUserController extends BaseController {
     @ApiOperation(value = "保存用户", notes = "保存用户")
     @PostMapping()
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    @SaveLog(title = "新建用户", value = "新建用户")
     public HttpResult create(@RequestBody SysUser user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         if (sysUserService.insert(user)) {
@@ -163,6 +171,7 @@ public class SysUserController extends BaseController {
     @ApiOperation(value = "根据ID删除用户", notes = "根据ID删除用户")
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    @SaveLog(title = "删除用户", value = "删除用户")
     public HttpResult delete(@PathVariable Integer id) {
         if (sysUserService.deleteById(id)) {
             return Result.OK("删除用户成功!");
@@ -181,6 +190,7 @@ public class SysUserController extends BaseController {
     @ApiOperation(value = "更新用户的角色信息", notes = "更新用户的角色信息")
     @PostMapping("/roles")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    @SaveLog(title = "更新用户的角色信息", value = "更新用户的角色信息")
     public HttpResult saveRoles(@RequestBody SysUser sysUser) {
         // 获取用户的角色列表
         EntityWrapper<SysUserRole> userRoleEntityWrapper = new EntityWrapper<>();

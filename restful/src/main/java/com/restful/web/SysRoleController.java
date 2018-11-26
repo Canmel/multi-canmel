@@ -13,6 +13,7 @@ import com.restful.service.SysRoleMenuService;
 import com.restful.service.SysRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
@@ -69,8 +70,8 @@ public class SysRoleController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @GetMapping()
+    @ApiOperation(value = "分页查询角色信息", notes = "分页查询角色信息")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
-    @SaveLog(title = "分页查询菜单信息", value = "日志信息菜单查询")
     public HttpResult index(SysRole sysRole) {
         EntityWrapper<SysRole> sysRoleEntityWrapper = new EntityWrapper<SysRole>();
         sysRoleEntityWrapper.like("rolename", sysRole.getRolename()).like("description", sysRole.getDescription());
@@ -86,6 +87,7 @@ public class SysRoleController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @GetMapping("/{id}")
+    @SaveLog(title = "修改角色", value = "根据角色ID修改角色")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
     public HttpResult details(@PathVariable Integer id) {
         SysRole role = sysRoleService.selectRoleDetails(id);
