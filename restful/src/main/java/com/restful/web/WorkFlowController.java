@@ -6,10 +6,12 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.restful.entity.SysRole;
 import com.restful.entity.SysUser;
 import com.restful.entity.WorkFlow;
 import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.exception.UnAuthenticationException;
+import com.restful.service.SysUserService;
 import com.restful.service.SystemFlowService;
 import com.restful.service.WorkFlowService;
 import io.swagger.annotations.Api;
@@ -27,6 +29,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.ByteArrayInputStream;
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -65,6 +68,9 @@ public class WorkFlowController extends BaseController {
     private WorkFlowService workFlowService;
 
     @Autowired
+    private SysUserService sysUserService;
+
+    @Autowired
     private SystemFlowService flowService;
 
     @Autowired
@@ -96,9 +102,10 @@ public class WorkFlowController extends BaseController {
      * creat_user: baily
      * creat_date: 2018/8/17
      **/
-    @GetMapping()
+    @GetMapping("/deployed")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
-    public @ResponseBody HttpResult index(WorkFlow workFlow) {
+    public @ResponseBody
+    HttpResult index(WorkFlow workFlow) {
         List<Deployment> list = processEngine().getRepositoryService().createDeploymentQuery().list();
         list.forEach((item) -> {
             DeploymentEntity deploymentEntity = (DeploymentEntity) item;
@@ -111,6 +118,21 @@ public class WorkFlowController extends BaseController {
         return Result.OK(page);
     }
 
+    /**
+     * describe: 分页查询工作流信息
+     * creat_user: baily
+     * creat_date: 2018/8/17
+     **/
+    @GetMapping()
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_MANAGER')")
+    public @ResponseBody
+    HttpResult deployedList(WorkFlow workFlow) {
+        EntityWrapper<WorkFlow> workFlowEntityWrapper = new EntityWrapper<>();
+        workFlowEntityWrapper.like("name", workFlow.getName());
+        Page<WorkFlow> workFlowPage = new Page<>(workFlow.getCurrentPage(), workFlow.getTsize());
+        return Result.OK(workFlowService.selectPage(workFlowPage, workFlowEntityWrapper));
+    }
+
 
     /**
      * describe: 新建流程
@@ -118,8 +140,8 @@ public class WorkFlowController extends BaseController {
      * creat_date: 2018/8/17
      **/
     @PostMapping
-    public HttpResult create(HttpServletRequest request, @RequestBody WorkFlow workFlow) {
-        SysUser currentUser = (SysUser) request.getSession().getAttribute("currentUser");
+    public HttpResult create(@RequestBody WorkFlow workFlow, Principal principal) {
+        SysUser currentUser = sysUserService.current(principal);
         if (ObjectUtils.isEmpty(currentUser)) {
             throw new UnAuthenticationException("当前用户不存在");
         }

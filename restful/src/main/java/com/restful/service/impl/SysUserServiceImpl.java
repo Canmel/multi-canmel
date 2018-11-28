@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,5 +77,12 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             sysUser.setSysRoles(sysRoleMapper.selectBatchIds(role_ids));
         }
         return sysUser;
+    }
+
+    @Override
+    public SysUser current(Principal principal) {
+        EntityWrapper<SysUser> userEntityWrapper = new EntityWrapper<>();
+        userEntityWrapper.eq("username", principal.getName());
+        return this.selectOne(userEntityWrapper);
     }
 }
