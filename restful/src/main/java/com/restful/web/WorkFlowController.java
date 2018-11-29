@@ -170,6 +170,7 @@ public class WorkFlowController extends BaseController {
      **/
     @PutMapping("/{id}")
     public HttpResult update(@PathVariable Integer id, @RequestBody WorkFlow workFlow) {
+        workFlow.setId(id);
         if (workFlowService.updateById(workFlow)) {
             return Result.OK("修改流程信息成功");
         } else {
