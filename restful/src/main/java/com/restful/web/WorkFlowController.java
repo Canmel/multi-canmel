@@ -23,6 +23,9 @@ import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.impl.persistence.entity.DeploymentEntity;
 import org.activiti.engine.repository.Deployment;
+import org.activiti.engine.repository.ProcessDefinition;
+import org.activiti.engine.runtime.ProcessInstance;
+import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.ObjectUtils;
@@ -82,22 +85,6 @@ public class WorkFlowController extends BaseController {
         return ProcessEngines.getDefaultProcessEngine();
     }
 
-//    @GetMapping("/test")
-//    public HttpResult test(){
-//        Map variable = new HashMap();
-//        String txt = "123123";
-//        List list = processEngine().getRepositoryService().createDeploymentQuery().list();
-//        processEngine().getRepositoryService()
-//        .createDeployment()
-//                .name("newDeployment")
-//                .addClasspathResource("bpmn/demo1.bpmn")
-//                .addClasspathResource("bpmn/demo1.png").deploy();
-//
-//        System.out.println(list);
-//        runtimeService.startProcessInstanceByKey("demo1", variable);
-//        return Result.OK("123123");
-//    }
-
     /**
      * describe: 分页查询工作流信息
      * creat_user: baily
@@ -111,6 +98,16 @@ public class WorkFlowController extends BaseController {
         workFlowEntityWrapper.like("name", workFlow.getName());
         workFlowEntityWrapper.eq("is_public", workFlow.getIsPublic());
         Page<WorkFlow> workFlowPage = new Page<>(workFlow.getCurrentPage(), workFlow.getTsize());
+
+        Deployment deployment = processEngine().getRepositoryService().createDeploymentQuery().deploymentId("10021").singleResult();
+        ProcessDefinition pd = processEngine().getRepositoryService().createProcessDefinitionQuery().deploymentId(deployment.getId()).singleResult();
+
+        ProcessInstance pi = processEngine().getRuntimeService().startProcessInstanceById(pd.getId());
+
+        ProcessInstance processInstance = processEngine().getRuntimeService().startProcessInstanceByKey("Process_1");
+        List<ProcessInstance> ps = processEngine().getRuntimeService().createProcessInstanceQuery().list();
+        List<Task> tasks = processEngine().getTaskService().createTaskQuery().list();
+
         return Result.OK(workFlowService.selectPage(workFlowPage, workFlowEntityWrapper));
     }
 
@@ -183,6 +180,7 @@ public class WorkFlowController extends BaseController {
         if (workFlowService.publish(id)) {
             WorkFlow workFlow = workFlowService.selectById(id);
 //            TODO 实物添加，当数据库提交失败 发布的要撤回
+
             Deployment deployment = processEngine().getRepositoryService()
                     .createDeployment()
                     .name(workFlow.getName())
