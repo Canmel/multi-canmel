@@ -98,12 +98,13 @@ public class WorkFlowController extends BaseController {
         workFlowEntityWrapper.like("name", workFlow.getName());
         workFlowEntityWrapper.eq("is_public", workFlow.getIsPublic());
         Page<WorkFlow> workFlowPage = new Page<>(workFlow.getCurrentPage(), workFlow.getTsize());
-
+        // 部署
 //        Deployment deployment = processEngine().getRepositoryService().createDeploymentQuery().deploymentId("17501").singleResult();
 //        ProcessDefinition pd = processEngine().getRepositoryService().createProcessDefinitionQuery().deploymentId(deployment.getId()).singleResult();
-//
+        // 启动
 //        ProcessInstance pi = processEngine().getRuntimeService().startProcessInstanceById(pd.getId());
 
+        // 查询
 //        ProcessInstance processInstance = processEngine().getRuntimeService().startProcessInstanceByKey("newPros");
 //        List<ProcessInstance> ps = processEngine().getRuntimeService().createProcessInstanceQuery().list();
 //        List<Task> tasks = processEngine().getTaskService().createTaskQuery().list();

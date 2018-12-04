@@ -12,6 +12,8 @@ import com.restful.mapper.ReimbursementMapper;
 import com.restful.service.ReimbursementService;
 import com.restful.service.SysUserService;
 import com.restful.service.WorkFlowInstanceService;
+import org.activiti.engine.RuntimeService;
+import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
@@ -19,7 +21,10 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -48,6 +53,10 @@ import java.util.Iterator;
  */
 @Service
 public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, Reimbursement> implements ReimbursementService {
+
+    @Autowired
+    private RuntimeService runtimeService;
+
 
     /**
      * describe: 插入报销申请
@@ -79,6 +88,22 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
 
     @Override
     public boolean apply(Reimbursement reimbursement) {
+        reimbursement.setStatus(1); // TODO magic number 需要转用枚举类型
+        this.updateById(reimbursement);
+
+        // 将业务和流程绑定来
+        String busniessKey = reimbursement.getClass().getSimpleName() + reimbursement.getId();
+        String definitionKey = reimbursement.getClass().getSimpleName() + "Flow";
+        Map<String, Object> map = new HashMap<>();
+        map.put("optor", "admin");
+        // 启动流程
+        runtimeService.startProcessInstanceByKey("Reimbursement1", busniessKey, map);
+
+        // 查询业务流程
+        List<ProcessInstance> processInstances = runtimeService.createProcessInstanceQuery()
+                .processInstanceBusinessKey(busniessKey, "Reimbursement1").list();
+
+        System.out.println(processInstances);
         return false;
     }
 
