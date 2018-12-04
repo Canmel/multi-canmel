@@ -49,9 +49,6 @@ import java.util.Iterator;
 @Service
 public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, Reimbursement> implements ReimbursementService {
 
-
-
-
     /**
      * describe: 插入报销申请
      * creat_user: baily
@@ -79,6 +76,12 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
         }
         return reimbursementPage;
     }
+
+    @Override
+    public boolean apply(Reimbursement reimbursement) {
+        return false;
+    }
+
     @Autowired
     private SysUserService userService;
 }

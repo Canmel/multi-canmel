@@ -30,4 +30,6 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface ReimbursementService extends IService<Reimbursement> {
 
+    boolean apply(Reimbursement reimbursement);
+
 }
