@@ -99,14 +99,14 @@ public class WorkFlowController extends BaseController {
         workFlowEntityWrapper.eq("is_public", workFlow.getIsPublic());
         Page<WorkFlow> workFlowPage = new Page<>(workFlow.getCurrentPage(), workFlow.getTsize());
 
-        Deployment deployment = processEngine().getRepositoryService().createDeploymentQuery().deploymentId("10021").singleResult();
-        ProcessDefinition pd = processEngine().getRepositoryService().createProcessDefinitionQuery().deploymentId(deployment.getId()).singleResult();
+//        Deployment deployment = processEngine().getRepositoryService().createDeploymentQuery().deploymentId("17501").singleResult();
+//        ProcessDefinition pd = processEngine().getRepositoryService().createProcessDefinitionQuery().deploymentId(deployment.getId()).singleResult();
+//
+//        ProcessInstance pi = processEngine().getRuntimeService().startProcessInstanceById(pd.getId());
 
-        ProcessInstance pi = processEngine().getRuntimeService().startProcessInstanceById(pd.getId());
-
-        ProcessInstance processInstance = processEngine().getRuntimeService().startProcessInstanceByKey("Process_1");
-        List<ProcessInstance> ps = processEngine().getRuntimeService().createProcessInstanceQuery().list();
-        List<Task> tasks = processEngine().getTaskService().createTaskQuery().list();
+//        ProcessInstance processInstance = processEngine().getRuntimeService().startProcessInstanceByKey("newPros");
+//        List<ProcessInstance> ps = processEngine().getRuntimeService().createProcessInstanceQuery().list();
+//        List<Task> tasks = processEngine().getTaskService().createTaskQuery().list();
 
         return Result.OK(workFlowService.selectPage(workFlowPage, workFlowEntityWrapper));
     }
@@ -177,16 +177,17 @@ public class WorkFlowController extends BaseController {
      **/
     @GetMapping("/publish/{id}")
     public HttpResult publish(@PathVariable Integer id) {
-        if (workFlowService.publish(id)) {
+//        if (workFlowService.publish(id)) {
             WorkFlow workFlow = workFlowService.selectById(id);
 //            TODO 实物添加，当数据库提交失败 发布的要撤回
 
             Deployment deployment = processEngine().getRepositoryService()
                     .createDeployment()
                     .name(workFlow.getName())
-                    .addString(workFlow.getName(), workFlow.getFlow()).deploy();
+                    .addClasspathResource("bpmn/demo1.bpmn")
+                    .addClasspathResource("bpmn/demo1.png").deploy();
             System.out.println(deployment.getName());
-        }
+//        }
         return Result.OK("流程部署成功");
     }
 }

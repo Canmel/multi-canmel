@@ -2,6 +2,7 @@ package com.restful.web;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
@@ -81,6 +82,13 @@ public class ReimbursementController extends BaseController {
         } else {
             return ErrorResult.EXPECTATION_FAILED();
         }
+    }
+
+    @GetMapping("/apply/{id}")
+    public Result apply(@PathVariable Integer id){
+        Reimbursement reimbursement = reimbursementService.selectById(id);
+        reimbursementService.apply(reimbursement);
+        return null;
     }
 }
 

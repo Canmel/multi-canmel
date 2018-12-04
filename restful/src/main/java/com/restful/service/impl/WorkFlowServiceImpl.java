@@ -63,10 +63,7 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
 
     @Override
     public boolean insert(WorkFlow entity) {
-        boolean flag = super.insert(entity);
-        if(!flag){
-            return flag;
-        }
+
         entity.setName(entity.getName() + ".bpmn");
 
         String sourceReplace = "xmlns:activiti=\"http://activiti.org/bpmn";
@@ -78,8 +75,10 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
             result = bpmn.replace(oldReplace, sourceReplace);
         }
         result = bpmn.replaceAll("camunda", "activiti");
+        result = result.replaceAll("bpmn2:task", "userTask");
         result = result.replaceAll("bpmn2:", "");
         result = result.replaceAll(":bpmn2", "");
+
 //        result = result.replaceAll("xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"", "");
 //        result = result.replaceAll("xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\"", "");
 //        result = result.replaceAll("xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\"", "");
@@ -92,7 +91,11 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
 
 
 //        result = result.replaceAll(newParams, oldParams);
-
+        entity.setFlow(result);
+        boolean flag = super.insert(entity);
+        if(!flag){
+            return flag;
+        }
         Deployment deployment = repositoryService.createDeployment().name(entity.getName()).addString(entity.getName(), result).deploy();
         return flag;
     }
