@@ -9,6 +9,7 @@ import com.core.entity.HttpResult;
 import com.core.entity.Result;
 import com.restful.entity.Reimbursement;
 import com.restful.service.ReimbursementService;
+import org.activiti.engine.repository.Deployment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,7 +50,9 @@ public class ReimbursementController extends BaseController {
         Page<Reimbursement> reimbursementPage = new Page<Reimbursement>(reimbursement.getCurrentPage(), 10);
         EntityWrapper<Reimbursement> reimbursementEntityWrapper = new EntityWrapper<Reimbursement>();
         reimbursementEntityWrapper.like("description", reimbursement.getDescription());
-        return Result.OK(reimbursementService.selectPage(reimbursementPage, reimbursementEntityWrapper));
+        Page page = reimbursementService.selectPage(reimbursementPage, reimbursementEntityWrapper);
+        page = reimbursementService.recordFlowStatus(page);
+        return Result.OK(page);
     }
 
     @PostMapping
@@ -68,6 +71,7 @@ public class ReimbursementController extends BaseController {
 
     @PutMapping("/{id}")
     public HttpResult edit(@RequestBody Reimbursement reimbursement, @PathVariable Integer id){
+        reimbursement.setId(id);
         if (reimbursementService.updateById(reimbursement)) {
             return Result.OK("修改报销申请成功!");
         } else {
@@ -85,9 +89,9 @@ public class ReimbursementController extends BaseController {
     }
 
     @GetMapping("/apply/{id}")
-    public Result apply(@PathVariable Integer id){
+    public Result apply(@PathVariable Integer id, Integer flowId){
         Reimbursement reimbursement = reimbursementService.selectById(id);
-        reimbursementService.apply(reimbursement);
+        reimbursementService.apply(reimbursement, flowId);
         return null;
     }
 }

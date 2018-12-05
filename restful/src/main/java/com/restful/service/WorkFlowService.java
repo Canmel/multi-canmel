@@ -1,7 +1,10 @@
 package com.restful.service;
 
 import com.baomidou.mybatisplus.service.IService;
+import com.restful.entity.BaseEntity;
 import com.restful.entity.WorkFlow;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -31,4 +34,6 @@ import com.restful.entity.WorkFlow;
 public interface WorkFlowService extends IService<WorkFlow> {
 
     boolean publish(Integer id);
+
+    boolean startProcess(BaseEntity baseEntity, WorkFlow workFlow, Map params);
 }

@@ -1,5 +1,7 @@
 package com.restful.entity.enums;
 
+import org.springframework.util.ObjectUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -73,5 +75,17 @@ public enum WorkFlowType {
             list.add(flowType.getValueMap());
         }
         return list;
+    }
+
+    public static WorkFlowType valueToEm(Integer value){
+        if(ObjectUtils.isEmpty(value)){
+            return null;
+        }
+        for (WorkFlowType flowType : WorkFlowType.values()) {
+            if(flowType.getValue().equals(value)){
+                return flowType;
+            }
+        }
+        return null;
     }
 }

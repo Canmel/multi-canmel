@@ -32,7 +32,7 @@ import java.math.BigDecimal;
  *      ┗┻┛      ┗┻┛
  * @since 2018-08-18
  */
-public class Reimbursement extends BaseEntity<Reimbursement> {
+public class Reimbursement extends BaseFlowEntity<Reimbursement> {
 
     private static final long serialVersionUID = 1L;
 

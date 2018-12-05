@@ -16,11 +16,9 @@ import com.restful.service.SystemFlowService;
 import com.restful.service.WorkFlowService;
 import com.sun.xml.internal.bind.v2.TODO;
 import io.swagger.annotations.Api;
+import io.swagger.models.auth.In;
 import org.activiti.bpmn.model.BpmnModel;
-import org.activiti.engine.ProcessEngine;
-import org.activiti.engine.ProcessEngines;
-import org.activiti.engine.RepositoryService;
-import org.activiti.engine.RuntimeService;
+import org.activiti.engine.*;
 import org.activiti.engine.impl.persistence.entity.DeploymentEntity;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
@@ -28,11 +26,13 @@ import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.ByteArrayInputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.security.Principal;
 import java.util.HashMap;
 import java.util.List;
@@ -81,6 +81,12 @@ public class WorkFlowController extends BaseController {
     private RuntimeService runtimeService;
 
     @Autowired
+    private RepositoryService repositoryService;
+
+    @Autowired
+    private TaskService taskService;
+
+    @Autowired
     private ProcessEngine processEngine() {
         return ProcessEngines.getDefaultProcessEngine();
     }
@@ -98,17 +104,6 @@ public class WorkFlowController extends BaseController {
         workFlowEntityWrapper.like("name", workFlow.getName());
         workFlowEntityWrapper.eq("is_public", workFlow.getIsPublic());
         Page<WorkFlow> workFlowPage = new Page<>(workFlow.getCurrentPage(), workFlow.getTsize());
-        // 部署
-//        Deployment deployment = processEngine().getRepositoryService().createDeploymentQuery().deploymentId("17501").singleResult();
-//        ProcessDefinition pd = processEngine().getRepositoryService().createProcessDefinitionQuery().deploymentId(deployment.getId()).singleResult();
-        // 启动
-//        ProcessInstance pi = processEngine().getRuntimeService().startProcessInstanceById(pd.getId());
-
-        // 查询
-//        ProcessInstance processInstance = processEngine().getRuntimeService().startProcessInstanceByKey("newPros");
-//        List<ProcessInstance> ps = processEngine().getRuntimeService().createProcessInstanceQuery().list();
-//        List<Task> tasks = processEngine().getTaskService().createTaskQuery().list();
-
         return Result.OK(workFlowService.selectPage(workFlowPage, workFlowEntityWrapper));
     }
 
@@ -179,17 +174,61 @@ public class WorkFlowController extends BaseController {
     @GetMapping("/publish/{id}")
     public HttpResult publish(@PathVariable Integer id) {
 //        if (workFlowService.publish(id)) {
-            WorkFlow workFlow = workFlowService.selectById(id);
+        WorkFlow workFlow = workFlowService.selectById(id);
 //            TODO 实物添加，当数据库提交失败 发布的要撤回
 
-            Deployment deployment = processEngine().getRepositoryService()
-                    .createDeployment()
-                    .name(workFlow.getName())
-                    .addClasspathResource("bpmn/demo1.bpmn")
-                    .addClasspathResource("bpmn/demo1.png").deploy();
-            System.out.println(deployment.getName());
+        Deployment deployment = repositoryService.createDeployment()
+                .name(workFlow.getWorkFlowType().name() + ".bpmn")
+                .addString(workFlow.getWorkFlowType().name() + ".bpmn", workFlow.getFlow())
+                .deploy();
+        System.out.println(deployment.getName());
 //        }
         return Result.OK("流程部署成功");
+    }
+
+    /**
+     * describe: 已发布流程
+     * creat_user: baily
+     * creat_date: 2018/8/19
+     **/
+    @GetMapping("/deployed")
+    public HttpResult deployed(WorkFlow workFlow) {
+        EntityWrapper<WorkFlow> workFlowEntityWrapper = new EntityWrapper<>();
+        if (!ObjectUtils.isEmpty(workFlow.getFlowType())) {
+            workFlowEntityWrapper.eq("flowType", workFlow.getFlowType());
+        }
+        List<WorkFlow> workFlows = workFlowService.selectList(workFlowEntityWrapper);
+        return Result.OK(workFlows);
+    }
+
+    @GetMapping("/task/image/{id}")
+    public void taskImage(HttpServletRequest request, HttpServletResponse response, @PathVariable String id){
+        List<Task> tasks = taskService.createTaskQuery().taskId(id).list();
+        if(!CollectionUtils.isEmpty(tasks)){
+            Task task = tasks.get(0);
+            String processDefinitionId = task.getProcessDefinitionId();
+            ProcessDefinition processDefinition=repositoryService.createProcessDefinitionQuery() // 创建流程定义查询
+                    .processDefinitionId(processDefinitionId) // 根据流程定义id查询
+                    .singleResult();
+            String aa = processDefinition.getDiagramResourceName();
+            System.out.println(aa);
+        }
+        try {
+            InputStream inputStream = null;
+            OutputStream os = response.getOutputStream();
+            byte[] b = new byte[1024];
+            for (int len = -1; (len= inputStream.read(b))!=-1; ) {
+                os.write(b, 0, len);
+            }
+            inputStream.close();
+            os.close();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        taskService.createTaskQuery().taskId(id).list();
+
     }
 }
 
