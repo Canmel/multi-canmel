@@ -29,6 +29,8 @@ spring:
     password: 1234
   aop:
     auto: true
+  jackson:
+      default-property-inclusion: non_null
 
 mybatis-plus:
   # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml

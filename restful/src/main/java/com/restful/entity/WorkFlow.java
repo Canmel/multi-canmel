@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.restful.entity.enums.WorkFlowType;
 
 /**
  * <p>
@@ -110,6 +111,10 @@ public class WorkFlow extends BaseEntity<WorkFlow> {
 
     public Integer getFlowType() {
         return flowType;
+    }
+
+    public WorkFlowType getWorkFlowType(){
+        return WorkFlowType.valueToEm(this.flowType);
     }
 
     public void setFlowType(Integer flowType) {

@@ -4,16 +4,20 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.restful.entity.Reimbursement;
-import com.restful.entity.SysUser;
-import com.restful.entity.WorkFlowInstance;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.restful.entity.*;
 import com.restful.exception.UnAuthenticationException;
 import com.restful.mapper.ReimbursementMapper;
 import com.restful.service.ReimbursementService;
 import com.restful.service.SysUserService;
-import com.restful.service.WorkFlowInstanceService;
+import com.restful.service.WorkFlowService;
+import org.activiti.engine.HistoryService;
 import org.activiti.engine.RuntimeService;
+import org.activiti.engine.TaskService;
+import org.activiti.engine.impl.persistence.entity.ExecutionEntity;
+import org.activiti.engine.impl.persistence.entity.TaskEntity;
 import org.activiti.engine.runtime.ProcessInstance;
+import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
@@ -21,10 +25,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>
@@ -57,6 +58,14 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
     @Autowired
     private RuntimeService runtimeService;
 
+    @Autowired
+    private WorkFlowService workFlowService;
+
+    @Autowired
+    private HistoryService historyService;
+
+    @Autowired
+    private TaskService taskService;
 
     /**
      * describe: 插入报销申请
@@ -87,24 +96,44 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
     }
 
     @Override
-    public boolean apply(Reimbursement reimbursement) {
+    public boolean apply(Reimbursement reimbursement, Integer flowId) {
+        WorkFlow workFlow = workFlowService.selectById(flowId);
         reimbursement.setStatus(1); // TODO magic number 需要转用枚举类型
+        // 更新实体类
         this.updateById(reimbursement);
-
-        // 将业务和流程绑定来
-        String busniessKey = reimbursement.getClass().getSimpleName() + reimbursement.getId();
-        String definitionKey = reimbursement.getClass().getSimpleName() + "Flow";
         Map<String, Object> map = new HashMap<>();
         map.put("optor", "admin");
         // 启动流程
-        runtimeService.startProcessInstanceByKey("Reimbursement1", busniessKey, map);
+        return workFlowService.startProcess(reimbursement, workFlow, map);
+    }
 
-        // 查询业务流程
-        List<ProcessInstance> processInstances = runtimeService.createProcessInstanceQuery()
-                .processInstanceBusinessKey(busniessKey, "Reimbursement1").list();
+    @Override
+    public Page<Reimbursement> recordFlowStatus(Page<Reimbursement> page) {
+        List<Reimbursement> list = new ArrayList<>();
+//        // 查询业务流程
+//        List<ProcessInstance> processInstances = runtimeService.createProcessInstanceQuery()
+//                .processInstanceBusinessKey(busniessKey, "Reimbursement1").list();
 
-        System.out.println(processInstances);
-        return false;
+//        System.out.println(processInstances);
+        List<Reimbursement> records = page.getRecords();
+        records.forEach(reimbursement -> {
+            String busniessKey = reimbursement.getClass().getSimpleName() + reimbursement.getId();
+
+            ProcessInstance pi = runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
+            if(!ObjectUtils.isEmpty(pi)){
+                String activitiId = ((ExecutionEntity) pi).getActivityId();
+                List<Task> tasks = taskService.createTaskQuery().processInstanceId(pi.getId()).active().list();
+                UserTask userTask = new UserTask();
+                TaskEntity taskEntity = (TaskEntity) tasks.get(0);
+                userTask.setId(taskEntity.getId());
+                userTask.setName(taskEntity.getName());
+                userTask.setDescription(taskEntity.getDescription());
+                reimbursement.setTask(userTask);
+            }
+            list.add(reimbursement);
+        });
+        page.setRecords(list);
+        return page;
     }
 
     @Autowired

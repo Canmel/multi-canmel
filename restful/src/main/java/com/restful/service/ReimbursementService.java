@@ -1,7 +1,8 @@
 package com.restful.service;
 
-import com.restful.entity.Reimbursement;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.IService;
+import com.restful.entity.Reimbursement;
 
 /**
  * <p>
@@ -30,6 +31,7 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface ReimbursementService extends IService<Reimbursement> {
 
-    boolean apply(Reimbursement reimbursement);
+    boolean apply(Reimbursement reimbursement, Integer flowId);
 
+    Page<Reimbursement> recordFlowStatus(Page<Reimbursement> page);
 }

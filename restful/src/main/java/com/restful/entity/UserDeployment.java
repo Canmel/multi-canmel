@@ -6,4 +6,5 @@ import org.activiti.engine.repository.Deployment;
 import java.util.Date;
 
 public class UserDeployment extends DeploymentEntity {
+
 }
