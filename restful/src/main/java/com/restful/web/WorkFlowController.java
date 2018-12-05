@@ -11,6 +11,7 @@ import com.restful.entity.SysUser;
 import com.restful.entity.WorkFlow;
 import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.exception.UnAuthenticationException;
+import com.restful.exception.WorkFlowImageGenerateFaildException;
 import com.restful.service.SysUserService;
 import com.restful.service.SystemFlowService;
 import com.restful.service.WorkFlowService;
@@ -202,33 +203,20 @@ public class WorkFlowController extends BaseController {
     }
 
     @GetMapping("/task/image/{id}")
-    public void taskImage(HttpServletRequest request, HttpServletResponse response, @PathVariable String id){
-        List<Task> tasks = taskService.createTaskQuery().taskId(id).list();
-        if(!CollectionUtils.isEmpty(tasks)){
-            Task task = tasks.get(0);
-            String processDefinitionId = task.getProcessDefinitionId();
-            ProcessDefinition processDefinition=repositoryService.createProcessDefinitionQuery() // 创建流程定义查询
-                    .processDefinitionId(processDefinitionId) // 根据流程定义id查询
-                    .singleResult();
-            String aa = processDefinition.getDiagramResourceName();
-            System.out.println(aa);
-        }
+    public void taskImage(HttpServletRequest request, HttpServletResponse response, @PathVariable String id) {
+        InputStream inputStream = workFlowService.traceProcessImage(id);
+
         try {
-            InputStream inputStream = null;
-            OutputStream os = response.getOutputStream();
+            OutputStream outputStream = response.getOutputStream();
+            // 输出图片内容
             byte[] b = new byte[1024];
-            for (int len = -1; (len= inputStream.read(b))!=-1; ) {
-                os.write(b, 0, len);
+            int len;
+            while ((len = inputStream.read(b, 0, 1024)) != -1) {
+                outputStream.write(b, 0, len);
             }
-            inputStream.close();
-            os.close();
-
         }catch (IOException e){
-            e.printStackTrace();
+            throw new WorkFlowImageGenerateFaildException();
         }
-
-        taskService.createTaskQuery().taskId(id).list();
-
     }
 }
 

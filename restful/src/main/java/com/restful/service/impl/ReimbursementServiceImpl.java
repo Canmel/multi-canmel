@@ -110,11 +110,6 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
     @Override
     public Page<Reimbursement> recordFlowStatus(Page<Reimbursement> page) {
         List<Reimbursement> list = new ArrayList<>();
-//        // 查询业务流程
-//        List<ProcessInstance> processInstances = runtimeService.createProcessInstanceQuery()
-//                .processInstanceBusinessKey(busniessKey, "Reimbursement1").list();
-
-//        System.out.println(processInstances);
         List<Reimbursement> records = page.getRecords();
         records.forEach(reimbursement -> {
             String busniessKey = reimbursement.getClass().getSimpleName() + reimbursement.getId();
