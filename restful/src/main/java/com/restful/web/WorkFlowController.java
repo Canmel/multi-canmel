@@ -231,14 +231,14 @@ public class WorkFlowController extends BaseController {
     public Result pass(@PathVariable String id, ActivitiForm params) {
         Map paramMap = objectMapper.convertValue(params, HashMap.class);
         boolean isPass = workFlowService.passProcess(id, paramMap);
-        return Result.OK("审核成功");
+        return Result.OK("审批成功");
     }
 
     @GetMapping("/task/back/{id}")
     public Result back(@PathVariable String id, ActivitiForm params) {
         Map paramMap = objectMapper.convertValue(params, HashMap.class);
         boolean isPass = workFlowService.backProcess(id, null, paramMap);
-        return Result.OK("审核成功");
+        return Result.OK("审批成功");
     }
 }
 

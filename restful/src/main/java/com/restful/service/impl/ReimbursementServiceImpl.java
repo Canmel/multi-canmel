@@ -115,9 +115,8 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
         List<Reimbursement> records = page.getRecords();
         records.forEach(reimbursement -> {
             String busniessKey = reimbursement.getClass().getSimpleName() + reimbursement.getId();
-
             ProcessInstance pi = runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
-            HistoricProcessInstance hpi = historyService.createHistoricProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
+
 
             if(!ObjectUtils.isEmpty(pi)){
                 String activitiId = ((ExecutionEntity) pi).getActivityId();
@@ -128,16 +127,17 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
                 userTask.setName(taskEntity.getName());
                 userTask.setDescription(taskEntity.getDescription());
                 reimbursement.setTask(userTask);
+            }else{
+                // 如果流程为空，在历史记录中去找， 历史记录中存在说明这个流程已经结束
+                HistoricProcessInstance hpi = historyService.createHistoricProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
+                if(!ObjectUtils.isEmpty(hpi)){
+                    UserTask userTask = new UserTask();
+                    userTask.setId(hpi.getId());
+                    userTask.setName("流程结束");
+                    List<Task> tasks = taskService.createTaskQuery().processInstanceId(hpi.getId()).active().list();
+                    reimbursement.setTask(userTask);
+                }
             }
-            // 如果流程为空，在历史记录中去找， 历史记录中存在说明这个流程已经结束
-            if(!ObjectUtils.isEmpty(hpi)){
-                UserTask userTask = new UserTask();
-                userTask.setId(hpi.getId());
-                userTask.setName("流程结束");
-                List<Task> tasks = taskService.createTaskQuery().processInstanceId(hpi.getId()).active().list();
-                reimbursement.setTask(userTask);
-            }
-
             list.add(reimbursement);
         });
         page.setRecords(list);
