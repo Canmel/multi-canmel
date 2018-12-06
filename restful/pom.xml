@@ -102,6 +102,14 @@
             <artifactId>swagger-ui</artifactId>
             <version>3.1.4</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/jdom/jdom -->
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

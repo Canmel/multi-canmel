@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.restful.config.activiti.ActivitiForm;
 import com.restful.entity.SysRole;
 import com.restful.entity.SysUser;
 import com.restful.entity.WorkFlow;
@@ -68,6 +70,9 @@ import java.util.Map;
 @Api(value = "工作流接口", description = "工作流接口")
 @RequestMapping("/api/workflow")
 public class WorkFlowController extends BaseController {
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Autowired
     private WorkFlowService workFlowService;
@@ -174,16 +179,13 @@ public class WorkFlowController extends BaseController {
      **/
     @GetMapping("/publish/{id}")
     public HttpResult publish(@PathVariable Integer id) {
-//        if (workFlowService.publish(id)) {
         WorkFlow workFlow = workFlowService.selectById(id);
 //            TODO 实物添加，当数据库提交失败 发布的要撤回
-
         Deployment deployment = repositoryService.createDeployment()
-                .name(workFlow.getWorkFlowType().name() + ".bpmn")
-                .addString(workFlow.getWorkFlowType().name() + ".bpmn", workFlow.getFlow())
+                .name(workFlow.getKey() + ".bpmn")
+                .addString(workFlow.getKey() + ".bpmn", workFlow.getFlow())
                 .deploy();
         System.out.println(deployment.getName());
-//        }
         return Result.OK("流程部署成功");
     }
 
@@ -202,6 +204,12 @@ public class WorkFlowController extends BaseController {
         return Result.OK(workFlows);
     }
 
+    /**
+     * 流程跟踪图
+     * @param request
+     * @param response
+     * @param id
+     */
     @GetMapping("/task/image/{id}")
     public void taskImage(HttpServletRequest request, HttpServletResponse response, @PathVariable String id) {
         InputStream inputStream = workFlowService.traceProcessImage(id);
@@ -214,9 +222,23 @@ public class WorkFlowController extends BaseController {
             while ((len = inputStream.read(b, 0, 1024)) != -1) {
                 outputStream.write(b, 0, len);
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             throw new WorkFlowImageGenerateFaildException();
         }
+    }
+
+    @GetMapping("/task/pass/{id}")
+    public Result pass(@PathVariable String id, ActivitiForm params) {
+        Map paramMap = objectMapper.convertValue(params, HashMap.class);
+        boolean isPass = workFlowService.passProcess(id, paramMap);
+        return Result.OK("审批成功");
+    }
+
+    @GetMapping("/task/back/{id}")
+    public Result back(@PathVariable String id, ActivitiForm params) {
+        Map paramMap = objectMapper.convertValue(params, HashMap.class);
+        boolean isPass = workFlowService.backProcess(id, null, paramMap);
+        return Result.OK("审批成功");
     }
 }
 
