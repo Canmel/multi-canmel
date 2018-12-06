@@ -275,6 +275,7 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
      */
     @Override
     public boolean passProcess(String taskId, Map<String, Object> variables) {
+        taskService.addComment(taskId, null, (String) variables.get("comment"));
         taskService.complete(taskId, variables);
         return true;
     }

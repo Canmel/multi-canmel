@@ -5,9 +5,10 @@ import org.activiti.engine.impl.persistence.entity.TaskEntity;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserTask{
-    public String id;
+    private String id;
     private String name;
     private String description;
+    private String isEnd;
 
     public UserTask() {
     }
@@ -34,5 +35,13 @@ public class UserTask{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getIsEnd() {
+        return isEnd;
+    }
+
+    public void setIsEnd(String isEnd) {
+        this.isEnd = isEnd;
     }
 }

@@ -116,10 +116,7 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
         records.forEach(reimbursement -> {
             String busniessKey = reimbursement.getClass().getSimpleName() + reimbursement.getId();
             ProcessInstance pi = runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
-
-
             if(!ObjectUtils.isEmpty(pi)){
-                String activitiId = ((ExecutionEntity) pi).getActivityId();
                 List<Task> tasks = taskService.createTaskQuery().processInstanceId(pi.getId()).active().list();
                 UserTask userTask = new UserTask();
                 TaskEntity taskEntity = (TaskEntity) tasks.get(0);
