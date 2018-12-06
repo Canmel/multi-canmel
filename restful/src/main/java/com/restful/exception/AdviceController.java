@@ -53,4 +53,11 @@ public class AdviceController {
         response.setStatus(HttpStatus.BAD_REQUEST.value());
         return ErrorResult.BAD_REQUEST(e.getLocalizedMessage());
     }
+
+    @ExceptionHandler(value = WorkFlowImageGenerateFaildException.class)
+    public HttpResult workFlowImageGenerateFaildException(WorkFlowImageGenerateFaildException e){
+        HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+        response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        return  ErrorResult.BAD_REQUEST(e.getLocalizedMessage());
+    }
 }
