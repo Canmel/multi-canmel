@@ -14,6 +14,8 @@ import com.restful.service.WorkFlowService;
 import org.activiti.engine.HistoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
+import org.activiti.engine.history.HistoricActivityInstance;
+import org.activiti.engine.history.HistoricProcessInstance;
 import org.activiti.engine.impl.persistence.entity.ExecutionEntity;
 import org.activiti.engine.impl.persistence.entity.TaskEntity;
 import org.activiti.engine.runtime.ProcessInstance;
@@ -115,6 +117,8 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
             String busniessKey = reimbursement.getClass().getSimpleName() + reimbursement.getId();
 
             ProcessInstance pi = runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
+            HistoricProcessInstance hpi = historyService.createHistoricProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
+
             if(!ObjectUtils.isEmpty(pi)){
                 String activitiId = ((ExecutionEntity) pi).getActivityId();
                 List<Task> tasks = taskService.createTaskQuery().processInstanceId(pi.getId()).active().list();
@@ -125,6 +129,15 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
                 userTask.setDescription(taskEntity.getDescription());
                 reimbursement.setTask(userTask);
             }
+            // 如果流程为空，在历史记录中去找， 历史记录中存在说明这个流程已经结束
+            if(!ObjectUtils.isEmpty(hpi)){
+                UserTask userTask = new UserTask();
+                userTask.setId(hpi.getId());
+                userTask.setName("流程结束");
+                List<Task> tasks = taskService.createTaskQuery().processInstanceId(hpi.getId()).active().list();
+                reimbursement.setTask(userTask);
+            }
+
             list.add(reimbursement);
         });
         page.setRecords(list);

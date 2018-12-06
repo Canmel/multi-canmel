@@ -49,6 +49,9 @@ public class WorkFlow extends BaseEntity<WorkFlow> {
      * 是否发布
      */
     private Integer isPublic;
+
+    private String key;
+
     private String currentState;
     private String nextState;
     @TableField("flowType")
@@ -151,6 +154,14 @@ public class WorkFlow extends BaseEntity<WorkFlow> {
 
     public void setFlow(String flow) {
         this.flow = flow;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public WorkFlow() {

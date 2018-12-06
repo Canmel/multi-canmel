@@ -26,12 +26,20 @@ import org.activiti.image.ProcessDiagramGenerator;
 import org.activiti.image.impl.DefaultProcessDiagramGenerator;
 import org.apache.commons.lang3.StringUtils;
 import org.codehaus.groovy.util.StringUtil;
+import org.jdom.Attribute;
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.JDOMException;
+import org.jdom.input.SAXBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -86,23 +94,19 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
     public boolean publish(Integer id) {
         WorkFlow workFlow = new WorkFlow(id, WorkFlowPublish.PUBLISHED.getValue());
         boolean flag = true;
-//                workFlowMapper.updateById(workFlow) > 0;
         if (!flag) {
             return flag;
         }
         WorkFlow flow = this.selectById(id);
         repositoryService.createDeployment().name(workFlow.getName())
                 .addClasspathResource("bpmn/" + flow.getName() + ".bpmn")
-//                .addClasspathResource("bpmn/" + flow.getName() + ".png")
                 .deploy();
         return flag;
     }
 
     @Override
     public boolean insert(WorkFlow entity) {
-
         entity.setName(entity.getName() + ".bpmn");
-
         String sourceReplace = "xmlns:activiti=\"http://activiti.org/bpmn";
         String oldReplace = "xmlns:camunda=\"http://camunda.org/schema/1.0/bpmn";
         String bpmn = entity.getFlow();
@@ -116,6 +120,21 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
         result = result.replaceAll("bpmn2:", "");
         result = result.replaceAll(":bpmn2", "");
 
+        SAXBuilder builder = new SAXBuilder();
+        try {
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(result.getBytes(Charset.forName("UTF-8")));
+            Document documen = builder.build(inputStream);
+            Element foo = documen.getRootElement();
+            Element element = (Element) foo.getChildren().get(0);
+            Attribute attribute = element.getAttribute("id");
+            String processKey = attribute.getValue();
+            entity.setKey(processKey);
+        } catch (JDOMException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         entity.setFlow(result);
         return super.insert(entity);
     }
@@ -125,19 +144,28 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
         // 将业务和流程绑定来
         String busniessKey = baseEntity.getClass().getSimpleName() + baseEntity.getId();
         // 启动流程
-        ProcessInstance pi = runtimeService.startProcessInstanceByKey(workFlow.getWorkFlowType().name(), busniessKey, params);
+        ProcessInstance pi = runtimeService.startProcessInstanceByKey(workFlow.getKey(), busniessKey, params);
         return !ObjectUtils.isEmpty(pi);
     }
 
+    /**
+     *
+     * @param id 未结束的流程 ID 未任务ID 结束的流程为 历史记录中 流程实例ID
+     * @return
+     */
     @Override
     public InputStream traceProcessImage(String id) {
         Task task = taskService.createTaskQuery().taskId(id).singleResult();
-        String processInstanceId = task.getProcessInstanceId();
-        String prcessDefinitionId = task.getProcessDefinitionId();
+        String processInstanceId = "";
+        if (!ObjectUtils.isEmpty(task)) {
+            processInstanceId = task.getProcessInstanceId();
+        }else{
+            processInstanceId = id;
+        }
+
         // 获取历史流程实例
         HistoricProcessInstance historicProcessInstance = historyService.createHistoricProcessInstanceQuery()
                 .processInstanceId(processInstanceId).singleResult();
-
 
         // 获取流程中已经执行的节点，按照执行先后顺序排序
         List<HistoricActivityInstance> historicActivityInstances = historyService.createHistoricActivityInstanceQuery().processInstanceId(processInstanceId)
@@ -152,6 +180,9 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
         List<HistoricProcessInstance> historicFinishedProcessInstances = historyService.createHistoricProcessInstanceQuery().processInstanceId(processInstanceId).finished()
                 .list();
 
+        processEngineConfiguration.setXmlEncoding("utf-8");
+        processEngineConfiguration.setActivityFontName("宋体");
+        processEngineConfiguration.setLabelFontName("宋体");
         // 生成图片的工具
         ProcessDiagramGenerator processDiagramGenerator = processEngineConfiguration.getProcessDiagramGenerator();
 
@@ -160,13 +191,17 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
         List<String> highLightedFlowIds = getHighLightedFlows(bpmnModel, historicActivityInstances);
 
         // 使用默认配置获得流程图表生成器，并生成追踪图片字符流
-        InputStream imageStream = processDiagramGenerator.generateDiagram(bpmnModel, "png", highLightedActivitiIds, highLightedFlowIds);
-
+        InputStream imageStream = processDiagramGenerator.generateDiagram(bpmnModel, "png", highLightedActivitiIds, highLightedFlowIds, "宋体", "宋体", null, 2.0);
 
         return imageStream;
     }
 
-
+    /**
+     * 获取高亮流程
+     * @param bpmnModel
+     * @param historicActivityInstances
+     * @return
+     */
     private static List<String> getHighLightedFlows(BpmnModel bpmnModel, List<HistoricActivityInstance> historicActivityInstances) {
         // 高亮流程已发生流转的线id集合
         List<String> highLightedFlowIds = new ArrayList<>();
@@ -214,7 +249,6 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
                         }
                     }
                 }
-
                 if (!CollectionUtils.isEmpty(tempMapList)) {
                     // 遍历匹配的集合，取得开始时间最早的一个
                     long earliestStamp = 0L;
@@ -226,12 +260,9 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
                             earliestStamp = highLightedFlowStartTime;
                         }
                     }
-
                     highLightedFlowIds.add(highLightedFlowId);
                 }
-
             }
-
         }
         return highLightedFlowIds;
     }
@@ -244,7 +275,8 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
      */
     @Override
     public boolean passProcess(String taskId, Map<String, Object> variables) {
-        return false;
+        taskService.complete(taskId, variables);
+        return true;
     }
 
     /**
@@ -256,6 +288,14 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
      */
     @Override
     public boolean backProcess(String taskId, String activityId, Map<String, Object> variables) {
+        List<Task> tasks = taskService.createTaskQuery().taskId(taskId).list();
+        for (Task task : tasks) {// 级联结束本节点发起的会签任务
+            try {
+                commitProcess(task.getId(), variables, null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         return false;
     }
 
