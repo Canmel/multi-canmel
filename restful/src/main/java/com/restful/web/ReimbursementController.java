@@ -7,11 +7,19 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.restful.config.activiti.ActivitiForm;
 import com.restful.entity.Reimbursement;
+import com.restful.entity.WorkFlow;
+import com.restful.entity.enums.ReimbursementStatus;
 import com.restful.service.ReimbursementService;
+import com.restful.service.WorkFlowService;
 import org.activiti.engine.repository.Deployment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -44,6 +52,12 @@ public class ReimbursementController extends BaseController {
 
     @Autowired
     private ReimbursementService reimbursementService;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Autowired
+    private WorkFlowService workFlowService;
 
     @GetMapping()
     public HttpResult index(Reimbursement reimbursement) {
@@ -93,6 +107,36 @@ public class ReimbursementController extends BaseController {
         Reimbursement reimbursement = reimbursementService.selectById(id);
         reimbursementService.apply(reimbursement, flowId);
         return null;
+    }
+
+    /**
+     * 通过
+     * @param id
+     * @param params
+     * @return
+     */
+    @GetMapping("/task/pass/{id}")
+    public Result pass(@PathVariable String id, ActivitiForm params) {
+        Map paramMap = objectMapper.convertValue(params, HashMap.class);
+        boolean isPass = workFlowService.passProcess(id, paramMap);
+        return Result.OK("审批成功");
+    }
+
+    /**
+     * 驳回
+     * @param id
+     * @param params
+     * @return
+     */
+    @GetMapping("/task/back/{id}")
+    public Result back(@PathVariable String id, ActivitiForm params) {
+        Map paramMap = objectMapper.convertValue(params, HashMap.class);
+        boolean isBack = workFlowService.backProcess(id, null, paramMap, () -> {
+            Reimbursement reimbursement = reimbursementService.selectById(params.getBusinessId());
+            reimbursement.setStatus(ReimbursementStatus.APPLY_FAILD.getValue());
+            reimbursementService.updateById(reimbursement);
+        });
+        return Result.OK("驳回成功");
     }
 }
 

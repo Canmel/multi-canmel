@@ -251,7 +251,9 @@ public class WorkFlowController extends BaseController {
     @GetMapping("/task/back/{id}")
     public Result back(@PathVariable String id, ActivitiForm params) {
         Map paramMap = objectMapper.convertValue(params, HashMap.class);
-        boolean isBack = workFlowService.backProcess(id, null, paramMap);
+        boolean isBack = workFlowService.backProcess(id, null, paramMap, ()-> {
+            System.out.println("工作流控制器中调用");
+        });
         return Result.OK("驳回成功");
     }
 

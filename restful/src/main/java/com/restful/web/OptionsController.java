@@ -3,8 +3,10 @@ package com.restful.web;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.restful.entity.Reimbursement;
 import com.restful.entity.WorkFlow;
 import com.restful.entity.enums.MenuLevel;
+import com.restful.entity.enums.ReimbursementStatus;
 import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.entity.enums.WorkFlowType;
 import com.restful.service.WorkFlowService;
@@ -80,6 +82,11 @@ public class OptionsController {
         workFlowEntityWrapper.eq("flowType", workFlowType.getValue());
         workFlowEntityWrapper.eq("is_public", WorkFlowPublish.PUBLISHED.getValue());
         return Result.OK(workFlowService.selectList(workFlowEntityWrapper));
+    }
+
+    @GetMapping("/reimbursement/status")
+    public HttpResult reimbursementStatus() {
+        return Result.OK(ReimbursementStatus.all());
     }
 
 }
