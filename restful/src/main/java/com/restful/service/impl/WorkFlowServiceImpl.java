@@ -12,6 +12,7 @@ import org.activiti.bpmn.model.SequenceFlow;
 import org.activiti.engine.*;
 import org.activiti.engine.history.HistoricActivityInstance;
 import org.activiti.engine.history.HistoricProcessInstance;
+import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.impl.RepositoryServiceImpl;
 import org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity;
 import org.activiti.engine.impl.persistence.entity.TaskEntity;
@@ -21,6 +22,7 @@ import org.activiti.engine.impl.pvm.process.ProcessDefinitionImpl;
 import org.activiti.engine.impl.pvm.process.TransitionImpl;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.ProcessInstance;
+import org.activiti.engine.task.Comment;
 import org.activiti.engine.task.Task;
 import org.activiti.image.ProcessDiagramGenerator;
 import org.activiti.image.impl.DefaultProcessDiagramGenerator;
@@ -150,7 +152,7 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
 
     /**
      *
-     * @param id 未结束的流程 ID 未任务ID 结束的流程为 历史记录中 流程实例ID
+     * @param id 未结束的流程: ID为任务ID， 结束的流程： 历史记录中 流程实例ID
      * @return
      */
     @Override
@@ -420,5 +422,24 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
         for (PvmTransition pvmTransition : oriPvmTransitionList) {
             pvmTransitionList.add(pvmTransition);
         }
+    }
+
+    @Override
+    public List<Comment> comments(String id) {
+        Task task = taskService.createTaskQuery().taskId(id).singleResult();
+        List<Comment> comments = new ArrayList<>();
+        List<HistoricTaskInstance> tasks = new ArrayList<>();
+        if(ObjectUtils.isEmpty(task)){
+            // 去历史记录中寻找
+            tasks = historyService.createHistoricTaskInstanceQuery().processInstanceId(id).list();
+        }else{
+            String processInstanceId = task.getProcessInstanceId();
+            tasks = historyService.createHistoricTaskInstanceQuery().processInstanceId(processInstanceId).list();
+        }
+
+        for(HistoricTaskInstance t: tasks){
+            comments.addAll(taskService.getTaskComments(task.getId()));
+        }
+        return comments;
     }
 }

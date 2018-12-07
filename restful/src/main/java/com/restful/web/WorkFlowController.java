@@ -26,6 +26,7 @@ import org.activiti.engine.impl.persistence.entity.DeploymentEntity;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.ProcessInstance;
+import org.activiti.engine.task.Comment;
 import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -237,8 +238,14 @@ public class WorkFlowController extends BaseController {
     @GetMapping("/task/back/{id}")
     public Result back(@PathVariable String id, ActivitiForm params) {
         Map paramMap = objectMapper.convertValue(params, HashMap.class);
-        boolean isPass = workFlowService.backProcess(id, null, paramMap);
+        boolean isBack = workFlowService.backProcess(id, null, paramMap);
         return Result.OK("审批成功");
+    }
+
+    @GetMapping("/comments")
+    public Result comments(String id){
+        List<Comment> list = workFlowService.comments(id);
+        return Result.OK(list);
     }
 }
 
