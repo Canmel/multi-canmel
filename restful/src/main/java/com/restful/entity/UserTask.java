@@ -1,14 +1,19 @@
 package com.restful.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.impl.persistence.entity.TaskEntity;
+import org.activiti.engine.task.Comment;
+
+import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserTask{
     private String id;
     private String name;
     private String description;
-    private String isEnd;
+    private boolean isEnd;
+    private List<Comment> comment;
 
     public UserTask() {
     }
@@ -37,11 +42,19 @@ public class UserTask{
         this.description = description;
     }
 
-    public String getIsEnd() {
+    public boolean getIsEnd() {
         return isEnd;
     }
 
-    public void setIsEnd(String isEnd) {
+    public void setIsEnd(boolean isEnd) {
         this.isEnd = isEnd;
+    }
+
+    public List<Comment> getComment() {
+        return comment;
+    }
+
+    public void setComment(List<Comment> comment) {
+        this.comment = comment;
     }
 }

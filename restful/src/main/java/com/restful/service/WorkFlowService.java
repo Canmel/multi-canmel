@@ -2,6 +2,7 @@ package com.restful.service;
 
 import com.baomidou.mybatisplus.service.IService;
 import com.restful.entity.BaseEntity;
+import com.restful.entity.UserTask;
 import com.restful.entity.WorkFlow;
 import org.activiti.engine.task.Comment;
 
@@ -46,5 +47,5 @@ public interface WorkFlowService extends IService<WorkFlow> {
 
     boolean backProcess(String taskId, String activityId, Map<String, Object> variables);
 
-    List<Comment> comments(String id);
+    List<UserTask> comments(String id);
 }
