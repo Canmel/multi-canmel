@@ -123,6 +123,7 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
                 userTask.setId(taskEntity.getId());
                 userTask.setName(taskEntity.getName());
                 userTask.setDescription(taskEntity.getDescription());
+                userTask.setIsEnd(false);
                 reimbursement.setTask(userTask);
             }else{
                 // 如果流程为空，在历史记录中去找， 历史记录中存在说明这个流程已经结束
@@ -131,6 +132,7 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
                     UserTask userTask = new UserTask();
                     userTask.setId(hpi.getId());
                     userTask.setName("流程结束");
+                    userTask.setIsEnd(true);
                     List<Task> tasks = taskService.createTaskQuery().processInstanceId(hpi.getId()).active().list();
                     reimbursement.setTask(userTask);
                 }

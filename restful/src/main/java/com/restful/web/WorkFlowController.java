@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.restful.config.activiti.ActivitiForm;
 import com.restful.entity.SysRole;
 import com.restful.entity.SysUser;
+import com.restful.entity.UserTask;
 import com.restful.entity.WorkFlow;
 import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.exception.UnAuthenticationException;
@@ -228,6 +229,12 @@ public class WorkFlowController extends BaseController {
         }
     }
 
+    /**
+     * 通过
+     * @param id
+     * @param params
+     * @return
+     */
     @GetMapping("/task/pass/{id}")
     public Result pass(@PathVariable String id, ActivitiForm params) {
         Map paramMap = objectMapper.convertValue(params, HashMap.class);
@@ -235,16 +242,22 @@ public class WorkFlowController extends BaseController {
         return Result.OK("审批成功");
     }
 
+    /**
+     * 驳回
+     * @param id
+     * @param params
+     * @return
+     */
     @GetMapping("/task/back/{id}")
     public Result back(@PathVariable String id, ActivitiForm params) {
         Map paramMap = objectMapper.convertValue(params, HashMap.class);
         boolean isBack = workFlowService.backProcess(id, null, paramMap);
-        return Result.OK("审批成功");
+        return Result.OK("驳回成功");
     }
 
     @GetMapping("/comments")
     public Result comments(String id){
-        List<Comment> list = workFlowService.comments(id);
+        List<UserTask> list = workFlowService.comments(id);
         return Result.OK(list);
     }
 }

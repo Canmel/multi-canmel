@@ -1,7 +1,9 @@
 package com.restful.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.restful.config.activiti.ActivitiEndCallBack;
 import com.restful.entity.BaseEntity;
+import com.restful.entity.UserTask;
 import com.restful.entity.WorkFlow;
 import com.restful.entity.enums.WorkFlowPublish;
 import com.restful.mapper.WorkFlowMapper;
@@ -16,6 +18,7 @@ import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.impl.RepositoryServiceImpl;
 import org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity;
 import org.activiti.engine.impl.persistence.entity.TaskEntity;
+import org.activiti.engine.impl.pvm.PvmActivity;
 import org.activiti.engine.impl.pvm.PvmTransition;
 import org.activiti.engine.impl.pvm.process.ActivityImpl;
 import org.activiti.engine.impl.pvm.process.ProcessDefinitionImpl;
@@ -161,7 +164,7 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
         String processInstanceId = "";
         if (!ObjectUtils.isEmpty(task)) {
             processInstanceId = task.getProcessInstanceId();
-        }else{
+        } else {
             processInstanceId = id;
         }
 
@@ -278,7 +281,12 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
     @Override
     public boolean passProcess(String taskId, Map<String, Object> variables) {
         taskService.addComment(taskId, null, (String) variables.get("comment"));
-        taskService.complete(taskId, variables);
+        try {
+            commitProcess(taskId, variables, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
         return true;
     }
 
@@ -291,15 +299,27 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
      */
     @Override
     public boolean backProcess(String taskId, String activityId, Map<String, Object> variables) {
-        List<Task> tasks = taskService.createTaskQuery().taskId(taskId).list();
-        for (Task task : tasks) {// 级联结束本节点发起的会签任务
-            try {
-                commitProcess(task.getId(), variables, null);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        taskService.addComment(taskId, null, (String) variables.get("comment"));
+        try {
+            ActivityImpl endActivity = findActivitiImpl(taskId, "end");
+            commitProcess(taskId, null, endActivity.getId());
+        } catch (Exception e) {
+            return false;
         }
-        return false;
+
+        return true;
+
+//        taskService.addComment(taskId, null, (String) variables.get("comment"));
+//        List<Task> tasks = taskService.createTaskQuery().taskId(taskId).list();
+//        for (Task task : tasks) {// 级联结束本节点发起的会签任务
+//            try {
+//                commitProcess(task.getId(), variables, null);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                return false;
+//            }
+//        }
+//        return false;
     }
 
     /**
@@ -425,21 +445,37 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
     }
 
     @Override
-    public List<Comment> comments(String id) {
+    public List<UserTask> comments(String id) {
         Task task = taskService.createTaskQuery().taskId(id).singleResult();
-        List<Comment> comments = new ArrayList<>();
+        List<UserTask> userTasks = new ArrayList<>();
         List<HistoricTaskInstance> tasks = new ArrayList<>();
-        if(ObjectUtils.isEmpty(task)){
+        if (ObjectUtils.isEmpty(task)) {
             // 去历史记录中寻找
             tasks = historyService.createHistoricTaskInstanceQuery().processInstanceId(id).list();
-        }else{
+        } else {
             String processInstanceId = task.getProcessInstanceId();
             tasks = historyService.createHistoricTaskInstanceQuery().processInstanceId(processInstanceId).list();
         }
 
-        for(HistoricTaskInstance t: tasks){
-            comments.addAll(taskService.getTaskComments(task.getId()));
+        for (HistoricTaskInstance t : tasks) {
+            List<Comment> comments = taskService.getTaskComments(t.getId());
+            UserTask userTask = new UserTask();
+            userTask.setName(t.getName());
+            userTask.setComment(comments);
+            userTasks.add(userTask);
         }
-        return comments;
+        return userTasks;
+    }
+
+    public boolean isEndByTaskId(String taskId) {
+        Task task = taskService.createTaskQuery().taskId(taskId).singleResult();
+        if (!ObjectUtils.isEmpty(task)) {
+            return false;
+        }
+        HistoricTaskInstance historicTaskInstance = historyService.createHistoricTaskInstanceQuery().taskId(taskId).singleResult();
+        String processInstanceId = historicTaskInstance.getProcessInstanceId();
+        ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().processInstanceId(processInstanceId).singleResult();
+        return ObjectUtils.isEmpty(processInstance);
+
     }
 }
