@@ -44,7 +44,7 @@ public interface WorkFlowService extends IService<WorkFlow> {
 
     InputStream traceProcessImage(String taskId);
 
-    boolean passProcess(String taskId, Map<String, Object> variables);
+    boolean passProcess(String taskId, Map<String, Object> variables, ActivitiEndCallBack activitiEndCallBack);
 
     boolean backProcess(String taskId, String activityId, Map<String, Object> variables, ActivitiEndCallBack activitiEndCallBack);
 

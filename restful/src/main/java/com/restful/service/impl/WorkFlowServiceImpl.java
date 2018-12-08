@@ -279,7 +279,7 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
      * @return
      */
     @Override
-    public boolean passProcess(String taskId, Map<String, Object> variables) {
+    public boolean passProcess(String taskId, Map<String, Object> variables, ActivitiEndCallBack activitiEndCallBack) {
         taskService.addComment(taskId, null, (String) variables.get("comment"));
         try {
             commitProcess(taskId, variables, null);
@@ -289,6 +289,7 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
         }
         if(isEndByTaskId(taskId)){
             // 执行回调函数
+            activitiEndCallBack.callBack();
         }
         return true;
     }

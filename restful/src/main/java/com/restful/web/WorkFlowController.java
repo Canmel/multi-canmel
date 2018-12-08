@@ -238,7 +238,9 @@ public class WorkFlowController extends BaseController {
     @GetMapping("/task/pass/{id}")
     public Result pass(@PathVariable String id, ActivitiForm params) {
         Map paramMap = objectMapper.convertValue(params, HashMap.class);
-        boolean isPass = workFlowService.passProcess(id, paramMap);
+        boolean isPass = workFlowService.passProcess(id, paramMap, ()->{
+            System.out.println("通过回调");
+        });
         return Result.OK("审批成功");
     }
 
@@ -257,6 +259,11 @@ public class WorkFlowController extends BaseController {
         return Result.OK("驳回成功");
     }
 
+    /**
+     * 获取评论信息列表
+     * @param id
+     * @return
+     */
     @GetMapping("/comments")
     public Result comments(String id){
         List<UserTask> list = workFlowService.comments(id);
