@@ -7,11 +7,21 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.core.entity.ErrorResult;
 import com.core.entity.HttpResult;
 import com.core.entity.Result;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.restful.config.activiti.ActivitiForm;
 import com.restful.entity.Reimbursement;
+import com.restful.entity.WorkFlow;
+import com.restful.entity.enums.ReimbursementStatus;
 import com.restful.service.ReimbursementService;
+import com.restful.service.WorkFlowService;
 import org.activiti.engine.repository.Deployment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -45,11 +55,20 @@ public class ReimbursementController extends BaseController {
     @Autowired
     private ReimbursementService reimbursementService;
 
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Autowired
+    private WorkFlowService workFlowService;
+
     @GetMapping()
     public HttpResult index(Reimbursement reimbursement) {
         Page<Reimbursement> reimbursementPage = new Page<Reimbursement>(reimbursement.getCurrentPage(), 10);
         EntityWrapper<Reimbursement> reimbursementEntityWrapper = new EntityWrapper<Reimbursement>();
-        reimbursementEntityWrapper.like("description", reimbursement.getDescription());
+        List<String> order = new ArrayList<>();
+        order.add("id");
+        reimbursementEntityWrapper.orderDesc(order);
+        reimbursementEntityWrapper.like("name", reimbursement.getName());
         Page page = reimbursementService.selectPage(reimbursementPage, reimbursementEntityWrapper);
         page = reimbursementService.recordFlowStatus(page);
         return Result.OK(page);
@@ -60,7 +79,7 @@ public class ReimbursementController extends BaseController {
         if (reimbursementService.insert(reimbursement)) {
             return Result.OK("新建报销申请成功");
         } else {
-            return ErrorResult.UNAUTHORIZED();
+            return ErrorResult.INTERNAL_SERVER_ERROR("未知原因，流程创建失败");
         }
     }
 
@@ -70,7 +89,7 @@ public class ReimbursementController extends BaseController {
     }
 
     @PutMapping("/{id}")
-    public HttpResult edit(@RequestBody Reimbursement reimbursement, @PathVariable Integer id){
+    public HttpResult edit(@RequestBody Reimbursement reimbursement, @PathVariable Integer id) {
         reimbursement.setId(id);
         if (reimbursementService.updateById(reimbursement)) {
             return Result.OK("修改报销申请成功!");
@@ -80,7 +99,7 @@ public class ReimbursementController extends BaseController {
     }
 
     @DeleteMapping("/{id}")
-    public HttpResult delete(@PathVariable Integer id){
+    public HttpResult delete(@PathVariable Integer id) {
         if (reimbursementService.deleteById(id)) {
             return Result.OK("删除报销申请成功!");
         } else {
@@ -89,10 +108,57 @@ public class ReimbursementController extends BaseController {
     }
 
     @GetMapping("/apply/{id}")
-    public Result apply(@PathVariable Integer id, Integer flowId){
+    public HttpResult apply(@PathVariable Integer id, Integer flowId) {
         Reimbursement reimbursement = reimbursementService.selectById(id);
-        reimbursementService.apply(reimbursement, flowId);
-        return null;
+        boolean isApply = reimbursementService.apply(reimbursement, flowId);
+        if(isApply){
+            return Result.OK("发起申请流程成功");
+        }else {
+            return ErrorResult.EXPECTATION_FAILED("发起申请流程失败");
+        }
+    }
+
+    /**
+     * 通过
+     * @param id
+     * @param params
+     * @return
+     */
+    @GetMapping("/task/pass/{id}")
+    public HttpResult pass(@PathVariable String id, ActivitiForm params) {
+        Map paramMap = objectMapper.convertValue(params, HashMap.class);
+        boolean isPass = workFlowService.passProcess(id, paramMap, () -> {
+            Reimbursement reimbursement = reimbursementService.selectById(params.getBusinessId());
+            reimbursement.setStatus(ReimbursementStatus.APPLY_SUCCESS.getValue());
+            reimbursementService.updateById(reimbursement);
+        });
+        if (isPass) {
+            return Result.OK("审批成功");
+        } else {
+            return ErrorResult.BAD_REQUEST("审批失败");
+        }
+
+    }
+
+    /**
+     * 驳回
+     * @param id
+     * @param params
+     * @return
+     */
+    @GetMapping("/task/back/{id}")
+    public HttpResult back(@PathVariable String id, ActivitiForm params) {
+        Map paramMap = objectMapper.convertValue(params, HashMap.class);
+        boolean isBack = workFlowService.backProcess(id, null, paramMap, () -> {
+            Reimbursement reimbursement = reimbursementService.selectById(params.getBusinessId());
+            reimbursement.setStatus(ReimbursementStatus.APPLY_FAILD.getValue());
+            reimbursementService.updateById(reimbursement);
+        });
+        if (isBack) {
+            return Result.OK("驳回成功");
+        } else {
+            return ErrorResult.BAD_REQUEST("驳回失败");
+        }
     }
 }
 

@@ -127,13 +127,13 @@ public class ReimbursementServiceImpl extends ServiceImpl<ReimbursementMapper, R
                 reimbursement.setTask(userTask);
             }else{
                 // 如果流程为空，在历史记录中去找， 历史记录中存在说明这个流程已经结束
-                HistoricProcessInstance hpi = historyService.createHistoricProcessInstanceQuery().processInstanceBusinessKey(busniessKey).singleResult();
+                List<HistoricProcessInstance> hpi = historyService.createHistoricProcessInstanceQuery().processInstanceBusinessKey(busniessKey).list();
                 if(!ObjectUtils.isEmpty(hpi)){
                     UserTask userTask = new UserTask();
-                    userTask.setId(hpi.getId());
+                    userTask.setId(hpi.get(0).getId());
                     userTask.setName("流程结束");
                     userTask.setIsEnd(true);
-                    List<Task> tasks = taskService.createTaskQuery().processInstanceId(hpi.getId()).active().list();
+                    List<Task> tasks = taskService.createTaskQuery().processInstanceId(hpi.get(0).getId()).active().list();
                     reimbursement.setTask(userTask);
                 }
             }

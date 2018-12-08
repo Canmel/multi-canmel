@@ -279,13 +279,17 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
      * @return
      */
     @Override
-    public boolean passProcess(String taskId, Map<String, Object> variables) {
+    public boolean passProcess(String taskId, Map<String, Object> variables, ActivitiEndCallBack activitiEndCallBack) {
         taskService.addComment(taskId, null, (String) variables.get("comment"));
         try {
             commitProcess(taskId, variables, null);
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        }
+        if(isEndByTaskId(taskId)){
+            // 执行回调函数
+            activitiEndCallBack.callBack();
         }
         return true;
     }
@@ -298,13 +302,17 @@ public class WorkFlowServiceImpl extends ServiceImpl<WorkFlowMapper, WorkFlow> i
      * @return
      */
     @Override
-    public boolean backProcess(String taskId, String activityId, Map<String, Object> variables) {
+    public boolean backProcess(String taskId, String activityId, Map<String, Object> variables, ActivitiEndCallBack activitiEndCallBack) {
         taskService.addComment(taskId, null, (String) variables.get("comment"));
         try {
             ActivityImpl endActivity = findActivitiImpl(taskId, "end");
             commitProcess(taskId, null, endActivity.getId());
         } catch (Exception e) {
             return false;
+        }
+        if(isEndByTaskId(taskId)){
+            // 执行回调函数
+            activitiEndCallBack.callBack();
         }
 
         return true;

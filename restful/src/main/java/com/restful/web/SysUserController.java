@@ -97,6 +97,9 @@ public class SysUserController extends BaseController {
     @ApiOperation(value = "当前登录人，不设使用权限" ,  notes="当前登录人，不设使用权限")
     @GetMapping("/current")
     public HttpResult current(HttpServletRequest request, Principal principal) {
+        if(ObjectUtils.isEmpty(principal)){
+            return ErrorResult.UNAUTHORIZED("未找到当前登录人");
+        }
         SysUser user = sysUserService.current(principal);
         if(ObjectUtils.isEmpty(user)){
             return ErrorResult.UNAUTHORIZED("未找到当前登录人");

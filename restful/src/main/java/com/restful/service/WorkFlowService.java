@@ -1,6 +1,7 @@
 package com.restful.service;
 
 import com.baomidou.mybatisplus.service.IService;
+import com.restful.config.activiti.ActivitiEndCallBack;
 import com.restful.entity.BaseEntity;
 import com.restful.entity.UserTask;
 import com.restful.entity.WorkFlow;
@@ -43,9 +44,9 @@ public interface WorkFlowService extends IService<WorkFlow> {
 
     InputStream traceProcessImage(String taskId);
 
-    boolean passProcess(String taskId, Map<String, Object> variables);
+    boolean passProcess(String taskId, Map<String, Object> variables, ActivitiEndCallBack activitiEndCallBack);
 
-    boolean backProcess(String taskId, String activityId, Map<String, Object> variables);
+    boolean backProcess(String taskId, String activityId, Map<String, Object> variables, ActivitiEndCallBack activitiEndCallBack);
 
     List<UserTask> comments(String id);
 }
