@@ -3,15 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/auth2/auth2.iml" filepath="$PROJECT_DIR$/auth2/auth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/canmel.iml" filepath="$PROJECT_DIR$/canmel.iml" />
       <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web/iauth2.iml" filepath="$PROJECT_DIR$/web/iauth2.iml" />
       <module fileurl="file://$PROJECT_DIR$/ioauth2/ioauth2.iml" filepath="$PROJECT_DIR$/ioauth2/ioauth2.iml" />
       <module fileurl="file://$PROJECT_DIR$/iweb/iweb.iml" filepath="$PROJECT_DIR$/iweb/iweb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iauth2/src/main/main.iml" filepath="$PROJECT_DIR$/iauth2/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multi-canmel.iml" filepath="$PROJECT_DIR$/multi-canmel.iml" />
       <module fileurl="file://$PROJECT_DIR$/restful/restful.iml" filepath="$PROJECT_DIR$/restful/restful.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iauth2/src/test/test.iml" filepath="$PROJECT_DIR$/iauth2/src/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>
   </component>

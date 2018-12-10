@@ -176,7 +176,7 @@ public class SysMenuController extends BaseController {
         }
         SysMenu menu = menus.get(0);
         if (!ObjectUtils.isEmpty(sysMenu.getId()) && menu.getId().equals(sysMenu.getId())) {
-            return Result.OK("菜单名可使用");
+            return Result.OK("菜单名可用");
         } else {
             return ErrorResult.EXPECTATION_FAILED("菜单名已存在");
         }
