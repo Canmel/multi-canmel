@@ -1,47 +1,28 @@
 package com.restful.web;
 
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.restful.BaseControllerTest;
 import com.restful.entity.SysUser;
 import com.restful.entity.SysUserRole;
 import com.restful.service.SysUserRoleService;
 import com.restful.service.SysUserService;
-import io.swagger.models.auth.In;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.http.protocol.HTTP;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import static org.hamcrest.Matchers.equalTo;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 import org.springframework.util.CollectionUtils;
-import org.springframework.web.context.WebApplicationContext;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SysUserControllerTest extends BaseControllerTest {
+import static org.hamcrest.Matchers.equalTo;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-    @Autowired
-    private WebApplicationContext webApplicationContext; // 3
+public class SysUserControllerTest extends BaseControllerTest {
 
     @Autowired
     private SysUserService userService;
@@ -172,7 +153,7 @@ public class SysUserControllerTest extends BaseControllerTest {
         Map<String, Object> map = new HashMap<>();
         Integer userId = 24;
         map.put("id", userId.toString());
-        int[] x={1,2,3};
+        int[] x = {1, 2, 3};
         map.put("roleIds", x);
 
         EntityWrapper<SysUserRole> entityWrapper = new EntityWrapper<>();

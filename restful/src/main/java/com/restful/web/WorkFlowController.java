@@ -34,12 +34,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 /**
  * <p>
  *  前端控制器
  * </p>
  *
- * @author  * 
+ * @author  *
  *   ┏ ┓   ┏ ┓
  *  ┏┛ ┻━━━┛ ┻┓
  *  ┃         ┃
@@ -74,21 +75,7 @@ public class WorkFlowController extends BaseController {
     private SysUserService sysUserService;
 
     @Autowired
-    private SystemFlowService flowService;
-
-    @Autowired
-    private RuntimeService runtimeService;
-
-    @Autowired
     private RepositoryService repositoryService;
-
-    @Autowired
-    private TaskService taskService;
-
-    @Autowired
-    private ProcessEngine processEngine() {
-        return ProcessEngines.getDefaultProcessEngine();
-    }
 
     /**
      * describe: 分页查询工作流信息

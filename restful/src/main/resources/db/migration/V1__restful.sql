@@ -68,3 +68,20 @@ CREATE TABLE `sys_log`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+DROP TABLE IF EXISTS `work_flow`;
+CREATE TABLE `work_flow` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL COMMENT '流程名称',
+  `status` int(11) NOT NULL DEFAULT '1' COMMENT '状态',
+  `is_public` int(11) NOT NULL DEFAULT '0' COMMENT '是否发布',
+  `current_state` varchar(255) DEFAULT NULL,
+  `next_state` varchar(255) DEFAULT NULL,
+  `flowType` int(11) NOT NULL,
+  `creator` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `is_del` int(11) NOT NULL DEFAULT '0',
+  `flow` text NOT NULL COMMENT '流程定義',
+  `key` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;

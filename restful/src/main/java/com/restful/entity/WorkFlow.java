@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.restful.entity.enums.WorkFlowType;
+import org.springframework.util.ObjectUtils;
 
 /**
  * <p>
@@ -89,7 +90,7 @@ public class WorkFlow extends BaseEntity<WorkFlow> {
     }
 
     public Integer getIsPublic() {
-        return isPublic;
+        return ObjectUtils.isEmpty(isPublic) ? 0 : isPublic;
     }
 
     public void setIsPublic(Integer isPublic) {
