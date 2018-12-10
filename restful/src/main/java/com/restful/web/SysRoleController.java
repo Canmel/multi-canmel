@@ -203,7 +203,7 @@ public class SysRoleController extends BaseController {
         }
         SysRole role = roles.get(0);
         if (!ObjectUtils.isEmpty(sysRole.getId()) && role.getId().equals(sysRole.getId())) {
-            return Result.OK("角色名可使用");
+            return Result.OK("角色名可用");
         } else {
             return ErrorResult.EXPECTATION_FAILED("角色名已存在");
         }

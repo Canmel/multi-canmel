@@ -42,3 +42,11 @@ INSERT INTO `sys_role_menu` VALUES
 ('6', '4', '3'),
 ('7', '4', '4'),
 ('8', '4', '5');
+
+TRUNCATE TABLE `sys_log`;
+INSERT INTO `sys_log` VALUES (1, 'index', '[Ljava.lang.reflect.Parameter;@102f3ff', '分页查询菜单信息', '日志信息菜单查询', 1, NULL, '2018-11-26 10:01:47');
+INSERT INTO `sys_log` VALUES (2, 'index', '[Ljava.lang.reflect.Parameter;@2ef8e', '分页查询菜单信息', '日志信息菜单查询', 1, NULL, '2018-11-26 10:54:13');
+INSERT INTO `sys_log` VALUES (3, 'index', '[Ljava.lang.reflect.Parameter;@77973f', '分页查询菜单信息', '日志信息菜单查询', 1, NULL, '2018-11-26 11:17:31');
+INSERT INTO `sys_log` VALUES (4, 'index', '[Ljava.lang.reflect.Parameter;@6799b2', '分页查询用户信息', '用户信息查询', 1, NULL, '2018-11-26 11:35:53');
+INSERT INTO `sys_log` VALUES (5, 'index', '[Ljava.lang.reflect.Parameter;@1fc38a6', '分页查询菜单信息', '日志信息菜单查询', 1, NULL, '2018-11-26 11:45:30');
+INSERT INTO `sys_log` VALUES (6, 'update', '[Ljava.lang.reflect.Parameter;@11ad751', '修改用户', '修改用户', 1, NULL, '2018-12-10 10:15:24');

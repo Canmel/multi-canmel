@@ -38,10 +38,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebAppConfiguration
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-@Slf4j
 public class SysUserControllerTest extends BaseControllerTest {
 
 
