@@ -14,6 +14,8 @@ public class Result extends HttpResult {
 
     public static final String NOT_FOUND_MSG = "未找到请求页面";
 
+    public static final String SUCCESS_DEFAULT_MSG = "请求成功";
+
     public String access_token;
 
     public Object data;
@@ -50,7 +52,7 @@ public class Result extends HttpResult {
         if (!ObjectUtils.isEmpty(oAccessToken)) {
             access_token = oAccessToken.toString();
         }
-        return new Result(HttpStatus.OK.value(), "请求成功", access_token, data);
+        return new Result(HttpStatus.OK.value(), SUCCESS_DEFAULT_MSG, access_token, data);
     }
 
     public static Result OK(String msg) {
