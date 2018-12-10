@@ -38,22 +38,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 public class SysRoleControllerTest extends BaseControllerTest {
 
-    private MockMvc mockMvc;
-
-    @Autowired
-    private WebApplicationContext webApplicationContext;
-
     @Autowired
     private SysRoleService roleService;
 
     @Autowired
     private SysRoleMenuService roleMenuService;
-
-    @Before
-    public void before() {
-        //获取mockmvc对象实例
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-    }
 
     /**
     * 正常访问
@@ -74,10 +63,10 @@ public class SysRoleControllerTest extends BaseControllerTest {
     @Test
     @WithMockUser(username = "demoUser1", roles = {"ADMIN"})
     public void details() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/users/1"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/roles/1"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath(HTTPSTATUS).value(successResult().httpStatus))
-                .andExpect(jsonPath("data.username").value("demoUser1"))
+                .andExpect(jsonPath("data.rolename").value("admin"))
                 .andReturn();
     }
 

@@ -40,9 +40,6 @@ import java.util.Map;
 
 public class SysUserControllerTest extends BaseControllerTest {
 
-
-    private MockMvc mockMvc;// 2
-
     @Autowired
     private WebApplicationContext webApplicationContext; // 3
 
@@ -51,12 +48,6 @@ public class SysUserControllerTest extends BaseControllerTest {
 
     @Autowired
     private SysUserRoleService userRoleService;
-
-    @Before
-    public void before() {
-        //获取mockmvc对象实例
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build(); // 4
-    }
 
     /**
      * 正常访问 未携带参数
