@@ -36,7 +36,8 @@ public class SysLogAop {
     // 定义切点
     // 在指定注解的位置切入代码
     @Pointcut("@annotation( com.restful.annotation.SaveLog)")
-    public void logPointCut() { }
+    public void logPointCut() {
+    }
 
     @After(value = "logPointCut()")
     public void saveLog(JoinPoint joinPoint) {
@@ -52,14 +53,21 @@ public class SysLogAop {
             String value = logAnnotation.value();
             log.setDescription(value);
         }
-        String userName = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String userName = "";
+        try {
+            userName = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        } catch (ClassCastException e) {
+            userName = "demoUser1";
+        }
+
         EntityWrapper<SysUser> sysUserEntityWrapper = new EntityWrapper<SysUser>();
         sysUserEntityWrapper.eq("username", userName);
         SysUser sysUser = sysUserService.selectOne(sysUserEntityWrapper);
         log.setOperator(sysUser.getId());
         log.setTitle(logAnnotation.title());
-        SimpleDateFormat sDateFormat=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         log.setCreatedAt(sDateFormat.format(new Date()));
         sysLogService.insert(log);
+        System.out.println("----------------日志结束------------------");
     }
 }
