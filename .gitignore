@@ -5,7 +5,6 @@
 # IntelliJ project files
 .idea/*.xml
 .idea/*
-*.iml
-out
 gen
-/.idea/
+/restful/restful.iml
+.idea/
