@@ -221,7 +221,7 @@ public class SysUserController extends BaseController {
         map.put("username", sysUser.getUsername());
         List<SysUser> users = sysUserService.selectByMap(map);
         if(users.size() > 1 ){
-            return ErrorResult.EXPECTATION_FAILED("用户名一已存在");
+            return ErrorResult.EXPECTATION_FAILED("用户名已存在");
         }
         if(users.size() == 0){
             return Result.OK("用户名可用");

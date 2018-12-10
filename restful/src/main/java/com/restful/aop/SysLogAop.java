@@ -56,7 +56,7 @@ public class SysLogAop {
         String userName = "";
         try {
             userName = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        } catch (ClassCastException e) {
+        } catch (RuntimeException e) {
             userName = "demoUser1";
         }
 
