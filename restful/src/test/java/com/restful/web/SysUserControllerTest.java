@@ -1,7 +1,10 @@
 package com.restful.web;
 
+import com.alibaba.fastjson.JSONObject;
 import com.restful.BaseControllerTest;
+import com.restful.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -21,6 +25,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.springframework.web.context.WebApplicationContext;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
@@ -32,6 +39,9 @@ public class SysUserControllerTest extends BaseControllerTest {
 
     @Autowired
     private WebApplicationContext webApplicationContext; // 3
+
+    @Autowired
+    private SysUserService userService;
 
     @Before
     public void before() {
@@ -84,7 +94,24 @@ public class SysUserControllerTest extends BaseControllerTest {
     }
 
     @Test
-    public void update() {
+    @WithMockUser(username = "demoUser1", roles = {"ADMIN"})
+    public void update() throws Exception {
+        /**
+         * 正常访问
+         */
+        Map<String, String> map = new HashMap<>();
+        map.put("id", "2");
+        map.put("username", "百里守约");
+        String content = JSONObject.toJSONString(map);
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/api/users/" + map.get("id"))
+                .param("username", map.get("username"))
+                .contentType(MediaType.APPLICATION_JSON_UTF8)
+                .content(content))
+                .andExpect(jsonPath("msg").value("修改用户成功!"))
+                .andExpect(jsonPath("httpStatus").value("200"));
+        Assert.assertEquals(userService.selectById(map.get("id")).getUsername(), map.get("username"));
+
     }
 
     @Test

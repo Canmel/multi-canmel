@@ -27,6 +27,10 @@ spring:
     url: jdbc:mysql://localhost:3306/auth2_test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 1234
+    initialization-mode: ALWAYS
+    schema:
+      - classpath:db/migration/V1__restful.sql
+      - classpath:db/migration-mock/afterMigrate.sql
   aop:
     auto: true
   jackson:
