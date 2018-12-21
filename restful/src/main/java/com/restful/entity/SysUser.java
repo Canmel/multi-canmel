@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.models.auth.In;
+import org.springframework.util.CollectionUtils;
 
 import java.io.Serializable;
 import java.util.List;
@@ -220,4 +221,6 @@ public class SysUser extends BaseEntity<WorkFlow> {
                 ", address=" + address +
                 "}";
     }
+
+
 }

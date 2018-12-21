@@ -6,8 +6,10 @@ import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 
 import com.baomidou.mybatisplus.annotations.TableId;
+import org.springframework.util.CollectionUtils;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -38,6 +40,7 @@ public class SysLog extends BaseEntity<SysLog> {
 
     private static final long serialVersionUID = 1L;
 
+    public static final String STRING_SPLIT_CHARTS = "@%@%@";
     /**
      * 主键
      */
@@ -59,7 +62,7 @@ public class SysLog extends BaseEntity<SysLog> {
     /**
      * 创建者
      */
-        private Integer operator;
+    private Integer operator;
     /**
      * 标签
      */
@@ -170,5 +173,18 @@ public class SysLog extends BaseEntity<SysLog> {
                 ", label=" + label +
                 ", createdAt=" + createdAt +
                 "}";
+    }
+
+    public static SysLog str2Obj(String logStr){
+        String[] logProps = logStr.split(STRING_SPLIT_CHARTS);
+        List<String> ps = CollectionUtils.arrayToList(logProps);
+        SysLog sysLog = new SysLog();
+        sysLog.setMethod(ps.get(0));
+        sysLog.setParams(ps.get(1));
+        sysLog.setDescription(ps.get(2));
+        sysLog.setOperator(Integer.parseInt(ps.get(3)));
+        sysLog.setTitle(ps.get(4));
+        sysLog.setCreatedAt(ps.get(5));
+        return sysLog;
     }
 }

@@ -30,7 +30,15 @@ spring:
   aop:
     auto: true
   jackson:
-      default-property-inclusion: non_null
+    default-property-inclusion: non_null
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    in-memory: true
+    pool:
+      enabled: false
+
 
 mybatis-plus:
   # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
